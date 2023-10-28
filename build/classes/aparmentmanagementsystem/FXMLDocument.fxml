@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <AnchorPane prefHeight="602.0" prefWidth="929.0" styleClass="left-form" stylesheets="@loginDesign.css">
+               <children>
+                  <Label layoutX="186.0" layoutY="169.0" text="Sign In" textFill="#000000d9">
+                     <font>
+                        <Font name="Berlin Sans FB" size="40.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon fill="#23929a" glyphName="USER" layoutX="211.0" layoutY="148.0" size="5em" text="" wrappingWidth="59.35714340209961" />
+                  <TextField layoutX="78.0" layoutY="262.0" prefHeight="53.0" prefWidth="326.0" promptText="Username" styleClass="textfield" stylesheets="@loginDesign.css">
+                     <font>
+                        <Font size="20.0" />
+                     </font></TextField>
+                  <PasswordField layoutX="78.0" layoutY="334.0" prefHeight="53.0" prefWidth="326.0" promptText="Password" styleClass="textfield" stylesheets="@loginDesign.css" />
+                  <Button layoutX="191.0" layoutY="417.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="Login">
+                     <font>
+                        <Font name="Tahoma" size="26.0" />
+                     </font></Button>
+                  <AnchorPane layoutX="500.0" layoutY="1.0" prefHeight="600.0" prefWidth="500.0" styleClass="right-form" stylesheets="@loginDesign.css">
+                     <children>
+                        <Button layoutX="497.0" layoutY="14.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="82.0" styleClass="close" stylesheets="@loginDesign.css" textFill="WHITE" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" text="" wrappingWidth="21.428571701049805" />
+                           </graphic>
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Button>
+                        <FontAwesomeIcon fill="WHITE" glyphName="BUILDING" layoutX="160.0" layoutY="350.0" size="15em" text="" wrappingWidth="179.14285278320312" />
+                        <Label layoutX="160.0" layoutY="85.0" prefHeight="72.0" prefWidth="179.0" text="BlueMoon" textFill="WHITE">
+                           <font>
+                              <Font name="Tahoma" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="35.0" layoutY="415.0" text="Apartment Management System" textFill="#fff9f9">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
