@@ -68,6 +68,8 @@ public class FXMLDocumentController implements Initializable {
                     alert.setContentText("Successfully login!!!");
                     alert.showAndWait();
                     
+                    loginBtr.getScene().getWindow().hide();
+                    
                     Parent root = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
                     
                     Stage stage = new Stage();
