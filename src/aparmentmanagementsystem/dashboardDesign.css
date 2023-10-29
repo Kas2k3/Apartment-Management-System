@@ -1,0 +1,73 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 30, 2023, 12:52:21 AM
+    Author     : Phuoc
+*/
+
+.top-form{
+    -fx-background-color: #fff;
+    -fx-border-color: #000;
+    -fx-border-width: .4px .4px .2px .4px;
+}
+
+.semi-top{
+    -fx-background-color: #efefef;
+    -fx-border-color: #000;
+    -fx-border-width: .2px .4px .4px .4px;
+}
+
+.close{
+    -fx-background-color: transparent;
+    -fx-cursor:hand;
+}
+.close:hover{
+    -fx-background-color: #d6370b;
+}
+
+.minimize{
+    -fx-background-color: transparent;
+    -fx-cursor:hand;
+}
+.minimize:hover{
+    -fx-background-color: #ddd;
+}
+
+.nav1{
+    -fx-background-color: linear-gradient(to bottom right, #23929a, #2bd4e4);
+    -fx-background-radius: 5px;
+}
+.nav2{
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+}
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 8, 0, 0, 0);
+}
+
+.nav-btn{
+    -fx-background-color: transparent;
+    -fx-font-size: 16px;
+    -fx-font-family: Arial;
+    -fx-cursor:hand;
+    -fx-text-fill: #000;
+    -fx-border-color: #ddd;
+    -fx-border-witdth: .6px;
+}
+.nav-btn:hover{
+    -fx-background-color: #464040;
+    -fx-text-fill: #fff;
+}
+
+.signout{
+    -fx-background-color: #efefef;
+    -fx-background-radius: 5px;
+    -fx-cursor:hand;
+}
+.signout:hover{
+    -fx-background-color: #ddd;
+}
