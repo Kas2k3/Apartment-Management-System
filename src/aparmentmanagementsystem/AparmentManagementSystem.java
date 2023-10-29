@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package aparmentmanagementsystem;
 
 
@@ -14,10 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-/**
- *
- * @author Phuoc
- */
+
 public class AparmentManagementSystem extends Application {
     private double x = 0;
     private double y =0;
@@ -50,9 +43,6 @@ public class AparmentManagementSystem extends Application {
         stage.show();
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         launch(args);
     }
