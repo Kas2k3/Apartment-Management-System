@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aparmentmanagementsystem.dashboardController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -18,17 +18,17 @@
                      <children>
                         <AnchorPane prefHeight="43.0" prefWidth="1200.0" styleClass="top-form" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <Button layoutX="1121.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="65.0" styleClass="close" stylesheets="@dashboardDesign.css" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+                              <Button fx:id="close" layoutX="1121.0" layoutY="10.0" mnemonicParsing="false" onAction="#close" prefHeight="30.0" prefWidth="65.0" styleClass="close" stylesheets="@dashboardDesign.css" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
                                  <graphic>
                                     <FontAwesomeIcon glyphName="CLOSE" size="1.3em" />
                                  </graphic>
                               </Button>
-                              <Button layoutX="1086.0" layoutY="6.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="47.0" styleClass="minimize" stylesheets="@dashboardDesign.css" AnchorPane.rightAnchor="67.0" AnchorPane.topAnchor="4.0">
+                              <Button fx:id="minimize" layoutX="1086.0" layoutY="6.0" mnemonicParsing="false" onAction="#minimize" prefHeight="30.0" prefWidth="47.0" styleClass="minimize" stylesheets="@dashboardDesign.css" AnchorPane.rightAnchor="67.0" AnchorPane.topAnchor="4.0">
                                  <graphic>
                                     <FontAwesomeIcon glyphName="MINUS" size="1.3em" />
                                  </graphic>
                               </Button>
-                              <Label layoutX="35.0" layoutY="6.0" text="BlueMoon Apartment Management System V2.0">
+                              <Label layoutX="35.0" layoutY="6.0" text="BlueMoon Apartment Management System V1.0">
                                  <font>
                                     <Font size="17.0" />
                                  </font>
@@ -45,12 +45,12 @@
                         <AnchorPane prefHeight="224.0" prefWidth="220.0" stylesheets="@dashboardDesign.css">
                            <children>
                               <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="81.0" layoutY="101.0" size="5em" />
-                              <Label layoutX="67.0" layoutY="120.0" text="User name:" textFill="WHITE">
+                              <Label layoutX="48.0" layoutY="120.0" text="Tên người dùng:" textFill="WHITE">
                                  <font>
                                     <Font name="Tahoma" size="17.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="52.0" layoutY="148.0" text="Administrator" textFill="WHITE">
+                              <Label fx:id="username" alignment="CENTER" layoutX="-7.0" layoutY="148.0" prefHeight="21.0" prefWidth="227.0" text="Quản Trị Viên" textFill="WHITE">
                                  <font>
                                     <Font name="Tahoma Bold" size="17.0" />
                                  </font>
@@ -67,13 +67,32 @@
                               <String fx:value="nav2" />
                            </styleClass>
                            <children>
-                              <Button layoutX="16.0" layoutY="33.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Dashboard" />
+                              <Button layoutX="16.0" layoutY="14.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Bảng điều khiển" />
+                              <Button layoutX="16.0" layoutY="70.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Khoản thu phí" />
+                              <Button layoutX="16.0" layoutY="127.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Tra cứu khoản thu" />
+                              <Button layoutX="16.0" layoutY="180.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Thông tin hộ GĐ" />
+                              <Button layoutX="16.0" layoutY="233.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Thông tin người dùng" />
+                              <Button layoutX="16.0" layoutY="289.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Thông tin người dùng" />
+                              <Button layoutX="16.0" layoutY="345.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Cập nhật mới (V2.0)" />
+                              <Button fx:id="logout" layoutX="53.0" layoutY="438.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="115.0" styleClass="signout" stylesheets="@dashboardDesign.css" text="Đăng xuất">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="SIGN_OUT" size="1.5em" />
+                                 </graphic>
+                              </Button>
                            </children>
                         </AnchorPane>
-                        <Separator layoutY="231.0" prefHeight="4.0" prefWidth="221.0" />
+                        <Separator layoutY="231.0" prefHeight="1.0" prefWidth="222.0" />
                      </children>
                   </AnchorPane>
                </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Separator layoutX="-1.0" layoutY="1.0" orientation="VERTICAL" prefHeight="737.0" prefWidth="18.0" />
+                        <AnchorPane layoutX="71.0" layoutY="60.0" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </AnchorPane>
+               </center>
             </BorderPane>
          </children>
       </AnchorPane>
