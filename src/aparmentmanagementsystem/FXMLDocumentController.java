@@ -61,9 +61,9 @@ public class FXMLDocumentController implements Initializable {
             
             if(username.getText().isEmpty() || password.getText().isEmpty()) {
                 alert = new Alert(AlertType.ERROR);
-                alert.setTitle("ERROR Message");
+                alert.setTitle("Lỗi");
                 alert.setHeaderText(null); 
-                alert.setContentText("Please fill all bank fields");
+                alert.setContentText("Vui lòng nhập vào tên tài khoản và mật khẩu");
                 alert.showAndWait();
             } else {
                 if(result.next()) {
@@ -71,9 +71,9 @@ public class FXMLDocumentController implements Initializable {
                     data.username = username.getText();
                     
                     alert = new Alert(AlertType.INFORMATION);
-                    alert.setTitle("Information Message");
+                    alert.setTitle("Thông báo");
                     alert.setHeaderText(null);
-                    alert.setContentText("Successfully login!!!");
+                    alert.setContentText("Đăng nhập thành công!");
                     alert.showAndWait();
                     
                     loginBtr.getScene().getWindow().hide();
@@ -100,9 +100,9 @@ public class FXMLDocumentController implements Initializable {
                             
                 } else {
                     alert = new Alert(AlertType.ERROR);
-                    alert.setTitle("ERORR Message");
+                    alert.setTitle("Lỗi");
                     alert.setHeaderText(null);
-                    alert.setContentText("WRONG Username/Password");
+                    alert.setContentText("Tên tài khoản/mật khẩu sai, vui lòng nhập lại!");
                     alert.showAndWait();
                 }
             }

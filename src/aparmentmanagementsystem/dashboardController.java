@@ -46,9 +46,9 @@ public class dashboardController implements Initializable{
     public void logout() {
         try{
             Alert alert = new Alert(AlertType.CONFIRMATION);
-            alert.setTitle("Confirmation Massage");
+            alert.setTitle("Xác nhận");
             alert.setHeaderText(null);
-            alert.setContentText("Are you sure you want to logout?");
+            alert.setContentText("Bạn có chắc chắn muốn đăng xuất?");
             Optional<ButtonType> option = alert.showAndWait();
             
             if(option.get().equals(ButtonType.OK)){

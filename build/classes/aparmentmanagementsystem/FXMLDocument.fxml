@@ -19,12 +19,12 @@
                      </font>
                   </Label>
                   <FontAwesomeIcon fill="#23929a" glyphName="USER" layoutX="211.0" layoutY="148.0" size="5em" text="" wrappingWidth="59.35714340209961" />
-                  <TextField fx:id="username" layoutX="78.0" layoutY="262.0" onAction="#login" prefHeight="53.0" prefWidth="326.0" promptText="Username" styleClass="textfield" stylesheets="@loginDesign.css">
+                  <TextField fx:id="username" layoutX="78.0" layoutY="262.0" onAction="#login" prefHeight="53.0" prefWidth="326.0" promptText="Tên tài khoản" styleClass="textfield" stylesheets="@loginDesign.css">
                      <font>
                         <Font size="20.0" />
                      </font></TextField>
-                  <PasswordField fx:id="password" layoutX="78.0" layoutY="334.0" onAction="#login" prefHeight="53.0" prefWidth="326.0" promptText="Password" styleClass="textfield" stylesheets="@loginDesign.css" />
-                  <Button fx:id="loginBtr" layoutX="191.0" layoutY="417.0" mnemonicParsing="false" onAction="#login" prefHeight="45.0" prefWidth="100.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="Login">
+                  <PasswordField fx:id="password" layoutX="78.0" layoutY="334.0" onAction="#login" prefHeight="53.0" prefWidth="326.0" promptText="Mật khẩu" styleClass="textfield" stylesheets="@loginDesign.css" />
+                  <Button fx:id="loginBtr" layoutX="182.0" layoutY="415.0" mnemonicParsing="false" onAction="#login" prefHeight="45.0" prefWidth="117.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="Đăng nhập">
                      <font>
                         <Font name="Tahoma" size="26.0" />
                      </font></Button>
@@ -48,7 +48,7 @@
                               <Font name="Tahoma" size="40.0" />
                            </font>
                         </Label>
-                        <Label layoutX="35.0" layoutY="415.0" text="Apartment Management System" textFill="#fff9f9">
+                        <Label layoutX="56.0" layoutY="413.0" text="Hệ Thống Quản Lý Chung Cư" textFill="#fff9f9">
                            <font>
                               <Font size="30.0" />
                            </font>
