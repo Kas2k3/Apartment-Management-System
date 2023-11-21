@@ -18,7 +18,7 @@
                         <Font name="Berlin Sans FB" size="40.0" />
                      </font>
                   </Label>
-                  <FontAwesomeIcon fill="#23929a" glyphName="USER" layoutX="211.0" layoutY="148.0" size="5em" text="" wrappingWidth="59.35714340209961" />
+                  <FontAwesomeIcon fill="#1c86ff" glyphName="USER" layoutX="211.0" layoutY="148.0" size="5em" text="" wrappingWidth="59.35714340209961" />
                   <TextField fx:id="username" layoutX="78.0" layoutY="262.0" onAction="#login" prefHeight="53.0" prefWidth="326.0" promptText="Tên tài khoản" styleClass="textfield" stylesheets="@loginDesign.css">
                      <font>
                         <Font size="20.0" />

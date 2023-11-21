@@ -89,7 +89,23 @@
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
                         <Separator layoutX="-1.0" layoutY="1.0" orientation="VERTICAL" prefHeight="737.0" prefWidth="18.0" />
-                        <AnchorPane layoutX="71.0" layoutY="60.0" prefHeight="200.0" prefWidth="200.0" />
+                        <AnchorPane layoutX="71.0" layoutY="60.0" prefHeight="740.0" prefWidth="978.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="25.0" layoutY="29.0" prefHeight="685.0" prefWidth="921.0" stylesheets="@dashboardDesign.css" visible="false">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="188.0" layoutY="145.0" prefHeight="343.0" prefWidth="496.0" stylesheets="@dashboardDesign.css">
+                                       <styleClass>
+                                          <String fx:value="card" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
                      </children>
                   </AnchorPane>
                </center>
