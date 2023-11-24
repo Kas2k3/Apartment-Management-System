@@ -1,8 +1,11 @@
 package aparmentmanagementsystem;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -37,7 +40,69 @@ public class dashboardController implements Initializable{
     private Label username;
     
     @FXML
-    private Button dashboard_btn;
+    private Button trangChu_btn;
+    
+    @FXML
+    private Button khoanThu_btn;
+    
+    @FXML
+    private Button thongTinHoGD_btn;
+    
+    @FXML
+    private Button thongTinQTV_btn;
+    
+    @FXML
+    private Button v2Update_btn;
+    
+    @FXML
+    private AnchorPane trangChu_form;
+    
+    @FXML
+    private AnchorPane khoanThu_form;
+    
+    @FXML
+    private AnchorPane thongTinHoGD_form;
+    
+    @FXML
+    private AnchorPane thongTinQTV_form;
+    
+    @FXML
+    private AnchorPane v2Update_form;
+    
+    public void switchForm(ActionEvent event){
+        if(event.getSource() == trangChu_btn){
+            trangChu_form.setVisible(true);
+            khoanThu_form.setVisible(false);
+            thongTinHoGD_form.setVisible(false);
+            thongTinQTV_form.setVisible(false);
+            v2Update_form.setVisible(false);
+        } else if(event.getSource() == khoanThu_btn){
+            trangChu_form.setVisible(false);
+            khoanThu_form.setVisible(true);
+            thongTinHoGD_form.setVisible(false);
+            thongTinQTV_form.setVisible(false);
+            v2Update_form.setVisible(false);
+        } else if(event.getSource() == thongTinHoGD_btn){
+            trangChu_form.setVisible(false);
+            khoanThu_form.setVisible(false);
+            thongTinHoGD_form.setVisible(true);
+            thongTinQTV_form.setVisible(false);
+            v2Update_form.setVisible(false);
+        } else if(event.getSource() == thongTinQTV_btn) {
+            trangChu_form.setVisible(false);
+            khoanThu_form.setVisible(false);
+            thongTinHoGD_form.setVisible(false);
+            thongTinQTV_form.setVisible(true);
+            v2Update_form.setVisible(false);
+        } else if(event.getSource() == v2Update_btn) {
+            trangChu_form.setVisible(false);
+            khoanThu_form.setVisible(false);
+            thongTinHoGD_form.setVisible(false);
+            thongTinQTV_form.setVisible(false);
+            v2Update_form.setVisible(true);
+        }
+        
+    }
     
     
     private double x = 0;

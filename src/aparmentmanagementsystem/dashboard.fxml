@@ -40,7 +40,7 @@
                   </AnchorPane>
                </top>
                <left>
-                  <AnchorPane prefHeight="761.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                  <AnchorPane prefHeight="773.0" prefWidth="222.0" BorderPane.alignment="CENTER">
                      <children>
                         <AnchorPane prefHeight="224.0" prefWidth="220.0" stylesheets="@dashboardDesign.css">
                            <children>
@@ -67,13 +67,11 @@
                               <String fx:value="nav2" />
                            </styleClass>
                            <children>
-                              <Button layoutX="16.0" layoutY="14.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Bảng điều khiển" />
-                              <Button layoutX="16.0" layoutY="70.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Khoản thu phí" />
-                              <Button layoutX="16.0" layoutY="127.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Tra cứu khoản thu" />
-                              <Button layoutX="16.0" layoutY="180.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Thông tin hộ GĐ" />
-                              <Button layoutX="16.0" layoutY="233.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Thông tin người dùng" />
-                              <Button layoutX="16.0" layoutY="289.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Thông tin người dùng" />
-                              <Button layoutX="16.0" layoutY="345.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Cập nhật mới (V2.0)" />
+                              <Button fx:id="trangChu_btn" layoutX="16.0" layoutY="31.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Trang chủ" />
+                              <Button fx:id="khoanThu_btn" layoutX="16.0" layoutY="100.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Các khoản thu phí " />
+                              <Button fx:id="thongTinHoGD_btn" layoutX="16.0" layoutY="170.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Thông tin hộ GĐ" />
+                              <Button fx:id="thongTinQTV_btn" layoutX="16.0" layoutY="239.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Thông tin QTV" />
+                              <Button fx:id="v2Update_btn" layoutX="16.0" layoutY="308.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="46.0" prefWidth="189.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Cập nhật mới (V2.0)" />
                               <Button fx:id="logout" layoutX="53.0" layoutY="438.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="115.0" styleClass="signout" stylesheets="@dashboardDesign.css" text="Đăng xuất">
                                  <graphic>
                                     <FontAwesomeIcon glyphName="SIGN_OUT" size="1.5em" />
@@ -89,17 +87,16 @@
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
                         <Separator layoutX="-1.0" layoutY="1.0" orientation="VERTICAL" prefHeight="737.0" prefWidth="18.0" />
-                        <AnchorPane layoutX="71.0" layoutY="60.0" prefHeight="740.0" prefWidth="978.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="trangChu_form" layoutX="71.0" layoutY="60.0" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <AnchorPane layoutX="25.0" layoutY="29.0" prefHeight="685.0" prefWidth="921.0" stylesheets="@dashboardDesign.css" visible="false">
+                              <AnchorPane layoutX="25.0" layoutY="29.0" prefHeight="685.0" prefWidth="921.0" stylesheets="@dashboardDesign.css">
                                  <styleClass>
                                     <String fx:value="white-bg" />
                                     <String fx:value="shadow" />
                                  </styleClass>
                                  <children>
-                                    <AnchorPane layoutX="188.0" layoutY="145.0" prefHeight="343.0" prefWidth="496.0" stylesheets="@dashboardDesign.css">
+                                    <AnchorPane layoutX="153.0" layoutY="137.0" prefHeight="449.0" prefWidth="616.0" stylesheets="@dashboardDesign.css">
                                        <styleClass>
-                                          <String fx:value="card" />
                                           <String fx:value="card" />
                                           <String fx:value="shadow" />
                                        </styleClass>
@@ -107,6 +104,103 @@
                                  </children>
                               </AnchorPane>
                            </children></AnchorPane>
+                        <AnchorPane fx:id="khoanThu_form" layoutX="32.0" layoutY="118.0" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="34.0" layoutY="31.0" prefHeight="70.0" prefWidth="911.0" styleClass="shadow" stylesheets="@dashboardDesign.css">
+                                 <children>
+                                    <AnchorPane layoutX="134.0" prefHeight="70.0" prefWidth="911.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="35.0" layoutY="126.0" prefHeight="590.0" prefWidth="911.0">
+                                 <children>
+                                    <AnchorPane layoutX="37.0" layoutY="24.0" prefHeight="590.0" prefWidth="911.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="thongTinHoGD_form" layoutX="277.0" layoutY="270.0" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="38.0" layoutY="38.0" prefHeight="307.0" prefWidth="902.0">
+                                 <children>
+                                    <AnchorPane layoutX="181.0" layoutY="54.0" prefHeight="307.0" prefWidth="902.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="35.0" layoutY="364.0" prefHeight="337.0" prefWidth="906.0" stylesheets="@dashboardDesign.css">
+                                 <children>
+                                    <AnchorPane layoutX="1.0" layoutY="123.0" prefHeight="337.0" prefWidth="905.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="thongTinQTV_form" layoutX="289.0" layoutY="201.0" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="42.0" layoutY="51.0" prefHeight="61.0" prefWidth="894.0">
+                                 <children>
+                                    <AnchorPane layoutX="48.0" layoutY="14.0" prefHeight="61.0" prefWidth="894.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="48.0" layoutY="155.0" prefHeight="552.0" prefWidth="253.0">
+                                 <children>
+                                    <AnchorPane layoutX="-7.0" layoutY="2.0" prefHeight="564.0" prefWidth="253.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="2.0">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="322.0" layoutY="155.0" prefHeight="555.0" prefWidth="613.0">
+                                 <children>
+                                    <AnchorPane layoutX="85.0" layoutY="178.0" prefHeight="555.0" prefWidth="613.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="v2Update_form" layoutX="252.0" layoutY="117.0" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="41.0" layoutY="34.0" prefHeight="176.0" prefWidth="898.0">
+                                 <children>
+                                    <AnchorPane layoutX="106.0" layoutY="-24.0" prefHeight="176.0" prefWidth="898.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <styleClass>
+                                          <String fx:value="card" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="46.0" layoutY="251.0" prefHeight="452.0" prefWidth="889.0" stylesheets="@dashboardDesign.css">
+                                 <styleClass>
+                                    <String fx:value="card" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
                      </children>
                   </AnchorPane>
                </center>

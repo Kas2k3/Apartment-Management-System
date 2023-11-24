@@ -28,7 +28,7 @@
 }
 
 .nav1{
-    -fx-background-color: linear-gradient(to bottom right, #23929a, #2bd4e4);
+    -fx-background-color: linear-gradient(to bottom right, #1373f9, #5ab2ff);
     -fx-background-radius: 5px;
 }
 .nav2{
@@ -50,7 +50,7 @@
     -fx-border-witdth: .6px;
 }
 .nav-btn:hover{
-    -fx-background-color: #464040;
+    -fx-background-color: #1373f9;
     -fx-text-fill: #fff;
 }
 
@@ -67,6 +67,6 @@
     -fx-background-radius: 6px;
 }
 .card{
-    -fx-background-color: #2bd4e4;
+    -fx-background-color: #5ab2ff;
     -fx-background-radius: 2px 8px 8px 2px;
 }
