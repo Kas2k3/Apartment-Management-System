@@ -104,7 +104,7 @@
                                  </children>
                               </AnchorPane>
                            </children></AnchorPane>
-                        <AnchorPane fx:id="khoanThu_form" layoutX="32.0" layoutY="118.0" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="khoanThu_form" layoutX="32.0" layoutY="118.0" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="34.0" layoutY="31.0" prefHeight="70.0" prefWidth="911.0" styleClass="shadow" stylesheets="@dashboardDesign.css">
                                  <children>
@@ -113,6 +113,9 @@
                                           <String fx:value="white-bg" />
                                           <String fx:value="shadow" />
                                        </styleClass>
+                                       <children>
+                                          <Button layoutX="52.0" layoutY="20.0" mnemonicParsing="false" styleClass="nav-btn" text="Nhập khoản thu" textFill="#3575ff" />
+                                       </children>
                                     </AnchorPane>
                                  </children>
                               </AnchorPane>

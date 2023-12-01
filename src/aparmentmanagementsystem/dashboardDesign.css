@@ -46,7 +46,7 @@
     -fx-font-family: Arial;
     -fx-cursor:hand;
     -fx-text-fill: #000;
-    -fx-border-color: #ddd;
+    -fx-border-color: #1373f9;
     -fx-border-witdth: .6px;
 }
 .nav-btn:hover{
@@ -69,4 +69,21 @@
 .card{
     -fx-background-color: #5ab2ff;
     -fx-background-radius: 2px 8px 8px 2px;
+}
+
+.funct1-btn{
+    -fx-background-color: linear-gradient(to bottom right, #1373f9, #5ab2ff);
+    -fx-background-radius: 8px;
+    -fx-font-size: 16px;
+    -fx-font-family: Arial;
+    -fx-border-witdth: 0.6px;
+}
+
+.funct1-btn:hover{
+    -fx-background-color: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-family: Arial;
+    -fx-cursor:hand;
+    -fx-text-fill: #000;
+    -fx-border-witdth: .6px;
 }
