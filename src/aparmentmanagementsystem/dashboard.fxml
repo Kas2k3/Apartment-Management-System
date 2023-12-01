@@ -104,24 +104,47 @@
                                  </children>
                               </AnchorPane>
                            </children></AnchorPane>
-                        <AnchorPane fx:id="khoanThu_form" layoutX="32.0" layoutY="118.0" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="khoanThu_form" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <AnchorPane layoutX="34.0" layoutY="31.0" prefHeight="70.0" prefWidth="911.0" styleClass="shadow" stylesheets="@dashboardDesign.css">
+                              <AnchorPane layoutX="35.0" layoutY="648.0" prefHeight="75.0" prefWidth="904.0" styleClass="shadow" stylesheets="@dashboardDesign.css">
                                  <children>
-                                    <AnchorPane layoutX="134.0" prefHeight="70.0" prefWidth="911.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane layoutX="4.0" layoutY="23.0" prefHeight="75.0" prefWidth="904.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <styleClass>
                                           <String fx:value="white-bg" />
                                           <String fx:value="shadow" />
                                        </styleClass>
                                        <children>
-                                          <Button layoutX="52.0" layoutY="20.0" mnemonicParsing="false" styleClass="nav-btn" text="Nhập khoản thu" textFill="#3575ff" />
+                                          <Button layoutX="693.0" layoutY="17.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="190.0" stylesheets="@dashboardDesign.css" text="Tra cứu khoản thu" textFill="WHITE">
+                                             <styleClass>
+                                                <String fx:value="funct1-btn" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button layoutX="471.0" layoutY="17.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="206.0" stylesheets="@dashboardDesign.css" text="Sửa khoản thu này" textFill="WHITE">
+                                             <styleClass>
+                                                <String fx:value="funct1-btn" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button layoutX="246.0" layoutY="17.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="206.0" stylesheets="@dashboardDesign.css" text="Xóa khoản thu này" textFill="WHITE">
+                                             <styleClass>
+                                                <String fx:value="funct1-btn" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button layoutX="20.0" layoutY="17.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="206.0" stylesheets="@dashboardDesign.css" text="Thêm mới khoản thu" textFill="WHITE">
+                                             <styleClass>
+                                                <String fx:value="funct1-btn" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
                                        </children>
                                     </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane layoutX="35.0" layoutY="126.0" prefHeight="590.0" prefWidth="911.0">
+                              <AnchorPane layoutX="37.0" layoutY="14.0" prefHeight="603.0" prefWidth="904.0">
                                  <children>
-                                    <AnchorPane layoutX="37.0" layoutY="24.0" prefHeight="590.0" prefWidth="911.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane layoutX="14.0" layoutY="24.0" prefHeight="603.0" prefWidth="904.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <styleClass>
                                           <String fx:value="shadow" />
                                           <String fx:value="white-bg" />
