@@ -15,6 +15,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -23,12 +24,6 @@ import javafx.stage.StageStyle;
 
 
 public class dashboardController implements Initializable{
-    
-    @FXML
-    private AnchorPane main_form;
-    
-    @FXML
-    private Button close;
     
     @FXML
     private Button logout;
@@ -55,6 +50,18 @@ public class dashboardController implements Initializable{
     private Button v2Update_btn;
     
     @FXML
+    private Button themKhoanThu_btn;
+    
+    @FXML
+    private Button xoaKhoanThu_btn;
+    
+    @FXML
+    private Button suaKhoanThu_btn;
+    
+    @FXML
+    private Button traCuuKhoanThu_btn;
+    
+    @FXML
     private AnchorPane trangChu_form;
     
     @FXML
@@ -68,6 +75,19 @@ public class dashboardController implements Initializable{
     
     @FXML
     private AnchorPane v2Update_form;
+    
+    @FXML
+    private AnchorPane themKhoanThu_form;
+    
+    @FXML
+    private AnchorPane xoaKhoanThu_form;
+    
+    @FXML
+    private AnchorPane suaKhoanThu_form;
+    
+    @FXML
+    private AnchorPane traCuuKhoanThu_form;
+
     
     public void switchForm(ActionEvent event){
         if(event.getSource() == trangChu_btn){
@@ -100,10 +120,32 @@ public class dashboardController implements Initializable{
             thongTinHoGD_form.setVisible(false);
             thongTinQTV_form.setVisible(false);
             v2Update_form.setVisible(true);
-        }
-        
+        }   
     }
     
+    public void switchFormKhoanThu(ActionEvent event){
+        if(event.getSource() == themKhoanThu_btn){
+            themKhoanThu_form.setVisible(true);
+            xoaKhoanThu_form.setVisible(false);
+            suaKhoanThu_form.setVisible(false);
+            traCuuKhoanThu_form.setVisible(false);
+        } else if(event.getSource() == xoaKhoanThu_btn){
+            themKhoanThu_form.setVisible(false);
+            xoaKhoanThu_form.setVisible(true);
+            suaKhoanThu_form.setVisible(false);
+            traCuuKhoanThu_form.setVisible(false);
+        } else if(event.getSource() == suaKhoanThu_btn){
+            themKhoanThu_form.setVisible(false);
+            xoaKhoanThu_form.setVisible(false);
+            suaKhoanThu_form.setVisible(true);
+            traCuuKhoanThu_form.setVisible(false);
+        } else if(event.getSource() == traCuuKhoanThu_btn){
+            themKhoanThu_form.setVisible(false);
+            xoaKhoanThu_form.setVisible(false);
+            suaKhoanThu_form.setVisible(false);
+            traCuuKhoanThu_form.setVisible(true);
+        } 
+    }
     
     private double x = 0;
     private double y = 0;
