@@ -30,12 +30,6 @@ public class FXMLDocumentController implements Initializable {
     private Button loginBtr;
 
     @FXML
-    private AnchorPane main_form;
-
-    @FXML
-    private Button close;
-
-    @FXML
     private TextField username;
     
     private Connection connect;

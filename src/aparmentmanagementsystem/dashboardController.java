@@ -15,7 +15,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -62,6 +61,18 @@ public class dashboardController implements Initializable{
     private Button traCuuKhoanThu_btn;
     
     @FXML
+    private Button themThongTinHoGD_btn;
+    
+    @FXML
+    private Button xoaThongTinHoGD_btn;
+    
+    @FXML
+    private Button suaThongTinHoGD_btn;
+    
+    @FXML
+    private Button traCuuThongTinHoGD_btn;
+    
+    @FXML
     private AnchorPane trangChu_form;
     
     @FXML
@@ -87,6 +98,18 @@ public class dashboardController implements Initializable{
     
     @FXML
     private AnchorPane traCuuKhoanThu_form;
+
+    @FXML
+    private AnchorPane themThongTinHoGD_form;
+    
+    @FXML
+    private AnchorPane xoaThongTinHoGD_form;
+    
+    @FXML
+    private AnchorPane suaThongTinHoGD_form;
+    
+    @FXML
+    private AnchorPane traCuuThongTinHoGD_form;
 
     
     public void switchForm(ActionEvent event){
@@ -144,6 +167,30 @@ public class dashboardController implements Initializable{
             xoaKhoanThu_form.setVisible(false);
             suaKhoanThu_form.setVisible(false);
             traCuuKhoanThu_form.setVisible(true);
+        } 
+    }
+    
+    public void switchFormThongTinHoGD(ActionEvent event){
+        if(event.getSource() == themThongTinHoGD_btn){
+            themThongTinHoGD_form.setVisible(true);
+            xoaThongTinHoGD_form.setVisible(false);
+            suaThongTinHoGD_form.setVisible(false);
+            traCuuThongTinHoGD_form.setVisible(false);
+        } else if(event.getSource() == xoaThongTinHoGD_btn){
+            themThongTinHoGD_form.setVisible(false);
+            xoaThongTinHoGD_form.setVisible(true);
+            suaThongTinHoGD_form.setVisible(false);
+            traCuuThongTinHoGD_form.setVisible(false);
+        } else if(event.getSource() == suaThongTinHoGD_btn){
+            themThongTinHoGD_form.setVisible(false);
+            xoaThongTinHoGD_form.setVisible(false);
+            suaThongTinHoGD_form.setVisible(true);
+            traCuuThongTinHoGD_form.setVisible(false);
+        } else if(event.getSource() == traCuuThongTinHoGD_btn){
+            themThongTinHoGD_form.setVisible(false);
+            xoaThongTinHoGD_form.setVisible(false);
+            suaThongTinHoGD_form.setVisible(false);
+            traCuuThongTinHoGD_form.setVisible(true);
         } 
     }
     
