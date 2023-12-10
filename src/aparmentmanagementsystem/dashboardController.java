@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +17,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -32,6 +35,9 @@ public class dashboardController implements Initializable{
     
     @FXML
     private Label username;
+    
+    @FXML
+    private ComboBox<?> danhSachTrangThai_cbb;
     
     @FXML
     private Button trangChu_btn;
@@ -123,7 +129,21 @@ public class dashboardController implements Initializable{
     @FXML
     private AnchorPane suaThongTinNhanKhau_form;
 
+    //OPTION_COMBO_BOX
+    private String[] trangThai = {"Đã nộp đủ", "Chưa nộp đủ"};
     
+    public void trangThaiNopTien(){
+        List<String> DStrangThai = new ArrayList<>();
+        
+        for(String data: trangThai) {
+            DStrangThai.add(data);
+        }
+        
+        ObservableList listData = FXCollections.observableArrayList(DStrangThai);
+        danhSachTrangThai_cbb.setItems(listData);
+    }
+    
+    //SWITCH_FORM
     public void switchForm(ActionEvent event){
         if(event.getSource() == trangChu_btn){
             trangChu_form.setVisible(true);
@@ -220,6 +240,7 @@ public class dashboardController implements Initializable{
     private double x = 0;
     private double y = 0;
     
+    //LOG_OUT
     public void logout() {
         try{
             Alert alert = new Alert(AlertType.CONFIRMATION);
@@ -260,16 +281,19 @@ public class dashboardController implements Initializable{
         }catch(Exception e){e.printStackTrace();}
     }
     
+    //SHOW_ACCOUNT_NAME
     public void displayUsername(){
         String user = data.username;
         user = user.substring(0, 1).toUpperCase() + user.substring(1);
         username.setText(user);
     }
     
+    //CLOSE_PROGRAM
     public void close() {
         System.exit(0);
     }
     
+    //MINIMIZE_PROGRAM
     public void minimize() {
         Stage stage = (Stage)minimize.getScene().getWindow();
         stage.setIconified(true);
@@ -278,6 +302,7 @@ public class dashboardController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         displayUsername();
+        trangThaiNopTien();
     }
     
 }
