@@ -73,6 +73,12 @@ public class dashboardController implements Initializable{
     private Button traCuuThongTinHoGD_btn;
     
     @FXML
+    private Button suaThongTinHoKhau_btn;
+    
+    @FXML
+    private Button suaThongTinNhanKhau_btn;
+    
+    @FXML
     private AnchorPane trangChu_form;
     
     @FXML
@@ -110,6 +116,12 @@ public class dashboardController implements Initializable{
     
     @FXML
     private AnchorPane traCuuThongTinHoGD_form;
+        
+    @FXML
+    private AnchorPane suaThongTinHoKhau_form;
+    
+    @FXML
+    private AnchorPane suaThongTinNhanKhau_form;
 
     
     public void switchForm(ActionEvent event){
@@ -193,6 +205,17 @@ public class dashboardController implements Initializable{
             traCuuThongTinHoGD_form.setVisible(true);
         } 
     }
+    
+    public void switchsuaHoNhanKhauForm(ActionEvent event){
+        if(event.getSource() == suaThongTinHoKhau_btn){
+            suaThongTinHoKhau_form.setVisible(true);
+            suaThongTinNhanKhau_form.setVisible(false);
+        } else if(event.getSource() == suaThongTinNhanKhau_btn){
+            suaThongTinHoKhau_form.setVisible(false);
+            suaThongTinNhanKhau_form.setVisible(true);
+        }
+    }
+    
     
     private double x = 0;
     private double y = 0;
