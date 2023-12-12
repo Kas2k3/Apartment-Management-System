@@ -40,6 +40,9 @@ public class dashboardController implements Initializable{
     private ComboBox<?> danhSachTrangThai_cbb;
     
     @FXML
+    private ComboBox<?> danhSachGioiTinh_cbb;
+    
+    @FXML
     private Button trangChu_btn;
     
     @FXML
@@ -79,10 +82,22 @@ public class dashboardController implements Initializable{
     private Button traCuuThongTinHoGD_btn;
     
     @FXML
-    private Button suaThongTinHoKhau_btn;
+    private Button suaHoKhau_btn;
     
     @FXML
-    private Button suaThongTinNhanKhau_btn;
+    private Button suaNhanKhau_btn;
+    
+    @FXML
+    private Button traCuuHoKhau_btn;
+    
+    @FXML
+    private Button traCuuNhanKhau_btn;
+    
+    @FXML
+    private Button themHoKhau_btn;
+    
+    @FXML
+    private Button themNhanKhau_btn;
     
     @FXML
     private AnchorPane trangChu_form;
@@ -124,10 +139,22 @@ public class dashboardController implements Initializable{
     private AnchorPane traCuuThongTinHoGD_form;
         
     @FXML
-    private AnchorPane suaThongTinHoKhau_form;
+    private AnchorPane suaHoKhau_form;
     
     @FXML
-    private AnchorPane suaThongTinNhanKhau_form;
+    private AnchorPane suaNhanKhau_form;
+    
+    @FXML
+    private AnchorPane traCuuHoKhau_form;
+    
+    @FXML
+    private AnchorPane traCuuNhanKhau_form;
+    
+    @FXML
+    private AnchorPane themHoKhau_form;
+    
+    @FXML
+    private AnchorPane themNhanKhau_form;
 
     //OPTION_COMBO_BOX
     private String[] trangThai = {"Đã nộp đủ", "Chưa nộp đủ"};
@@ -141,6 +168,20 @@ public class dashboardController implements Initializable{
         
         ObservableList listData = FXCollections.observableArrayList(DStrangThai);
         danhSachTrangThai_cbb.setItems(listData);
+    }
+    
+    
+    private String[] gioiTinh = {"Nam", "Nữ"};
+    
+    public void gioiTinh(){
+        List<String> DSgioiTinh = new ArrayList<>();
+        
+        for(String data: gioiTinh) {
+            DSgioiTinh.add(data);
+        }
+        
+        ObservableList listData = FXCollections.observableArrayList(DSgioiTinh);
+        danhSachGioiTinh_cbb.setItems(listData);
     }
     
     //SWITCH_FORM
@@ -226,15 +267,38 @@ public class dashboardController implements Initializable{
         } 
     }
     
-    public void switchsuaHoNhanKhauForm(ActionEvent event){
-        if(event.getSource() == suaThongTinHoKhau_btn){
-            suaThongTinHoKhau_form.setVisible(true);
-            suaThongTinNhanKhau_form.setVisible(false);
-        } else if(event.getSource() == suaThongTinNhanKhau_btn){
-            suaThongTinHoKhau_form.setVisible(false);
-            suaThongTinNhanKhau_form.setVisible(true);
+    public void switchFormSuaHoNhanKhau(ActionEvent event){
+        if(event.getSource() == suaHoKhau_btn){
+            suaHoKhau_form.setVisible(true);
+            suaNhanKhau_form.setVisible(false);
+        } else if(event.getSource() == suaNhanKhau_btn){
+            suaHoKhau_form.setVisible(false);
+            suaNhanKhau_form.setVisible(true);
         }
-    }
+    }    
+    
+    public void switchFormTraCuuHoNhanKhau(ActionEvent event){
+        if(event.getSource() == traCuuHoKhau_btn){
+            traCuuHoKhau_form.setVisible(true);
+            traCuuNhanKhau_form.setVisible(false);
+        } else if(event.getSource() == traCuuNhanKhau_btn){
+            traCuuHoKhau_form.setVisible(false);
+            traCuuNhanKhau_form.setVisible(true);
+        }
+    }    
+    
+    public void switchFormThemHoNhanKhau(ActionEvent event){
+        if(event.getSource() == themHoKhau_btn){
+            themHoKhau_form.setVisible(true);
+            themNhanKhau_form.setVisible(false);
+        } else if(event.getSource() == themNhanKhau_btn){
+            themHoKhau_form.setVisible(false);
+            themNhanKhau_form.setVisible(true);
+        }
+    } 
+            
+    
+      
     
     
     private double x = 0;
