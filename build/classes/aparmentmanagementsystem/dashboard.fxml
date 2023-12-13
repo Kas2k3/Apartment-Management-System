@@ -58,7 +58,7 @@
                               </Label>
                            </children>
                            <styleClass>
-                              <String fx:value="nav1" />
+                              <String fx:value="funct1-btn" />
                               <String fx:value="shadow" />
                            </styleClass>
                         </AnchorPane>
@@ -92,7 +92,7 @@
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
                         <Separator layoutX="-1.0" layoutY="1.0" orientation="VERTICAL" prefHeight="737.0" prefWidth="18.0" />
-                        <AnchorPane fx:id="trangChu_form" layoutX="71.0" layoutY="60.0" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="trangChu_form" layoutX="71.0" layoutY="60.0" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="25.0" layoutY="29.0" prefHeight="685.0" prefWidth="921.0" stylesheets="@dashboardDesign.css">
                                  <styleClass>

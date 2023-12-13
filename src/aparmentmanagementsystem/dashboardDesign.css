@@ -27,31 +27,8 @@
     -fx-background-color: #ddd;
 }
 
-.nav1{
-    -fx-background-color: linear-gradient(to bottom right, #1373f9, #5ab2ff);
-    -fx-background-radius: 5px;
-}
-.nav2{
-    -fx-background-color: #fff;
-    -fx-background-radius: 5px;
-}
-
 .shadow{
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 8, 0, 0, 0);
-}
-
-.nav-btn{
-    -fx-background-color: transparent;
-    -fx-font-size: 16px;
-    -fx-font-family: Arial;
-    -fx-cursor:hand;
-    -fx-text-fill: #000;
-    -fx-border-color: #1373f9;
-    -fx-border-witdth: .6px;
-}
-.nav-btn:hover{
-    -fx-background-color: #1373f9;
-    -fx-text-fill: #fff;
 }
 
 .signout{
