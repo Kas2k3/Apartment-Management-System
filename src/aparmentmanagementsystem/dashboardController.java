@@ -82,6 +82,18 @@ public class dashboardController implements Initializable{
     private Button traCuuThongTinHoGD_btn;
     
     @FXML
+    private Button themThongTinQTV_btn;
+    
+    @FXML
+    private Button xoaThongTinQTV_btn;
+    
+    @FXML
+    private Button suaThongTinQTV_btn;
+    
+    @FXML
+    private Button traCuuThongTinQTV_btn;
+    
+    @FXML
     private Button suaHoKhau_btn;
     
     @FXML
@@ -98,6 +110,12 @@ public class dashboardController implements Initializable{
     
     @FXML
     private Button themNhanKhau_btn;
+    
+    @FXML
+    private Button suaThongTinQTV1_btn;
+    
+    @FXML
+    private Button doiMatKhau_btn;
     
     @FXML
     private AnchorPane trangChu_form;
@@ -155,6 +173,24 @@ public class dashboardController implements Initializable{
     
     @FXML
     private AnchorPane themNhanKhau_form;
+    
+    @FXML
+    private AnchorPane themThongTinQTV_form;
+    
+    @FXML
+    private AnchorPane xoaThongTinQTV_form;
+    
+    @FXML
+    private AnchorPane suaThongTinQTV_form;
+    
+    @FXML
+    private AnchorPane traCuuThongTinQTV_form;
+    
+    @FXML
+    private AnchorPane suaThongTinQTV1_form;
+    
+    @FXML
+    private AnchorPane doiMatKhau_form;
 
     //OPTION_COMBO_BOX
     private String[] trangThai = {"Đã nộp đủ", "Chưa nộp đủ"};
@@ -296,7 +332,40 @@ public class dashboardController implements Initializable{
             themNhanKhau_form.setVisible(true);
         }
     } 
-            
+    
+    public void switchFormThongTinQTV(ActionEvent event){
+        if(event.getSource() == themThongTinQTV_btn){
+            themThongTinQTV_form.setVisible(true);
+            xoaThongTinQTV_form.setVisible(false);
+            suaThongTinQTV_form.setVisible(false);
+            traCuuThongTinQTV_form.setVisible(false);
+        } else if(event.getSource() == xoaThongTinQTV_btn){
+            themThongTinQTV_form.setVisible(false);
+            xoaThongTinQTV_form.setVisible(true);
+            suaThongTinQTV_form.setVisible(false);
+            traCuuThongTinQTV_form.setVisible(false);
+        } else if(event.getSource() == suaThongTinQTV_btn){
+            themThongTinQTV_form.setVisible(false);
+            xoaThongTinQTV_form.setVisible(false);
+            suaThongTinQTV_form.setVisible(true);
+            traCuuThongTinQTV_form.setVisible(false);
+        } else if(event.getSource() == traCuuThongTinQTV_btn){
+            themThongTinQTV_form.setVisible(false);
+            xoaThongTinQTV_form.setVisible(false);
+            suaThongTinQTV_form.setVisible(false);
+            traCuuThongTinQTV_form.setVisible(true);
+        } 
+    }
+    
+    public void switchFormSuaThongTinQTV(ActionEvent event){
+        if(event.getSource() == suaThongTinQTV1_btn){
+            suaThongTinQTV1_form.setVisible(true);
+            doiMatKhau_form.setVisible(false);
+        } else if(event.getSource() == doiMatKhau_btn){
+            suaThongTinQTV1_form.setVisible(false);
+            doiMatKhau_form.setVisible(true);
+        }
+    } 
     
       
     
