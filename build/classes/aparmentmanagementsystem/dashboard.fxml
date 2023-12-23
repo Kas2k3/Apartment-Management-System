@@ -152,11 +152,11 @@
                                  </children>
                               </AnchorPane>
                            </children></AnchorPane>
-                        <AnchorPane fx:id="khoanThu_form" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="khoanThu_form" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="37.0" layoutY="29.0" prefHeight="588.0" prefWidth="904.0">
                                  <children>
-                                    <AnchorPane fx:id="traCuuKhoanThu_form" layoutX="14.0" layoutY="89.0" onDragDetected="#switchFormKhoanThu" prefHeight="588.0" prefWidth="904.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane fx:id="traCuuKhoanThu_form" layoutX="14.0" layoutY="89.0" onDragDetected="#switchFormKhoanThu" prefHeight="588.0" prefWidth="904.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <styleClass>
                                           <String fx:value="shadow" />
                                           <String fx:value="white-bg" />
@@ -176,8 +176,12 @@
                                                          </columns>
                                                       </TableView>
                                                    </children>
+                                                   <styleClass>
+                                                      <String fx:value="white-bg" />
+                                                      <String fx:value="shadow" />
+                                                   </styleClass>
                                                 </AnchorPane>
-                                                <AnchorPane fx:id="traCuuPhiDichVu_form" onDragDetected="#switchFormTraCuuPhi" prefHeight="598.0" prefWidth="665.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <AnchorPane fx:id="traCuuPhiDichVu_form" onDragDetected="#switchFormTraCuuPhi" prefHeight="598.0" prefWidth="665.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <children>
                                                       <TableView prefHeight="598.0" prefWidth="665.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <columns>
@@ -189,8 +193,12 @@
                                                          </columns>
                                                       </TableView>
                                                    </children>
+                                                   <styleClass>
+                                                      <String fx:value="white-bg" />
+                                                      <String fx:value="shadow" />
+                                                   </styleClass>
                                                 </AnchorPane>
-                                                <AnchorPane fx:id="traCuuPhiKhac_form" onDragDetected="#switchFormTraCuuPhi" prefHeight="598.0" prefWidth="665.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <AnchorPane fx:id="traCuuPhiKhac_form" onDragDetected="#switchFormTraCuuPhi" prefHeight="598.0" prefWidth="665.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <children>
                                                       <TableView prefHeight="598.0" prefWidth="665.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                         <columns>
@@ -202,36 +210,44 @@
                                                         </columns>
                                                       </TableView>
                                                    </children>
+                                                   <styleClass>
+                                                      <String fx:value="shadow" />
+                                                      <String fx:value="white-bg" />
+                                                   </styleClass>
                                                 </AnchorPane>
                                              </children>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
                                           </AnchorPane>
+                                          <Button fx:id="traCuuPhiQuanLy_btn" layoutX="25.0" layoutY="114.0" mnemonicParsing="false" onAction="#switchFormTraCuuPhi" onMouseClicked="#switchFormTraCuuPhi" prefHeight="33.0" prefWidth="192.0" stylesheets="@dashboardDesign.css" text="      Phí Quản Lý" textFill="WHITE">
+                                             <styleClass>
+                                                <String fx:value="funct3-btn" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="traCuuPhiDichVu_btn" layoutX="25.0" layoutY="176.0" mnemonicParsing="false" onAction="#switchFormTraCuuPhi" onMouseClicked="#switchFormTraCuuPhi" prefHeight="33.0" prefWidth="193.0" stylesheets="@dashboardDesign.css" text="      Phí Dịch Vụ" textFill="WHITE">
+                                             <styleClass>
+                                                <String fx:value="funct3-btn" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="traCuuPhiKhac_btn" layoutX="25.0" layoutY="240.0" mnemonicParsing="false" onAction="#switchFormTraCuuPhi" onMouseClicked="#switchFormTraCuuPhi" prefHeight="33.0" prefWidth="191.0" stylesheets="@dashboardDesign.css" text="      Khoản Phí Khác" textFill="WHITE">
+                                             <styleClass>
+                                                <String fx:value="funct3-btn" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
                                           <Label layoutX="65.0" layoutY="49.0" text="TRA CỨU">
                                              <font>
                                                 <Font name="Tahoma Bold" size="25.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="23.0" layoutY="315.0" prefHeight="37.0" prefWidth="196.0" promptText="Nhập mã hộ gia đình..." />
-                                          <Button fx:id="traCuuPhiQuanLy_btn" layoutX="25.0" layoutY="114.0" mnemonicParsing="false" onAction="#switchFormTraCuuPhi" prefHeight="33.0" prefWidth="192.0" stylesheets="@dashboardDesign.css" text="      Phí Quản Lý" textFill="WHITE">
-                                             <styleClass>
-                                                <String fx:value="funct3-btn" />
-                                                <String fx:value="shadow" />
-                                             </styleClass>
-                                          </Button>
                                           <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="44.0" layoutY="138.0" size="1.5em" text="" />
-                                          <Button fx:id="traCuuPhiKhac_btn" layoutX="25.0" layoutY="240.0" mnemonicParsing="false" onAction="#switchFormTraCuuPhi" prefHeight="33.0" prefWidth="191.0" stylesheets="@dashboardDesign.css" text="      Khoản Phí Khác" textFill="WHITE">
-                                             <styleClass>
-                                                <String fx:value="funct3-btn" />
-                                                <String fx:value="shadow" />
-                                             </styleClass>
-                                          </Button>
-                                          <Button fx:id="traCuuPhiDichVu_btn" layoutX="25.0" layoutY="176.0" mnemonicParsing="false" onAction="#switchFormTraCuuPhi" prefHeight="33.0" prefWidth="193.0" stylesheets="@dashboardDesign.css" text="      Phí Dịch Vụ" textFill="WHITE">
-                                             <styleClass>
-                                                <String fx:value="funct3-btn" />
-                                                <String fx:value="shadow" />
-                                             </styleClass>
-                                          </Button>
                                           <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="44.0" layoutY="200.0" size="1.5em" text="" />
                                           <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="44.0" layoutY="264.0" size="1.5em" text="" />
+                                          <TextField layoutX="23.0" layoutY="315.0" prefHeight="37.0" prefWidth="196.0" promptText="Nhập mã hộ gia đình..." />
                                           <Button layoutX="70.0" layoutY="375.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="101.0" stylesheets="@dashboardDesign.css" text="Tìm kiếm" textFill="WHITE">
                                              <styleClass>
                                                 <String fx:value="funct4-btn" />
@@ -342,7 +358,7 @@
                            <children>
                               <AnchorPane layoutX="37.0" layoutY="29.0" prefHeight="588.0" prefWidth="904.0">
                                  <children>
-                                    <AnchorPane fx:id="traCuuThongTinHoGD_form" layoutX="47.0" layoutY="32.0" onDragDetected="#switchFormThongTinHoGD" prefHeight="634.0" prefWidth="955.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane fx:id="traCuuThongTinHoGD_form" layoutX="47.0" layoutY="32.0" onDragDetected="#switchFormThongTinHoGD" prefHeight="634.0" prefWidth="955.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
                                           <AnchorPane layoutY="65.0" prefHeight="526.0" prefWidth="908.0">
                                              <styleClass>
@@ -558,7 +574,7 @@
                                           <String fx:value="shadow" />
                                        </styleClass>
                                     </AnchorPane>
-                                    <AnchorPane fx:id="themThongTinHoGD_form" layoutX="67.0" layoutY="52.0" onDragDetected="#switchFormThongTinHoGD" prefHeight="728.0" prefWidth="1079.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane fx:id="themThongTinHoGD_form" layoutX="67.0" layoutY="52.0" onDragDetected="#switchFormThongTinHoGD" prefHeight="728.0" prefWidth="1079.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
                                           <AnchorPane layoutY="65.0" prefHeight="526.0" prefWidth="908.0">
                                              <children>
@@ -594,7 +610,7 @@
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <Button fx:id="suaNhanKhau_btn11" layoutX="338.0" layoutY="407.0" mnemonicParsing="false" onAction="#switchFormSuaHoNhanKhau" prefHeight="35.0" prefWidth="232.0" stylesheets="@dashboardDesign.css" text="          Gửi yêu cầu thêm mới" textFill="WHITE">
+                                                      <Button layoutX="338.0" layoutY="407.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" stylesheets="@dashboardDesign.css" text="          Gửi yêu cầu thêm mới" textFill="WHITE">
                                                          <styleClass>
                                                             <String fx:value="funct4-btn" />
                                                             <String fx:value="shadow" />
@@ -736,7 +752,7 @@
                               </AnchorPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="thongTinQTV_form" layoutX="10.0" layoutY="17.0" onDragDetected="#switchForm" prefHeight="757.0" prefWidth="988.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="thongTinQTV_form" layoutX="10.0" layoutY="17.0" onDragDetected="#switchForm" prefHeight="757.0" prefWidth="988.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="38.0" layoutY="38.0" prefHeight="564.0" prefWidth="908.0">
                                  <children>
@@ -792,7 +808,7 @@
                                           <String fx:value="shadow" />
                                        </styleClass>
                                     </AnchorPane>
-                                    <AnchorPane fx:id="suaThongTinQTV_form" layoutX="67.0" layoutY="52.0" onDragDetected="#switchFormThongTinQTV" prefHeight="728.0" prefWidth="1079.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane fx:id="suaThongTinQTV_form" layoutX="67.0" layoutY="52.0" onDragDetected="#switchFormThongTinQTV" prefHeight="728.0" prefWidth="1079.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
                                           <AnchorPane layoutY="88.0" prefHeight="503.0" prefWidth="908.0">
                                              <children>
@@ -828,7 +844,7 @@
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <Button fx:id="suaNhanKhau_btn11" layoutX="356.0" layoutY="407.0" mnemonicParsing="false" onAction="#switchFormSuaHoNhanKhau" prefHeight="35.0" prefWidth="196.0" stylesheets="@dashboardDesign.css" text="         Gửi yêu cầu sửa" textFill="WHITE">
+                                                      <Button layoutX="356.0" layoutY="407.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="196.0" stylesheets="@dashboardDesign.css" text="         Gửi yêu cầu sửa" textFill="WHITE">
                                                          <styleClass>
                                                             <String fx:value="funct4-btn" />
                                                             <String fx:value="shadow" />
@@ -913,7 +929,7 @@
                                           <String fx:value="white-bg" />
                                        </styleClass>
                                     </AnchorPane>
-                                    <AnchorPane fx:id="traCuuThongTinQTV_form" onDragDetected="#switchFormThongTinQTV" prefHeight="570.0" prefWidth="919.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane fx:id="traCuuThongTinQTV_form" onDragDetected="#switchFormThongTinQTV" prefHeight="570.0" prefWidth="919.0" stylesheets="@dashboardDesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <styleClass>
                                           <String fx:value="shadow" />
                                           <String fx:value="white-bg" />

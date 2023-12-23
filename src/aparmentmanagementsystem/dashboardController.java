@@ -36,11 +36,11 @@ public class dashboardController implements Initializable{
     @FXML
     private Label username;
     
-    @FXML
-    private ComboBox<?> danhSachTrangThai_cbb;
-    
-    @FXML
-    private ComboBox<?> danhSachGioiTinh_cbb;
+//    @FXML
+//    private ComboBox<?> danhSachTrangThai_cbb;
+//    
+//    @FXML
+//    private ComboBox<?> danhSachGioiTinh_cbb;
     
     @FXML
     private Button trangChu_btn;
@@ -211,32 +211,32 @@ public class dashboardController implements Initializable{
     private AnchorPane doiMatKhau_form;
 
     //OPTION_COMBO_BOX
-    private String[] trangThai = {"Đã nộp đủ", "Chưa nộp đủ"};
-    
-    public void trangThaiNopTien(){
-        List<String> DStrangThai = new ArrayList<>();
-        
-        for(String data: trangThai) {
-            DStrangThai.add(data);
-        }
-        
-        ObservableList listData = FXCollections.observableArrayList(DStrangThai);
-        danhSachTrangThai_cbb.setItems(listData);
-    }
-    
-    
-    private String[] gioiTinh = {"Nam", "Nữ"};
-    
-    public void gioiTinh(){
-        List<String> DSgioiTinh = new ArrayList<>();
-        
-        for(String data: gioiTinh) {
-            DSgioiTinh.add(data);
-        }
-        
-        ObservableList listData = FXCollections.observableArrayList(DSgioiTinh);
-        danhSachGioiTinh_cbb.setItems(listData);
-    }
+//    private String[] trangThai = {"Đã nộp đủ", "Chưa nộp đủ"};
+//    
+//    public void trangThaiNopTien(){
+//        List<String> DStrangThai = new ArrayList<>();
+//        
+//        for(String data: trangThai) {
+//            DStrangThai.add(data);
+//        }
+//        
+//        ObservableList listData = FXCollections.observableArrayList(DStrangThai);
+//        danhSachTrangThai_cbb.setItems(listData);
+//    }
+//    
+//    
+//    private String[] gioiTinh = {"Nam", "Nữ"};
+//    
+//    public void gioiTinh(){
+//        List<String> DSgioiTinh = new ArrayList<>();
+//        
+//        for(String data: gioiTinh) {
+//            DSgioiTinh.add(data);
+//        }
+//        
+//        ObservableList listData = FXCollections.observableArrayList(DSgioiTinh);
+//        danhSachGioiTinh_cbb.setItems(listData);
+//    }
     
     //SWITCH_FORM
     public void switchForm(ActionEvent event){
@@ -469,7 +469,7 @@ public class dashboardController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         displayUsername();
-        trangThaiNopTien();
+//        trangThaiNopTien();
     }
     
 }
