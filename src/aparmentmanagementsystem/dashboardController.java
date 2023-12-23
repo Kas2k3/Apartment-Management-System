@@ -36,11 +36,11 @@ public class dashboardController implements Initializable{
     @FXML
     private Label username;
     
-    @FXML
-    private ComboBox<?> danhSachTrangThai_cbb;
-    
-    @FXML
-    private ComboBox<?> danhSachGioiTinh_cbb;
+//    @FXML
+//    private ComboBox<?> danhSachTrangThai_cbb;
+//    
+//    @FXML
+//    private ComboBox<?> danhSachGioiTinh_cbb;
     
     @FXML
     private Button trangChu_btn;
@@ -68,6 +68,15 @@ public class dashboardController implements Initializable{
     
     @FXML
     private Button traCuuKhoanThu_btn;
+    
+    @FXML
+    private Button traCuuPhiQuanLy_btn;
+    
+    @FXML
+    private Button traCuuPhiDichVu_btn;
+    
+    @FXML
+    private Button traCuuPhiKhac_btn;
     
     @FXML
     private Button themThongTinHoGD_btn;
@@ -142,6 +151,15 @@ public class dashboardController implements Initializable{
     private AnchorPane suaKhoanThu_form;
     
     @FXML
+    private AnchorPane traCuuPhiQuanLy_form;
+    
+    @FXML
+    private AnchorPane traCuuPhiDichVu_form;
+    
+    @FXML
+    private AnchorPane traCuuPhiKhac_form;
+    
+    @FXML
     private AnchorPane traCuuKhoanThu_form;
 
     @FXML
@@ -193,32 +211,32 @@ public class dashboardController implements Initializable{
     private AnchorPane doiMatKhau_form;
 
     //OPTION_COMBO_BOX
-    private String[] trangThai = {"Đã nộp đủ", "Chưa nộp đủ"};
-    
-    public void trangThaiNopTien(){
-        List<String> DStrangThai = new ArrayList<>();
-        
-        for(String data: trangThai) {
-            DStrangThai.add(data);
-        }
-        
-        ObservableList listData = FXCollections.observableArrayList(DStrangThai);
-        danhSachTrangThai_cbb.setItems(listData);
-    }
-    
-    
-    private String[] gioiTinh = {"Nam", "Nữ"};
-    
-    public void gioiTinh(){
-        List<String> DSgioiTinh = new ArrayList<>();
-        
-        for(String data: gioiTinh) {
-            DSgioiTinh.add(data);
-        }
-        
-        ObservableList listData = FXCollections.observableArrayList(DSgioiTinh);
-        danhSachGioiTinh_cbb.setItems(listData);
-    }
+//    private String[] trangThai = {"Đã nộp đủ", "Chưa nộp đủ"};
+//    
+//    public void trangThaiNopTien(){
+//        List<String> DStrangThai = new ArrayList<>();
+//        
+//        for(String data: trangThai) {
+//            DStrangThai.add(data);
+//        }
+//        
+//        ObservableList listData = FXCollections.observableArrayList(DStrangThai);
+//        danhSachTrangThai_cbb.setItems(listData);
+//    }
+//    
+//    
+//    private String[] gioiTinh = {"Nam", "Nữ"};
+//    
+//    public void gioiTinh(){
+//        List<String> DSgioiTinh = new ArrayList<>();
+//        
+//        for(String data: gioiTinh) {
+//            DSgioiTinh.add(data);
+//        }
+//        
+//        ObservableList listData = FXCollections.observableArrayList(DSgioiTinh);
+//        danhSachGioiTinh_cbb.setItems(listData);
+//    }
     
     //SWITCH_FORM
     public void switchForm(ActionEvent event){
@@ -278,6 +296,22 @@ public class dashboardController implements Initializable{
             traCuuKhoanThu_form.setVisible(true);
         } 
     }
+    
+    public void switchFormTraCuuPhi(ActionEvent event){
+        if(event.getSource() == traCuuPhiQuanLy_btn){
+            traCuuPhiQuanLy_form.setVisible(true);
+            traCuuPhiDichVu_form.setVisible(false);
+            traCuuPhiKhac_form.setVisible(false);
+        } else if(event.getSource() == traCuuPhiDichVu_btn){
+            traCuuPhiQuanLy_form.setVisible(false);
+            traCuuPhiDichVu_form.setVisible(true);
+            traCuuPhiKhac_form.setVisible(false);
+        } else if(event.getSource() == traCuuPhiKhac_btn){
+            traCuuPhiQuanLy_form.setVisible(false);
+            traCuuPhiDichVu_form.setVisible(false);
+            traCuuPhiKhac_form.setVisible(true);
+        }
+    } 
     
     public void switchFormThongTinHoGD(ActionEvent event){
         if(event.getSource() == themThongTinHoGD_btn){
@@ -435,7 +469,7 @@ public class dashboardController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         displayUsername();
-        trangThaiNopTien();
+//        trangThaiNopTien();
     }
     
 }
