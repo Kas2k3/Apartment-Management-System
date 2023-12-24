@@ -58,10 +58,16 @@ public class dashboardController implements Initializable{
     private Button v2Update_btn;
     
     @FXML
-    private Button themKhoanThu_btn;
+    private Button traCuuV2Update_btn;
     
     @FXML
-    private Button xoaKhoanThu_btn;
+    private Button themV2Update_btn;
+    
+    @FXML
+    private Button suaV2Update_btn;
+    
+    @FXML
+    private Button themKhoanThu_btn;
     
     @FXML
     private Button suaKhoanThu_btn;
@@ -79,6 +85,24 @@ public class dashboardController implements Initializable{
     private Button traCuuPhiKhac_btn;
     
     @FXML
+    private Button themPhiQuanLy_btn;
+    
+    @FXML
+    private Button themPhiDichVu_btn;
+    
+    @FXML
+    private Button themPhiKhac_btn;
+    
+    @FXML
+    private Button suaPhiQuanLy_btn;
+    
+    @FXML
+    private Button suaPhiDichVu_btn;
+    
+    @FXML
+    private Button suaPhiKhac_btn;
+    
+    @FXML
     private Button themThongTinHoGD_btn;
     
     @FXML
@@ -89,12 +113,6 @@ public class dashboardController implements Initializable{
     
     @FXML
     private Button traCuuThongTinHoGD_btn;
-    
-    @FXML
-    private Button themThongTinQTV_btn;
-    
-    @FXML
-    private Button xoaThongTinQTV_btn;
     
     @FXML
     private Button suaThongTinQTV_btn;
@@ -142,10 +160,16 @@ public class dashboardController implements Initializable{
     private AnchorPane v2Update_form;
     
     @FXML
-    private AnchorPane themKhoanThu_form;
+    private AnchorPane traCuuV2Update_form;
     
     @FXML
-    private AnchorPane xoaKhoanThu_form;
+    private AnchorPane themV2Update_form;
+    
+    @FXML
+    private AnchorPane suaV2Update_form;
+    
+    @FXML
+    private AnchorPane themKhoanThu_form;
     
     @FXML
     private AnchorPane suaKhoanThu_form;
@@ -160,13 +184,28 @@ public class dashboardController implements Initializable{
     private AnchorPane traCuuPhiKhac_form;
     
     @FXML
+    private AnchorPane themPhiQuanLy_form;
+    
+    @FXML
+    private AnchorPane themPhiDichVu_form;
+    
+    @FXML
+    private AnchorPane themPhiKhac_form;
+    
+    @FXML
+    private AnchorPane suaPhiQuanLy_form;
+    
+    @FXML
+    private AnchorPane suaPhiDichVu_form;
+    
+    @FXML
+    private AnchorPane suaPhiKhac_form;
+    
+    @FXML
     private AnchorPane traCuuKhoanThu_form;
 
     @FXML
     private AnchorPane themThongTinHoGD_form;
-    
-    @FXML
-    private AnchorPane xoaThongTinHoGD_form;
     
     @FXML
     private AnchorPane suaThongTinHoGD_form;
@@ -191,12 +230,6 @@ public class dashboardController implements Initializable{
     
     @FXML
     private AnchorPane themNhanKhau_form;
-    
-    @FXML
-    private AnchorPane themThongTinQTV_form;
-    
-    @FXML
-    private AnchorPane xoaThongTinQTV_form;
     
     @FXML
     private AnchorPane suaThongTinQTV_form;
@@ -276,22 +309,14 @@ public class dashboardController implements Initializable{
     public void switchFormKhoanThu(ActionEvent event){
         if(event.getSource() == themKhoanThu_btn){
             themKhoanThu_form.setVisible(true);
-            xoaKhoanThu_form.setVisible(false);
-            suaKhoanThu_form.setVisible(false);
-            traCuuKhoanThu_form.setVisible(false);
-        } else if(event.getSource() == xoaKhoanThu_btn){
-            themKhoanThu_form.setVisible(false);
-            xoaKhoanThu_form.setVisible(true);
             suaKhoanThu_form.setVisible(false);
             traCuuKhoanThu_form.setVisible(false);
         } else if(event.getSource() == suaKhoanThu_btn){
             themKhoanThu_form.setVisible(false);
-            xoaKhoanThu_form.setVisible(false);
             suaKhoanThu_form.setVisible(true);
             traCuuKhoanThu_form.setVisible(false);
         } else if(event.getSource() == traCuuKhoanThu_btn){
             themKhoanThu_form.setVisible(false);
-            xoaKhoanThu_form.setVisible(false);
             suaKhoanThu_form.setVisible(false);
             traCuuKhoanThu_form.setVisible(true);
         } 
@@ -313,25 +338,49 @@ public class dashboardController implements Initializable{
         }
     } 
     
+    public void switchFormThemPhi(ActionEvent event){
+        if(event.getSource() == themPhiQuanLy_btn){
+            themPhiQuanLy_form.setVisible(true);
+            themPhiDichVu_form.setVisible(false);
+            themPhiKhac_form.setVisible(false);
+        } else if(event.getSource() == themPhiDichVu_btn){
+            themPhiQuanLy_form.setVisible(false);
+            themPhiDichVu_form.setVisible(true);
+            themPhiKhac_form.setVisible(false);
+        } else if(event.getSource() == themPhiKhac_btn){
+            themPhiQuanLy_form.setVisible(false);
+            themPhiDichVu_form.setVisible(false);
+            themPhiKhac_form.setVisible(true);
+        }
+    }
+    
+    public void switchFormSuaPhi(ActionEvent event){
+        if(event.getSource() == suaPhiQuanLy_btn){
+            suaPhiQuanLy_form.setVisible(true);
+            suaPhiDichVu_form.setVisible(false);
+            suaPhiKhac_form.setVisible(false);
+        } else if(event.getSource() == suaPhiDichVu_btn){
+            suaPhiQuanLy_form.setVisible(false);
+            suaPhiDichVu_form.setVisible(true);
+            suaPhiKhac_form.setVisible(false);
+        } else if(event.getSource() == suaPhiKhac_btn){
+            suaPhiQuanLy_form.setVisible(false);
+            suaPhiDichVu_form.setVisible(false);
+            suaPhiKhac_form.setVisible(true);
+        }
+    }
+    
     public void switchFormThongTinHoGD(ActionEvent event){
         if(event.getSource() == themThongTinHoGD_btn){
             themThongTinHoGD_form.setVisible(true);
-            xoaThongTinHoGD_form.setVisible(false);
-            suaThongTinHoGD_form.setVisible(false);
-            traCuuThongTinHoGD_form.setVisible(false);
-        } else if(event.getSource() == xoaThongTinHoGD_btn){
-            themThongTinHoGD_form.setVisible(false);
-            xoaThongTinHoGD_form.setVisible(true);
             suaThongTinHoGD_form.setVisible(false);
             traCuuThongTinHoGD_form.setVisible(false);
         } else if(event.getSource() == suaThongTinHoGD_btn){
             themThongTinHoGD_form.setVisible(false);
-            xoaThongTinHoGD_form.setVisible(false);
             suaThongTinHoGD_form.setVisible(true);
             traCuuThongTinHoGD_form.setVisible(false);
         } else if(event.getSource() == traCuuThongTinHoGD_btn){
             themThongTinHoGD_form.setVisible(false);
-            xoaThongTinHoGD_form.setVisible(false);
             suaThongTinHoGD_form.setVisible(false);
             traCuuThongTinHoGD_form.setVisible(true);
         } 
@@ -368,24 +417,10 @@ public class dashboardController implements Initializable{
     } 
     
     public void switchFormThongTinQTV(ActionEvent event){
-        if(event.getSource() == themThongTinQTV_btn){
-            themThongTinQTV_form.setVisible(true);
-            xoaThongTinQTV_form.setVisible(false);
-            suaThongTinQTV_form.setVisible(false);
-            traCuuThongTinQTV_form.setVisible(false);
-        } else if(event.getSource() == xoaThongTinQTV_btn){
-            themThongTinQTV_form.setVisible(false);
-            xoaThongTinQTV_form.setVisible(true);
-            suaThongTinQTV_form.setVisible(false);
-            traCuuThongTinQTV_form.setVisible(false);
-        } else if(event.getSource() == suaThongTinQTV_btn){
-            themThongTinQTV_form.setVisible(false);
-            xoaThongTinQTV_form.setVisible(false);
+        if(event.getSource() == suaThongTinQTV_btn){
             suaThongTinQTV_form.setVisible(true);
             traCuuThongTinQTV_form.setVisible(false);
         } else if(event.getSource() == traCuuThongTinQTV_btn){
-            themThongTinQTV_form.setVisible(false);
-            xoaThongTinQTV_form.setVisible(false);
             suaThongTinQTV_form.setVisible(false);
             traCuuThongTinQTV_form.setVisible(true);
         } 
@@ -401,7 +436,21 @@ public class dashboardController implements Initializable{
         }
     } 
     
-      
+    public void switchFormV2Update(ActionEvent event){
+        if(event.getSource() == traCuuV2Update_btn){
+            traCuuV2Update_form.setVisible(true);
+            themV2Update_form.setVisible(false);
+            suaV2Update_form.setVisible(false);
+        } else if(event.getSource() == themV2Update_btn){
+            traCuuV2Update_form.setVisible(false);
+            themV2Update_form.setVisible(true);
+            suaV2Update_form.setVisible(false);
+        } else if(event.getSource() == suaV2Update_btn){
+            traCuuV2Update_form.setVisible(false);
+            themV2Update_form.setVisible(false);
+            suaV2Update_form.setVisible(true);
+        }
+    }    
     
     
     private double x = 0;

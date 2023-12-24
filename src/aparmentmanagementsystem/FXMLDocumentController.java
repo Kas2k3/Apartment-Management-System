@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,7 +21,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-
 public class FXMLDocumentController implements Initializable {
     
     @FXML
@@ -31,6 +31,19 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private TextField username;
+    
+    @FXML
+    private Button forgetPass_btn;
+    
+    @FXML
+    private AnchorPane forgetPass_form;
+    
+    //SWITCH
+    public void switchFormLogin(ActionEvent event){
+        if(event.getSource() == forgetPass_btn){
+            forgetPass_form.setVisible(true);
+        }
+    }  
     
     private Connection connect;
     private PreparedStatement prepare;
@@ -103,6 +116,7 @@ public class FXMLDocumentController implements Initializable {
         } catch(Exception e) {e.printStackTrace();}
     }
     
+    
     //CLOSE THE PROGRAM
     public void close(){
         System.exit(0);
@@ -112,7 +126,6 @@ public class FXMLDocumentController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
 }
     
         

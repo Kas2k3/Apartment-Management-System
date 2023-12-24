@@ -92,7 +92,7 @@
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
                         <Separator layoutX="-1.0" layoutY="1.0" orientation="VERTICAL" prefHeight="737.0" prefWidth="18.0" />
-                        <AnchorPane fx:id="trangChu_form" layoutX="71.0" layoutY="60.0" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="trangChu_form" layoutX="71.0" layoutY="60.0" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="25.0" layoutY="29.0" prefHeight="685.0" prefWidth="921.0" stylesheets="@dashboardDesign.css">
                                  <styleClass>
@@ -157,69 +157,51 @@
                               <AnchorPane layoutX="37.0" layoutY="29.0" prefHeight="588.0" prefWidth="904.0">
                                  <children>
                                     <AnchorPane fx:id="traCuuKhoanThu_form" layoutX="14.0" layoutY="89.0" onDragDetected="#switchFormKhoanThu" prefHeight="588.0" prefWidth="904.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                       <styleClass>
-                                          <String fx:value="shadow" />
-                                          <String fx:value="white-bg" />
-                                       </styleClass>
                                        <children>
-                                          <AnchorPane layoutX="240.0" prefHeight="598.0" prefWidth="665.0">
+                                          <AnchorPane layoutX="240.0" prefHeight="598.0" prefWidth="665.0" styleClass="white-bg">
                                              <children>
-                                                <AnchorPane fx:id="traCuuPhiQuanLy_form" onDragDetected="#switchFormTraCuuPhi" prefHeight="598.0" prefWidth="665.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <AnchorPane fx:id="traCuuPhiQuanLy_form" onDragDetected="#switchFormTraCuuPhi" prefHeight="598.0" prefWidth="665.0" styleClass="white-bg" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <children>
                                                       <TableView prefHeight="598.0" prefWidth="665.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <columns>
-                                                            <TableColumn prefWidth="151.0" text="Mã Hộ Gia Đình" />
-                                                            <TableColumn prefWidth="128.0" text="Phí 1" />
-                                                            <TableColumn minWidth="0.0" prefWidth="115.0" text="Phí 2" />
-                                                            <TableColumn prefWidth="126.0" text="Phí 3" />
-                                                            <TableColumn prefWidth="142.0" text="Tình Trạng" />
+                                                            <TableColumn prefWidth="169.0" text="Mã Hộ Gia Đình" />
+                                                            <TableColumn prefWidth="123.0" text="Mã phí" />
+                                                            <TableColumn minWidth="0.0" prefWidth="178.0" text="Phí vận hành (VND)" />
+                                                            <TableColumn prefWidth="194.0" text="Tình Trạng" />
                                                          </columns>
                                                       </TableView>
                                                    </children>
-                                                   <styleClass>
-                                                      <String fx:value="white-bg" />
-                                                      <String fx:value="shadow" />
-                                                   </styleClass>
                                                 </AnchorPane>
-                                                <AnchorPane fx:id="traCuuPhiDichVu_form" onDragDetected="#switchFormTraCuuPhi" prefHeight="598.0" prefWidth="665.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <AnchorPane fx:id="traCuuPhiDichVu_form" onDragDetected="#switchFormTraCuuPhi" prefHeight="598.0" prefWidth="665.0" styleClass="white-bg" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <children>
                                                       <TableView prefHeight="598.0" prefWidth="665.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <columns>
-                                                            <TableColumn prefWidth="151.0" text="Mã Hộ Gia Đình" />
-                                                            <TableColumn prefWidth="128.0" text="Phí 1" />
-                                                            <TableColumn minWidth="0.0" prefWidth="115.0" text="Phí 2" />
-                                                            <TableColumn prefWidth="126.0" text="Phí 3" />
-                                                            <TableColumn prefWidth="142.0" text="Tình Trạng" />
+                                                            <TableColumn prefWidth="91.0" text="Mã Hộ GĐ" />
+                                                            <TableColumn prefWidth="81.0" text="Mã phí" />
+                                                            <TableColumn minWidth="0.0" prefWidth="101.0" text="Phí vệ sinh" />
+                                                            <TableColumn prefWidth="95.0" text="Phí bảo trì" />
+                                                            <TableColumn minWidth="0.0" prefWidth="87.0" text="Phí SHC" />
+                                                            <TableColumn minWidth="0.0" prefWidth="106.0" text="Phí an ninh" />
+                                                            <TableColumn minWidth="0.0" prefWidth="103.0" text="Tình Trạng" />
                                                          </columns>
                                                       </TableView>
                                                    </children>
-                                                   <styleClass>
-                                                      <String fx:value="white-bg" />
-                                                      <String fx:value="shadow" />
-                                                   </styleClass>
                                                 </AnchorPane>
-                                                <AnchorPane fx:id="traCuuPhiKhac_form" onDragDetected="#switchFormTraCuuPhi" prefHeight="598.0" prefWidth="665.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <AnchorPane fx:id="traCuuPhiKhac_form" onDragDetected="#switchFormTraCuuPhi" prefHeight="598.0" prefWidth="665.0" styleClass="white-bg" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <children>
                                                       <TableView prefHeight="598.0" prefWidth="665.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                         <columns>
-                                                          <TableColumn prefWidth="151.0" text="Mã Hộ Gia Đình" />
-                                                          <TableColumn prefWidth="128.0" text="Phí 1" />
-                                                            <TableColumn minWidth="0.0" prefWidth="115.0" text="Phí 2" />
-                                                            <TableColumn prefWidth="126.0" text="Phí 3" />
-                                                            <TableColumn prefWidth="152.0" text="Tình Trạng" />
+                                                          <TableColumn prefWidth="130.0" text="Mã Hộ Gia Đình" />
+                                                          <TableColumn prefWidth="74.0" text="Mã phí" />
+                                                            <TableColumn minWidth="0.0" prefWidth="114.0" text="Quỹ biển đảo" />
+                                                            <TableColumn prefWidth="135.0" text="Quỹ khuyến học" />
+                                                            <TableColumn prefWidth="107.0" text="Quỹ từ thiện" />
+                                                            <TableColumn prefWidth="104.0" text="Tình Trạng" />
                                                         </columns>
                                                       </TableView>
                                                    </children>
-                                                   <styleClass>
-                                                      <String fx:value="shadow" />
-                                                      <String fx:value="white-bg" />
-                                                   </styleClass>
                                                 </AnchorPane>
                                              </children>
-                                             <styleClass>
-                                                <String fx:value="shadow" />
-                                                <String fx:value="white-bg" />
-                                             </styleClass>
                                           </AnchorPane>
                                           <Button fx:id="traCuuPhiQuanLy_btn" layoutX="25.0" layoutY="114.0" mnemonicParsing="false" onAction="#switchFormTraCuuPhi" onMouseClicked="#switchFormTraCuuPhi" prefHeight="33.0" prefWidth="192.0" stylesheets="@dashboardDesign.css" text="      Phí Quản Lý" textFill="WHITE">
                                              <styleClass>
@@ -254,62 +236,362 @@
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
+                                          <Button layoutX="27.0" layoutY="505.0" mnemonicParsing="false" onAction="#switchFormKhoanThu" prefHeight="42.0" prefWidth="187.0" stylesheets="@dashboardDesign.css" text="     Xóa khoản thu này" textFill="WHITE" fx:id="xoaKhoanThu_btn">
+                                             <styleClass>
+                                                <String fx:value="funct4-btn" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="36.0" layoutY="534.0" size="1.5em" />
+                                          <Separator layoutY="462.0" prefHeight="7.0" prefWidth="239.0" />
                                        </children>
-                                    </AnchorPane>
-                                    <AnchorPane fx:id="suaKhoanThu_form" layoutX="187.0" layoutY="110.0" onDragDetected="#switchFormKhoanThu" prefHeight="588.0" prefWidth="904.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <styleClass>
-                                          <String fx:value="white-bg" />
                                           <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
                                        </styleClass>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="themKhoanThu_form" onDragDetected="#switchFormKhoanThu" prefHeight="598.0" prefWidth="905.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <Label layoutX="67.0" layoutY="385.0" text="Số tiền nộp:">
+                                          <AnchorPane layoutX="240.0" prefHeight="598.0" prefWidth="665.0" styleClass="white-bg">
+                                             <children>
+                                                <AnchorPane fx:id="themPhiQuanLy_form" onDragDetected="#switchFormThemPhi" prefHeight="598.0" prefWidth="665.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <styleClass>
+                                                      <String fx:value="white-bg" />
+                                                      <String fx:value="shadow" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <Button layoutX="224.0" layoutY="409.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="217.0" styleClass="funct4-btn" text="        Xác nhận thêm phí" textFill="WHITE" />
+                                                      <Label layoutX="74.0" layoutY="157.0" prefHeight="21.0" prefWidth="157.0" text="Mã hộ khẩu:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="183.0" layoutY="152.0" prefHeight="31.0" prefWidth="406.0" />
+                                                      <TextField layoutX="204.0" layoutY="213.0" prefHeight="31.0" prefWidth="385.0" />
+                                                      <Label layoutX="74.0" layoutY="218.0" prefHeight="21.0" prefWidth="157.0" text="Mã phí quản lý:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="246.0" layoutY="276.0" prefHeight="31.0" prefWidth="346.0" />
+                                                      <Label layoutX="77.0" layoutY="281.0" prefHeight="21.0" prefWidth="157.0" text="Phí vận hành (VND):">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="179.0" layoutY="345.0" prefHeight="31.0" prefWidth="413.0" />
+                                                      <Label layoutX="77.0" layoutY="350.0" prefHeight="21.0" prefWidth="157.0" text="Tình trạng:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="242.0" layoutY="436.0" size="1.5em" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane fx:id="themPhiDichVu_form" layoutX="10.0" layoutY="10.0" onDragDetected="#switchFormThemPhi" prefHeight="608.0" prefWidth="675.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Button layoutX="224.0" layoutY="505.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="217.0" styleClass="funct4-btn" text="        Xác nhận thêm phí" textFill="WHITE" />
+                                                      <Label layoutX="74.0" layoutY="52.0" prefHeight="21.0" prefWidth="157.0" text="Mã hộ khẩu:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="183.0" layoutY="47.0" prefHeight="31.0" prefWidth="406.0" />
+                                                      <TextField layoutX="204.0" layoutY="108.0" prefHeight="31.0" prefWidth="385.0" />
+                                                      <Label layoutX="74.0" layoutY="113.0" prefHeight="21.0" prefWidth="157.0" text="Mã phí dịch vụ:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="227.0" layoutY="171.0" prefHeight="31.0" prefWidth="365.0" />
+                                                      <Label layoutX="77.0" layoutY="176.0" prefHeight="21.0" prefWidth="157.0" text="Phí vệ sinh (VND):">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="224.0" layoutY="240.0" prefHeight="31.0" prefWidth="368.0" />
+                                                      <Label layoutX="77.0" layoutY="245.0" prefHeight="21.0" prefWidth="151.0" text="Phí bảo trì (VND):">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="242.0" layoutY="532.0" size="1.5em" />
+                                                      <Label layoutX="77.0" layoutY="313.0" prefHeight="21.0" prefWidth="157.0" text="Phí an ninh (VND):">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="233.0" layoutY="308.0" prefHeight="31.0" prefWidth="359.0" />
+                                                      <Label layoutX="75.0" layoutY="382.0" prefHeight="21.0" prefWidth="219.0" text="Phí sinh hoạt chung (VND):">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="293.0" layoutY="377.0" prefHeight="31.0" prefWidth="297.0" />
+                                                      <Label layoutX="75.0" layoutY="448.0" prefHeight="21.0" prefWidth="157.0" text="Tình trạng:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="175.0" layoutY="443.0" prefHeight="31.0" prefWidth="415.0" />
+                                                   </children>
+                                                   <styleClass>
+                                                      <String fx:value="white-bg" />
+                                                      <String fx:value="shadow" />
+                                                   </styleClass>
+                                                </AnchorPane>
+                                                <AnchorPane fx:id="themPhiKhac_form" layoutX="10.0" layoutY="10.0" onDragDetected="#switchFormThemPhi" prefHeight="608.0" prefWidth="675.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Button layoutX="224.0" layoutY="477.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="217.0" styleClass="funct4-btn" text="        Xác nhận thêm phí" textFill="WHITE" />
+                                                      <Label layoutX="74.0" layoutY="87.0" prefHeight="21.0" prefWidth="157.0" text="Mã hộ khẩu:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="183.0" layoutY="82.0" prefHeight="31.0" prefWidth="406.0" />
+                                                      <TextField layoutX="204.0" layoutY="143.0" prefHeight="31.0" prefWidth="385.0" />
+                                                      <Label layoutX="74.0" layoutY="148.0" prefHeight="21.0" prefWidth="157.0" text="Mã phí khác:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="252.0" layoutY="206.0" prefHeight="31.0" prefWidth="340.0" />
+                                                      <Label layoutX="77.0" layoutY="211.0" prefHeight="21.0" prefWidth="178.0" text="Quỹ biển đảo (VND):">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="274.0" layoutY="275.0" prefHeight="31.0" prefWidth="318.0" />
+                                                      <Label layoutX="77.0" layoutY="280.0" prefHeight="21.0" prefWidth="196.0" text="Quỹ khuyến học (VND):">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="242.0" layoutY="504.0" size="1.5em" />
+                                                      <Label layoutX="75.0" layoutY="343.0" prefHeight="21.0" prefWidth="171.0" text="Quỹ từ thiện (VND):">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="242.0" layoutY="338.0" prefHeight="31.0" prefWidth="348.0" />
+                                                      <Label layoutX="75.0" layoutY="407.0" prefHeight="21.0" prefWidth="157.0" text="Tình trạng:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="176.0" layoutY="402.0" prefHeight="31.0" prefWidth="414.0" />
+                                                   </children>
+                                                   <styleClass>
+                                                      <String fx:value="white-bg" />
+                                                      <String fx:value="shadow" />
+                                                   </styleClass>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <Button fx:id="themPhiQuanLy_btn" layoutX="25.0" layoutY="114.0" mnemonicParsing="false" onAction="#switchFormThemPhi" onMouseClicked="#switchFormTraCuuPhi" prefHeight="33.0" prefWidth="192.0" stylesheets="@dashboardDesign.css" text="      Phí Quản Lý" textFill="WHITE">
+                                             <styleClass>
+                                                <String fx:value="funct3-btn" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="themPhiDichVu_btn" layoutX="25.0" layoutY="176.0" mnemonicParsing="false" onAction="#switchFormThemPhi" onMouseClicked="#switchFormTraCuuPhi" prefHeight="33.0" prefWidth="193.0" stylesheets="@dashboardDesign.css" text="      Phí Dịch Vụ" textFill="WHITE">
+                                             <styleClass>
+                                                <String fx:value="funct3-btn" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="themPhiKhac_btn" layoutX="25.0" layoutY="240.0" mnemonicParsing="false" onAction="#switchFormThemPhi" onMouseClicked="#switchFormTraCuuPhi" prefHeight="33.0" prefWidth="191.0" stylesheets="@dashboardDesign.css" text="      Khoản Phí Khác" textFill="WHITE">
+                                             <styleClass>
+                                                <String fx:value="funct3-btn" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                          <Label layoutX="85.0" layoutY="48.0" text="THÊM">
                                              <font>
-                                                <Font size="18.0" />
+                                                <Font name="Tahoma Bold" size="25.0" />
                                              </font>
                                           </Label>
-                                          <Label layoutX="66.0" layoutY="322.0" text="Tên Khoản Thu: ">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="71.0" layoutY="165.0" text="Số điện thoại:">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="71.0" layoutY="110.0" text="Tên hộ:">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="72.0" layoutY="218.0" text="Địa chỉ:">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Label>
-                                          <TextField layoutX="146.0" layoutY="108.0" prefHeight="31.0" prefWidth="328.0" />
-                                          <TextField layoutX="196.0" layoutY="163.0" prefHeight="31.0" prefWidth="276.0" />
-                                          <ComboBox layoutX="153.0" layoutY="216.0" prefHeight="31.0" prefWidth="227.0" promptText="Tỉnh (Thành phố)" />
-                                          <ComboBox layoutX="397.0" layoutY="216.0" prefHeight="31.0" prefWidth="185.0" promptText="Quận (Huyện)" />
-                                          <ComboBox layoutX="607.0" layoutY="216.0" prefHeight="31.0" prefWidth="181.0" promptText="Phường (Xã)" />
-                                          <TextField layoutX="153.0" layoutY="270.0" prefHeight="31.0" prefWidth="634.0" promptText="Nhập vào địa chỉ cụ thể..." />
-                                          <ComboBox layoutX="213.0" layoutY="320.0" prefHeight="31.0" prefWidth="209.0" promptText="Vui lòng chọn..." />
-                                          <TextField layoutX="177.0" layoutY="383.0" prefHeight="31.0" prefWidth="298.0" />
-                                          <Label layoutX="297.0" layoutY="28.0" text="Sửa Thông Tin Khoản Thu:">
-                                             <font>
-                                                <Font name="System Bold Italic" size="25.0" />
-                                             </font>
-                                          </Label>
-                                          <Button fx:id="suaKhoanThu_btn1" layoutX="317.0" layoutY="449.0" mnemonicParsing="false" onAction="#switchFormKhoanThu" prefHeight="42.0" prefWidth="210.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="Cập nhật khoản thu" textFill="WHITE" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="36.0" layoutY="534.0" size="1.5em" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="45.0" layoutY="138.0" size="1.5em" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="45.0" layoutY="200.0" size="1.5em" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="45.0" layoutY="264.0" size="1.5em" />
                                        </children>
-                                    </AnchorPane>
-                                    <AnchorPane layoutX="335.0" layoutY="153.0" onDragDetected="#switchFormKhoanThu" prefHeight="588.0" prefWidth="904.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" fx:id="xoaKhoanThu_form">
                                        <styleClass>
                                           <String fx:value="shadow" />
                                           <String fx:value="white-bg" />
                                        </styleClass>
                                     </AnchorPane>
-                                    <AnchorPane fx:id="themKhoanThu_form" layoutX="252.0" layoutY="218.0" onDragDetected="#switchFormKhoanThu" prefHeight="588.0" prefWidth="904.0" styleClass="signout" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <AnchorPane fx:id="suaKhoanThu_form" onDragDetected="#switchFormKhoanThu" prefHeight="598.0" prefWidth="905.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <AnchorPane layoutX="240.0" prefHeight="598.0" prefWidth="665.0" styleClass="white-bg">
+                                             <children>
+                                                <AnchorPane fx:id="suaPhiQuanLy_form" onDragDetected="#switchFormSuaPhi" prefHeight="598.0" prefWidth="665.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Button layoutX="224.0" layoutY="409.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="217.0" styleClass="funct4-btn" text="        Xác nhận sửa phí" textFill="WHITE" />
+                                                      <Label layoutX="74.0" layoutY="157.0" prefHeight="21.0" prefWidth="157.0" text="Mã hộ khẩu:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="183.0" layoutY="152.0" prefHeight="31.0" prefWidth="406.0" />
+                                                      <TextField layoutX="204.0" layoutY="213.0" prefHeight="31.0" prefWidth="385.0" />
+                                                      <Label layoutX="74.0" layoutY="218.0" prefHeight="21.0" prefWidth="157.0" text="Mã phí quản lý:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="246.0" layoutY="276.0" prefHeight="31.0" prefWidth="346.0" />
+                                                      <Label layoutX="77.0" layoutY="281.0" prefHeight="21.0" prefWidth="157.0" text="Phí vận hành (VND):">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="179.0" layoutY="345.0" prefHeight="31.0" prefWidth="413.0" />
+                                                      <Label layoutX="77.0" layoutY="350.0" prefHeight="21.0" prefWidth="157.0" text="Tình trạng:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="242.0" layoutY="436.0" size="1.5em" />
+                                                   </children>
+                                                   <styleClass>
+                                                      <String fx:value="white-bg" />
+                                                      <String fx:value="shadow" />
+                                                   </styleClass>
+                                                </AnchorPane>
+                                                <AnchorPane fx:id="suaPhiDichVu_form" layoutX="10.0" layoutY="10.0" onDragDetected="#switchFormSuaPhi" prefHeight="608.0" prefWidth="675.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Button layoutX="224.0" layoutY="505.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="217.0" styleClass="funct4-btn" text="        Xác nhận sửa phí" textFill="WHITE" />
+                                                      <Label layoutX="74.0" layoutY="52.0" prefHeight="21.0" prefWidth="157.0" text="Mã hộ khẩu:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="183.0" layoutY="47.0" prefHeight="31.0" prefWidth="406.0" />
+                                                      <TextField layoutX="204.0" layoutY="108.0" prefHeight="31.0" prefWidth="385.0" />
+                                                      <Label layoutX="74.0" layoutY="113.0" prefHeight="21.0" prefWidth="157.0" text="Mã phí dịch vụ:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="227.0" layoutY="171.0" prefHeight="31.0" prefWidth="365.0" />
+                                                      <Label layoutX="77.0" layoutY="176.0" prefHeight="21.0" prefWidth="157.0" text="Phí vệ sinh (VND):">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="224.0" layoutY="240.0" prefHeight="31.0" prefWidth="368.0" />
+                                                      <Label layoutX="77.0" layoutY="245.0" prefHeight="21.0" prefWidth="151.0" text="Phí bảo trì (VND):">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="242.0" layoutY="532.0" size="1.5em" />
+                                                      <Label layoutX="77.0" layoutY="313.0" prefHeight="21.0" prefWidth="157.0" text="Phí an ninh (VND):">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="233.0" layoutY="308.0" prefHeight="31.0" prefWidth="359.0" />
+                                                      <Label layoutX="75.0" layoutY="382.0" prefHeight="21.0" prefWidth="219.0" text="Phí sinh hoạt chung (VND):">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="293.0" layoutY="377.0" prefHeight="31.0" prefWidth="297.0" />
+                                                      <Label layoutX="75.0" layoutY="448.0" prefHeight="21.0" prefWidth="157.0" text="Tình trạng:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="175.0" layoutY="443.0" prefHeight="31.0" prefWidth="415.0" />
+                                                   </children>
+                                                   <styleClass>
+                                                      <String fx:value="white-bg" />
+                                                      <String fx:value="shadow" />
+                                                   </styleClass>
+                                                </AnchorPane>
+                                                <AnchorPane fx:id="suaPhiKhac_form" layoutX="10.0" layoutY="10.0" onDragDetected="#switchFormSuaPhi" prefHeight="608.0" prefWidth="675.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Button layoutX="224.0" layoutY="477.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="217.0" styleClass="funct4-btn" text="        Xác nhận sửa phí" textFill="WHITE" />
+                                                      <Label layoutX="74.0" layoutY="87.0" prefHeight="21.0" prefWidth="157.0" text="Mã hộ khẩu:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="183.0" layoutY="82.0" prefHeight="31.0" prefWidth="406.0" />
+                                                      <TextField layoutX="204.0" layoutY="143.0" prefHeight="31.0" prefWidth="385.0" />
+                                                      <Label layoutX="74.0" layoutY="148.0" prefHeight="21.0" prefWidth="157.0" text="Mã phí khác:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="252.0" layoutY="206.0" prefHeight="31.0" prefWidth="340.0" />
+                                                      <Label layoutX="77.0" layoutY="211.0" prefHeight="21.0" prefWidth="178.0" text="Quỹ biển đảo (VND):">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="274.0" layoutY="275.0" prefHeight="31.0" prefWidth="318.0" />
+                                                      <Label layoutX="77.0" layoutY="280.0" prefHeight="21.0" prefWidth="196.0" text="Quỹ khuyến học (VND):">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="242.0" layoutY="504.0" size="1.5em" />
+                                                      <Label layoutX="75.0" layoutY="343.0" prefHeight="21.0" prefWidth="171.0" text="Quỹ từ thiện (VND):">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="242.0" layoutY="338.0" prefHeight="31.0" prefWidth="348.0" />
+                                                      <Label layoutX="75.0" layoutY="407.0" prefHeight="21.0" prefWidth="157.0" text="Tình trạng:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="176.0" layoutY="402.0" prefHeight="31.0" prefWidth="414.0" />
+                                                   </children>
+                                                   <styleClass>
+                                                      <String fx:value="white-bg" />
+                                                      <String fx:value="shadow" />
+                                                   </styleClass>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <Button fx:id="suaPhiQuanLy_btn" layoutX="25.0" layoutY="114.0" mnemonicParsing="false" onAction="#switchFormSuaPhi" onMouseClicked="#switchFormTraCuuPhi" prefHeight="33.0" prefWidth="192.0" stylesheets="@dashboardDesign.css" text="      Phí Quản Lý" textFill="WHITE">
+                                             <styleClass>
+                                                <String fx:value="funct3-btn" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="suaPhiDichVu_btn" layoutX="25.0" layoutY="176.0" mnemonicParsing="false" onAction="#switchFormSuaPhi" onMouseClicked="#switchFormTraCuuPhi" prefHeight="33.0" prefWidth="193.0" stylesheets="@dashboardDesign.css" text="      Phí Dịch Vụ" textFill="WHITE">
+                                             <styleClass>
+                                                <String fx:value="funct3-btn" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="suaPhiKhac_btn" layoutX="25.0" layoutY="240.0" mnemonicParsing="false" onAction="#switchFormSuaPhi" onMouseClicked="#switchFormTraCuuPhi" prefHeight="33.0" prefWidth="191.0" stylesheets="@dashboardDesign.css" text="      Khoản Phí Khác" textFill="WHITE">
+                                             <styleClass>
+                                                <String fx:value="funct3-btn" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                          <Label layoutX="95.0" layoutY="44.0" text="SỬA">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="36.0" layoutY="534.0" size="1.5em" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="44.0" layoutY="138.0" size="1.5em" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="44.0" layoutY="200.0" size="1.5em" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="44.0" layoutY="264.0" size="1.5em" />
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </AnchorPane>
                                  </children>
                               </AnchorPane>
                               <AnchorPane layoutX="35.0" layoutY="648.0" prefHeight="75.0" prefWidth="904.0" styleClass="shadow" stylesheets="@dashboardDesign.css">
@@ -320,34 +602,27 @@
                                           <String fx:value="shadow" />
                                        </styleClass>
                                        <children>
-                                          <Button fx:id="traCuuKhoanThu_btn" layoutX="693.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormKhoanThu" prefHeight="42.0" prefWidth="190.0" stylesheets="@dashboardDesign.css" text="      Tra cứu khoản thu" textFill="WHITE">
+                                          <Button fx:id="traCuuKhoanThu_btn" layoutX="617.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchFormKhoanThu" prefHeight="42.0" prefWidth="208.0" stylesheets="@dashboardDesign.css" text="      Tra cứu khoản thu" textFill="WHITE">
                                              <styleClass>
-                                                <String fx:value="funct1-btn" />
+                                                <String fx:value="funct2-btn" />
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
-                                          <Button fx:id="suaKhoanThu_btn" layoutX="479.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormKhoanThu" prefHeight="42.0" prefWidth="189.0" stylesheets="@dashboardDesign.css" text="      Sửa khoản thu này" textFill="WHITE">
+                                          <Button fx:id="suaKhoanThu_btn" layoutX="346.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormKhoanThu" prefHeight="42.0" prefWidth="213.0" stylesheets="@dashboardDesign.css" text="      Sửa khoản thu này" textFill="WHITE">
                                              <styleClass>
-                                                <String fx:value="funct1-btn" />
+                                                <String fx:value="funct2-btn" />
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
-                                          <Button layoutX="257.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormKhoanThu" prefHeight="42.0" prefWidth="197.0" stylesheets="@dashboardDesign.css" text="       Xóa khoản thu này" textFill="WHITE" fx:id="xoaKhoanThu_btn">
+                                          <Button fx:id="themKhoanThu_btn" layoutX="72.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchFormKhoanThu" prefHeight="42.0" prefWidth="213.0" stylesheets="@dashboardDesign.css" text="     Thêm mới khoản thu" textFill="WHITE">
                                              <styleClass>
-                                                <String fx:value="funct1-btn" />
+                                                <String fx:value="funct2-btn" />
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
-                                          <Button fx:id="themKhoanThu_btn" layoutX="20.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormKhoanThu" prefHeight="42.0" prefWidth="213.0" stylesheets="@dashboardDesign.css" text="     Thêm mới khoản thu" textFill="WHITE">
-                                             <styleClass>
-                                                <String fx:value="funct1-btn" />
-                                                <String fx:value="shadow" />
-                                             </styleClass>
-                                          </Button>
-                                          <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="711.0" layoutY="45.0" size="1.5em" />
-                                          <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="491.0" layoutY="45.0" size="1.5em" />
-                                          <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="274.0" layoutY="45.0" size="1.5em" />
-                                          <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="35.0" layoutY="46.0" size="1.5em" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="629.0" layoutY="44.0" size="1.5em" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="364.0" layoutY="45.0" size="1.5em" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="87.0" layoutY="44.0" size="1.5em" />
                                        </children>
                                     </AnchorPane>
                                  </children>
@@ -366,84 +641,63 @@
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                              <children>
-                                                <AnchorPane fx:id="traCuuNhanKhau_form" onDragDetected="#switchFormTraCuuHoNhanKhau" prefHeight="518.0" prefWidth="908.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                   <styleClass>
-                                                      <String fx:value="shadow" />
-                                                      <String fx:value="white-bg" />
-                                                   </styleClass>
+                                                <AnchorPane fx:id="traCuuNhanKhau_form" onDragDetected="#switchFormTraCuuHoNhanKhau" prefHeight="518.0" prefWidth="908.0" styleClass="white-bg" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <children>
                                                       <TableView prefHeight="524.0" prefWidth="908.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                         <columns>
-                                                          <TableColumn prefWidth="75.0" text="HoTen" />
-                                                          <TableColumn prefWidth="75.0" text="NgaySinh" />
-                                                            <TableColumn prefWidth="75.0" text="GioiTinh" />
-                                                            <TableColumn prefWidth="75.0" text="BietDanh" />
-                                                            <TableColumn prefWidth="75.0" text="SoCMND" />
-                                                            <TableColumn prefWidth="75.0" text="TonGiao" />
-                                                            <TableColumn prefWidth="91.0" text="ThuongTru" />
-                                                            <TableColumn prefWidth="59.0" text="C2" />
-                                                            <TableColumn prefWidth="75.0" text="C2" />
-                                                            <TableColumn prefWidth="75.0" text="C2" />
-                                                            <TableColumn prefWidth="75.0" text="C2" />
+                                                          <TableColumn prefWidth="145.0" text="Mã nhân khẩu" />
+                                                          <TableColumn minWidth="0.0" prefWidth="172.0" text="Họ tên" />
+                                                            <TableColumn prefWidth="146.0" text="Số CCCD" />
+                                                            <TableColumn prefWidth="118.0" text="Giới tính" />
+                                                            <TableColumn prefWidth="166.0" text="Ngày sinh" />
+                                                            <TableColumn prefWidth="160.0" text="QH với chủ hộ" />
                                                         </columns>
                                                       </TableView>
                                                    </children>
                                                 </AnchorPane>
-                                                <AnchorPane fx:id="traCuuHoKhau_form" onDragDetected="#switchFormTraCuuHoNhanKhau" prefHeight="526.0" prefWidth="908.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                   <styleClass>
-                                                      <String fx:value="white-bg" />
-                                                      <String fx:value="shadow" />
-                                                   </styleClass>
+                                                <AnchorPane fx:id="traCuuHoKhau_form" onDragDetected="#switchFormTraCuuHoNhanKhau" prefHeight="526.0" prefWidth="908.0" styleClass="white-bg" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <children>
                                                       <TableView prefHeight="526.0" prefWidth="908.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <columns>
-                                                            <TableColumn prefWidth="90.0" text="SoHoKhau" />
-                                                            <TableColumn prefWidth="72.0" text="KhuVuc" />
-                                                            <TableColumn prefWidth="85.0" text="NgayLap" />
-                                                            <TableColumn prefWidth="53.0" text="DiaChi" />
-                                                            <TableColumn prefWidth="75.0" text="C2" />
-                                                            <TableColumn prefWidth="75.0" text="C2" />
-                                                            <TableColumn prefWidth="75.0" text="C2" />
-                                                            <TableColumn prefWidth="75.0" text="C2" />
-                                                            <TableColumn prefWidth="75.0" text="C2" />
-                                                            <TableColumn prefWidth="75.0" text="C2" />
-                                                            <TableColumn prefWidth="75.0" text="C2" />
+                                                            <TableColumn prefWidth="109.0" text="Mã hộ khẩu" />
+                                                            <TableColumn prefWidth="137.0" text="Tên chủ hộ" />
+                                                            <TableColumn minWidth="4.0" prefWidth="195.0" text="Địa chỉ" />
+                                                            <TableColumn minWidth="0.0" prefWidth="158.0" text="Diện tích thuê (m2)" />
+                                                            <TableColumn minWidth="0.0" prefWidth="119.0" text="C.Lượng C.cư" />
+                                                            <TableColumn prefWidth="88.0" text="Ngày tạo " />
+                                                            <TableColumn prefWidth="101.0" text="Ngày sửa" />
                                                          </columns>
                                                       </TableView>
                                                    </children>
                                                 </AnchorPane>
                                              </children>
                                           </AnchorPane>
-                                          <Button fx:id="traCuuNhanKhau_btn" layoutX="469.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchFormTraCuuHoNhanKhau" prefHeight="35.0" prefWidth="256.0" stylesheets="@dashboardDesign.css" text="      Tra cứu thông tin nhân khẩu" textFill="WHITE">
+                                          <Button fx:id="traCuuNhanKhau_btn" layoutX="193.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchFormTraCuuHoNhanKhau" prefHeight="35.0" prefWidth="130.0" stylesheets="@dashboardDesign.css" text="      Nhân khẩu" textFill="WHITE">
                                              <styleClass>
                                                 <String fx:value="funct3-btn" />
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
-                                          <Button fx:id="traCuuHoKhau_btn" layoutX="186.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchFormTraCuuHoNhanKhau" prefHeight="33.0" prefWidth="245.0" stylesheets="@dashboardDesign.css" text="      Tra cứu thông tin hộ khẩu" textFill="WHITE">
+                                          <Button fx:id="traCuuHoKhau_btn" layoutX="33.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchFormTraCuuHoNhanKhau" prefHeight="33.0" prefWidth="127.0" stylesheets="@dashboardDesign.css" text="      Hộ khẩu" textFill="WHITE">
                                              <styleClass>
                                                 <String fx:value="funct3-btn" />
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
-                                          <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="480.0" layoutY="41.0" size="1.5em" text="" />
-                                          <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="199.0" layoutY="41.0" size="1.5em" text="" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="204.0" layoutY="41.0" size="1.5em" text="" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="46.0" layoutY="41.0" size="1.5em" text="" />
+                                          <Separator layoutX="351.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="64.0" prefWidth="8.0" />
+                                          <TextField layoutX="421.0" layoutY="16.0" prefHeight="34.0" prefWidth="310.0" promptText="Nhập mã hộ gia đình cần tra cứu..." />
+                                          <Button layoutX="766.0" layoutY="17.0" mnemonicParsing="false" styleClass="funct4-btn" text="Tìm kiếm" textFill="WHITE" />
                                        </children>
                                        <styleClass>
                                           <String fx:value="white-bg" />
                                           <String fx:value="shadow" />
                                        </styleClass>
                                     </AnchorPane>
-                                    <AnchorPane layoutX="335.0" layoutY="153.0" onDragDetected="#switchFormThongTinHoGD" prefHeight="588.0" prefWidth="904.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" fx:id="xoaThongTinHoGD_form">
-                                       <styleClass>
-                                          <String fx:value="shadow" />
-                                          <String fx:value="card" />
-                                          <String fx:value="white-bg" />
-                                       </styleClass>
-                                    </AnchorPane>
-                                    <AnchorPane fx:id="suaThongTinHoGD_form" layoutX="57.0" layoutY="42.0" onDragDetected="#switchFormThongTinHoGD" prefHeight="676.0" prefWidth="1012.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane fx:id="suaThongTinHoGD_form" layoutX="57.0" layoutY="42.0" onDragDetected="#switchFormThongTinHoGD" prefHeight="676.0" prefWidth="1012.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <AnchorPane layoutY="65.0" prefHeight="526.0" prefWidth="908.0">
+                                          <AnchorPane layoutY="65.0" prefHeight="526.0" prefWidth="908.0" styleClass="white-bg">
                                              <children>
                                                 <AnchorPane fx:id="suaHoKhau_form" onDragDetected="#switchFormSuaHoNhanKhau" prefHeight="518.0" prefWidth="908.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <styleClass>
@@ -451,102 +705,96 @@
                                                       <String fx:value="white-bg" />
                                                    </styleClass>
                                                    <children>
-                                                      <Label layoutX="99.0" layoutY="58.0" prefHeight="21.0" prefWidth="99.0" text="Tên chủ hộ:">
+                                                      <Label layoutX="99.0" layoutY="58.0" prefHeight="21.0" prefWidth="99.0" text="Mã hộ khẩu:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="198.0" layoutY="53.0" prefHeight="31.0" prefWidth="606.0" />
-                                                      <TextField layoutX="201.0" layoutY="124.0" prefHeight="31.0" prefWidth="606.0" />
-                                                      <Label layoutX="102.0" layoutY="129.0" prefHeight="21.0" prefWidth="99.0" text="Số hộ khẩu:">
+                                                      <TextField layoutX="205.0" layoutY="53.0" prefHeight="31.0" prefWidth="599.0" />
+                                                      <TextField layoutX="207.0" layoutY="114.0" prefHeight="31.0" prefWidth="600.0" />
+                                                      <Label layoutX="102.0" layoutY="119.0" prefHeight="21.0" prefWidth="99.0" text="Tên chủ hộ:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="255.0" layoutY="194.0" prefHeight="31.0" prefWidth="552.0" />
-                                                      <Label layoutX="102.0" layoutY="199.0" prefHeight="21.0" prefWidth="146.0" text="Ngày sửa hộ khẩu:">
+                                                      <TextField layoutX="174.0" layoutY="180.0" prefHeight="31.0" prefWidth="633.0" />
+                                                      <Label layoutX="102.0" layoutY="185.0" prefHeight="21.0" prefWidth="78.0" text="Địa chỉ:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="183.0" layoutY="263.0" prefHeight="31.0" prefWidth="624.0" />
-                                                      <Label layoutX="102.0" layoutY="268.0" prefHeight="21.0" prefWidth="99.0" text="Khu vực:">
+                                                      <TextField layoutX="228.0" layoutY="248.0" prefHeight="31.0" prefWidth="579.0" />
+                                                      <Label layoutX="102.0" layoutY="253.0" prefHeight="21.0" prefWidth="128.0" text="Diện tích thuê:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="171.0" layoutY="338.0" prefHeight="31.0" prefWidth="636.0" />
-                                                      <Label layoutX="102.0" layoutY="343.0" prefHeight="21.0" prefWidth="99.0" text="Địa chỉ:">
+                                                      <TextField layoutX="340.0" layoutY="309.0" prefHeight="31.0" prefWidth="467.0" />
+                                                      <Label layoutX="102.0" layoutY="314.0" prefHeight="21.0" prefWidth="237.0" text="Chất lượng chung cư đã thuê:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <Button fx:id="suaNhanKhau_btn1" layoutX="356.0" layoutY="407.0" mnemonicParsing="false" onAction="#switchFormSuaHoNhanKhau" prefHeight="35.0" prefWidth="196.0" stylesheets="@dashboardDesign.css" text="         Gửi yêu cầu sửa" textFill="WHITE">
+                                                      <Button layoutX="356.0" layoutY="441.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="196.0" stylesheets="@dashboardDesign.css" text="         Gửi yêu cầu sửa" textFill="WHITE">
                                                          <styleClass>
                                                             <String fx:value="funct4-btn" />
                                                             <String fx:value="shadow" />
                                                          </styleClass>
                                                       </Button>
-                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="375.0" layoutY="433.0" size="1.5em" wrappingWidth="20.5" />
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="375.0" layoutY="467.0" size="1.5em" wrappingWidth="20.5" />
+                                                      <Label layoutX="102.0" layoutY="379.0" prefHeight="21.0" prefWidth="156.0" text="Ngày sửa hộ khẩu:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="258.0" layoutY="374.0" prefHeight="31.0" prefWidth="549.0" />
                                                    </children>
                                                 </AnchorPane>
                                                 <AnchorPane fx:id="suaNhanKhau_form" onDragDetected="#switchFormSuaHoNhanKhau" prefHeight="526.0" prefWidth="908.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <children>
-                                                      <Label layoutX="102.0" layoutY="50.0" prefHeight="21.0" prefWidth="99.0" text="Tên chủ hộ:">
+                                                      <Label layoutX="102.0" layoutY="50.0" prefHeight="21.0" prefWidth="118.0" text="Mã nhân khẩu:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="201.0" layoutY="45.0" prefHeight="31.0" prefWidth="606.0" />
-                                                      <TextField layoutX="344.0" layoutY="96.0" prefHeight="31.0" prefWidth="463.0" />
-                                                      <Label layoutX="102.0" layoutY="101.0" prefHeight="21.0" prefWidth="241.0" text="Tên thành viên trong gia đình:">
+                                                      <TextField layoutX="227.0" layoutY="45.0" prefHeight="31.0" prefWidth="580.0" />
+                                                      <TextField layoutX="364.0" layoutY="109.0" prefHeight="31.0" prefWidth="445.0" />
+                                                      <Label layoutX="97.0" layoutY="114.0" prefHeight="21.0" prefWidth="271.0" text="Tên thành viên trong hộ gia đình:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="271.0" layoutY="194.0" prefHeight="31.0" prefWidth="536.0" />
-                                                      <Label layoutX="102.0" layoutY="199.0" prefHeight="21.0" prefWidth="167.0" text="Quan hệ với chủ hộ:">
+                                                      <TextField layoutX="271.0" layoutY="248.0" prefHeight="31.0" prefWidth="536.0" />
+                                                      <Label layoutX="102.0" layoutY="253.0" prefHeight="21.0" prefWidth="167.0" text="Ngày sinh:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="289.0" layoutY="244.0" prefHeight="31.0" prefWidth="518.0" />
-                                                      <Label layoutX="102.0" layoutY="249.0" prefHeight="21.0" prefWidth="182.0" text="Tên gọi khác (nếu có):">
+                                                      <TextField layoutX="289.0" layoutY="317.0" prefHeight="31.0" prefWidth="518.0" />
+                                                      <Label layoutX="102.0" layoutY="322.0" prefHeight="21.0" prefWidth="182.0" text="Giới tính:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="267.0" layoutY="404.0" prefHeight="31.0" prefWidth="540.0" />
-                                                      <Label layoutX="102.0" layoutY="409.0" prefHeight="21.0" prefWidth="158.0" text="Địa chỉ thường chủ:">
-                                                         <font>
-                                                            <Font name="Tahoma" size="17.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Button fx:id="suaNhanKhau_btn11" layoutX="356.0" layoutY="461.0" mnemonicParsing="false" onAction="#switchFormSuaHoNhanKhau" prefHeight="35.0" prefWidth="196.0" stylesheets="@dashboardDesign.css" text="         Gửi yêu cầu sửa" textFill="WHITE">
+                                                      <Button layoutX="356.0" layoutY="445.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="196.0" stylesheets="@dashboardDesign.css" text="         Gửi yêu cầu sửa" textFill="WHITE">
                                                          <styleClass>
                                                             <String fx:value="funct4-btn" />
                                                             <String fx:value="shadow" />
                                                          </styleClass>
                                                       </Button>
-                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="376.0" layoutY="486.0" size="1.5em" wrappingWidth="20.5" />
-                                                      <Label layoutX="102.0" layoutY="149.0" prefHeight="21.0" prefWidth="99.0" text="Giới tính:">
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="376.0" layoutY="470.0" size="1.5em" wrappingWidth="20.5" />
+                                                      <Label layoutX="97.0" layoutY="187.0" prefHeight="21.0" prefWidth="99.0" text="Số CCCD:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <ComboBox fx:id="danhSachGioiTinh_cbb" layoutX="193.0" layoutY="144.0" prefHeight="31.0" prefWidth="158.0" promptText="Vui lòng chọn..." />
-                                                      <Label layoutX="102.0" layoutY="300.0" prefHeight="21.0" prefWidth="99.0" text="Ngày sinh:">
+                                                      <Label layoutX="102.0" layoutY="394.0" prefHeight="21.0" prefWidth="198.0" text="Quan hệ với chủ hộ:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="198.0" layoutY="295.0" prefHeight="31.0" prefWidth="609.0" />
-                                                      <Label layoutX="102.0" layoutY="351.0" prefHeight="21.0" prefWidth="99.0" text="Dân tộc:">
-                                                         <font>
-                                                            <Font name="Tahoma" size="17.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <TextField layoutX="180.0" layoutY="346.0" prefHeight="31.0" prefWidth="627.0" />
+                                                      <TextField layoutX="271.0" layoutY="389.0" prefHeight="31.0" prefWidth="536.0" />
+                                                      <TextField layoutX="186.0" layoutY="182.0" prefHeight="31.0" prefWidth="618.0" />
                                                    </children>
                                                    <styleClass>
                                                       <String fx:value="shadow" />
@@ -554,10 +802,6 @@
                                                    </styleClass>
                                                 </AnchorPane>
                                              </children>
-                                             <styleClass>
-                                                <String fx:value="white-bg" />
-                                                <String fx:value="shadow" />
-                                             </styleClass>
                                           </AnchorPane>
                                           <Button fx:id="suaNhanKhau_btn" layoutX="469.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchFormSuaHoNhanKhau" prefHeight="35.0" prefWidth="256.0" styleClass="funct3-btn" stylesheets="@dashboardDesign.css" text="      Sửa thông tin nhân khẩu" textFill="WHITE" />
                                           <Button fx:id="suaHoKhau_btn" layoutX="191.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchFormSuaHoNhanKhau" prefHeight="33.0" prefWidth="245.0" stylesheets="@dashboardDesign.css" text="      Sửa thông tin hộ khẩu" textFill="WHITE">
@@ -574,49 +818,55 @@
                                           <String fx:value="shadow" />
                                        </styleClass>
                                     </AnchorPane>
-                                    <AnchorPane fx:id="themThongTinHoGD_form" layoutX="67.0" layoutY="52.0" onDragDetected="#switchFormThongTinHoGD" prefHeight="728.0" prefWidth="1079.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane fx:id="themThongTinHoGD_form" onDragDetected="#switchFormThongTinHoGD" prefHeight="676.0" prefWidth="1012.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
                                           <AnchorPane layoutY="65.0" prefHeight="526.0" prefWidth="908.0">
                                              <children>
                                                 <AnchorPane fx:id="themHoKhau_form" onDragDetected="#switchFormThemHoNhanKhau" prefHeight="518.0" prefWidth="908.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <children>
-                                                      <Label layoutX="99.0" layoutY="58.0" prefHeight="21.0" prefWidth="99.0" text="Tên chủ hộ:">
+                                                      <Label layoutX="99.0" layoutY="58.0" prefHeight="21.0" prefWidth="99.0" text="Mã hộ khẩu:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="198.0" layoutY="53.0" prefHeight="31.0" prefWidth="606.0" />
-                                                      <TextField layoutX="201.0" layoutY="124.0" prefHeight="31.0" prefWidth="606.0" />
-                                                      <Label layoutX="102.0" layoutY="129.0" prefHeight="21.0" prefWidth="99.0" text="Số hộ khẩu:">
+                                                      <TextField layoutX="205.0" layoutY="53.0" prefHeight="31.0" prefWidth="599.0" />
+                                                      <TextField layoutX="207.0" layoutY="114.0" prefHeight="31.0" prefWidth="600.0" />
+                                                      <Label layoutX="102.0" layoutY="119.0" prefHeight="21.0" prefWidth="99.0" text="Tên chủ hộ:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="255.0" layoutY="194.0" prefHeight="31.0" prefWidth="552.0" />
-                                                      <Label layoutX="102.0" layoutY="199.0" prefHeight="21.0" prefWidth="146.0" text="Ngày lập hộ khẩu:">
+                                                      <TextField layoutX="174.0" layoutY="180.0" prefHeight="31.0" prefWidth="633.0" />
+                                                      <Label layoutX="102.0" layoutY="185.0" prefHeight="21.0" prefWidth="78.0" text="Địa chỉ:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="183.0" layoutY="263.0" prefHeight="31.0" prefWidth="624.0" />
-                                                      <Label layoutX="102.0" layoutY="268.0" prefHeight="21.0" prefWidth="99.0" text="Khu vực:">
+                                                      <TextField layoutX="228.0" layoutY="248.0" prefHeight="31.0" prefWidth="579.0" />
+                                                      <Label layoutX="102.0" layoutY="253.0" prefHeight="21.0" prefWidth="128.0" text="Diện tích thuê:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="171.0" layoutY="338.0" prefHeight="31.0" prefWidth="636.0" />
-                                                      <Label layoutX="102.0" layoutY="343.0" prefHeight="21.0" prefWidth="99.0" text="Địa chỉ:">
+                                                      <TextField layoutX="340.0" layoutY="309.0" prefHeight="31.0" prefWidth="467.0" />
+                                                      <Label layoutX="102.0" layoutY="314.0" prefHeight="21.0" prefWidth="237.0" text="Chất lượng chung cư đã thuê:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <Button layoutX="338.0" layoutY="407.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" stylesheets="@dashboardDesign.css" text="          Gửi yêu cầu thêm mới" textFill="WHITE">
+                                                      <Button layoutX="356.0" layoutY="441.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="196.0" stylesheets="@dashboardDesign.css" text="         Gửi yêu cầu sửa" textFill="WHITE">
                                                          <styleClass>
                                                             <String fx:value="funct4-btn" />
                                                             <String fx:value="shadow" />
                                                          </styleClass>
                                                       </Button>
-                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="358.0" layoutY="434.0" size="1.5em" text="" wrappingWidth="20.5" />
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="375.0" layoutY="467.0" size="1.5em" wrappingWidth="20.5" />
+                                                      <Label layoutX="102.0" layoutY="379.0" prefHeight="21.0" prefWidth="156.0" text="Ngày sửa tạo khẩu:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="258.0" layoutY="374.0" prefHeight="31.0" prefWidth="549.0" />
                                                    </children>
                                                    <styleClass>
                                                       <String fx:value="shadow" />
@@ -625,62 +875,49 @@
                                                 </AnchorPane>
                                                 <AnchorPane fx:id="themNhanKhau_form" onDragDetected="#switchFormThemHoNhanKhau" prefHeight="526.0" prefWidth="908.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <children>
-                                                      <Label layoutX="102.0" layoutY="50.0" prefHeight="21.0" prefWidth="99.0" text="Tên chủ hộ:">
+                                                      <Label layoutX="102.0" layoutY="50.0" prefHeight="21.0" prefWidth="118.0" text="Mã nhân khẩu:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="201.0" layoutY="45.0" prefHeight="31.0" prefWidth="606.0" />
-                                                      <TextField layoutX="344.0" layoutY="96.0" prefHeight="31.0" prefWidth="463.0" />
-                                                      <Label layoutX="102.0" layoutY="101.0" prefHeight="21.0" prefWidth="241.0" text="Tên thành viên trong gia đình:">
+                                                      <TextField layoutX="227.0" layoutY="45.0" prefHeight="31.0" prefWidth="580.0" />
+                                                      <TextField layoutX="364.0" layoutY="109.0" prefHeight="31.0" prefWidth="445.0" />
+                                                      <Label layoutX="97.0" layoutY="114.0" prefHeight="21.0" prefWidth="271.0" text="Tên thành viên trong hộ gia đình:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="271.0" layoutY="194.0" prefHeight="31.0" prefWidth="536.0" />
-                                                      <Label layoutX="102.0" layoutY="199.0" prefHeight="21.0" prefWidth="167.0" text="Quan hệ với chủ hộ:">
+                                                      <TextField layoutX="271.0" layoutY="248.0" prefHeight="31.0" prefWidth="536.0" />
+                                                      <Label layoutX="102.0" layoutY="253.0" prefHeight="21.0" prefWidth="167.0" text="Ngày sinh:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="289.0" layoutY="244.0" prefHeight="31.0" prefWidth="518.0" />
-                                                      <Label layoutX="102.0" layoutY="249.0" prefHeight="21.0" prefWidth="182.0" text="Tên gọi khác (nếu có):">
+                                                      <TextField layoutX="289.0" layoutY="317.0" prefHeight="31.0" prefWidth="518.0" />
+                                                      <Label layoutX="102.0" layoutY="322.0" prefHeight="21.0" prefWidth="182.0" text="Giới tính:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="267.0" layoutY="404.0" prefHeight="31.0" prefWidth="540.0" />
-                                                      <Label layoutX="102.0" layoutY="409.0" prefHeight="21.0" prefWidth="158.0" text="Địa chỉ thường chủ:">
-                                                         <font>
-                                                            <Font name="Tahoma" size="17.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="376.0" layoutY="486.0" size="1.5em" wrappingWidth="20.5" />
-                                                      <Label layoutX="102.0" layoutY="149.0" prefHeight="21.0" prefWidth="99.0" text="Giới tính:">
-                                                         <font>
-                                                            <Font name="Tahoma" size="17.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <ComboBox fx:id="danhSachGioiTinh_cbb1" layoutX="193.0" layoutY="144.0" prefHeight="31.0" prefWidth="158.0" promptText="Vui lòng chọn..." />
-                                                      <Label layoutX="102.0" layoutY="300.0" prefHeight="21.0" prefWidth="99.0" text="Ngày sinh:">
-                                                         <font>
-                                                            <Font name="Tahoma" size="17.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <TextField layoutX="198.0" layoutY="295.0" prefHeight="31.0" prefWidth="609.0" />
-                                                      <Label layoutX="102.0" layoutY="351.0" prefHeight="21.0" prefWidth="99.0" text="Dân tộc:">
-                                                         <font>
-                                                            <Font name="Tahoma" size="17.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <TextField layoutX="180.0" layoutY="346.0" prefHeight="31.0" prefWidth="627.0" />
-                                                      <Button fx:id="suaNhanKhau_btn112" layoutX="342.0" layoutY="461.0" mnemonicParsing="false" onAction="#switchFormSuaHoNhanKhau" prefHeight="35.0" prefWidth="225.0" stylesheets="@dashboardDesign.css" text="        Gửi yêu cầu thêm mới" textFill="WHITE">
+                                                      <Button layoutX="356.0" layoutY="445.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="196.0" stylesheets="@dashboardDesign.css" text="         Gửi yêu cầu sửa" textFill="WHITE">
                                                          <styleClass>
                                                             <String fx:value="funct4-btn" />
                                                             <String fx:value="shadow" />
                                                          </styleClass>
                                                       </Button>
-                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="355.0" layoutY="487.0" size="1.5em" text="" wrappingWidth="20.5" />
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="376.0" layoutY="470.0" size="1.5em" wrappingWidth="20.5" />
+                                                      <Label layoutX="97.0" layoutY="187.0" prefHeight="21.0" prefWidth="99.0" text="Số CCCD:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="102.0" layoutY="394.0" prefHeight="21.0" prefWidth="198.0" text="Quan hệ với chủ hộ:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="271.0" layoutY="389.0" prefHeight="31.0" prefWidth="536.0" />
+                                                      <TextField layoutX="186.0" layoutY="182.0" prefHeight="31.0" prefWidth="618.0" />
                                                    </children>
                                                    <styleClass>
                                                       <String fx:value="shadow" />
@@ -693,15 +930,15 @@
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </AnchorPane>
-                                          <Button fx:id="themNhanKhau_btn" layoutX="469.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchFormThemHoNhanKhau" prefHeight="35.0" prefWidth="256.0" styleClass="funct3-btn" stylesheets="@dashboardDesign.css" text="      Thêm thông tin nhân khẩu" textFill="WHITE" />
+                                          <Button fx:id="themNhanKhau_btn1" layoutX="469.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchFormThemHoNhanKhau" prefHeight="35.0" prefWidth="256.0" styleClass="funct3-btn" stylesheets="@dashboardDesign.css" text="      Thêm thông tin nhân khẩu" textFill="WHITE" />
                                           <Button fx:id="themHoKhau_btn" layoutX="191.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchFormThemHoNhanKhau" prefHeight="33.0" prefWidth="245.0" stylesheets="@dashboardDesign.css" text="      Thêm thông tin hộ khẩu" textFill="WHITE">
                                              <styleClass>
                                                 <String fx:value="funct3-btn" />
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
-                                          <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="208.0" layoutY="41.0" size="1.5em" text="" />
-                                          <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="484.0" layoutY="42.0" size="1.5em" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="212.0" layoutY="41.0" size="1.5em" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="488.0" layoutY="40.0" size="1.5em" />
                                        </children>
                                        <styleClass>
                                           <String fx:value="white-bg" />
@@ -720,13 +957,13 @@
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
-                                          <Button fx:id="suaThongTinHoGD_btn" layoutX="479.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormThongTinHoGD" prefHeight="42.0" prefWidth="189.0" stylesheets="@dashboardDesign.css" text="      Sửa thông tin này" textFill="WHITE">
+                                          <Button fx:id="suaThongTinHoGD_btn" layoutX="479.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormThongTinHoGD" prefHeight="42.0" prefWidth="189.0" stylesheets="@dashboardDesign.css" text="      Sửa thông tin" textFill="WHITE">
                                              <styleClass>
                                                 <String fx:value="funct2-btn" />
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
-                                          <Button layoutX="257.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormThongTinHoGD" prefHeight="42.0" prefWidth="197.0" stylesheets="@dashboardDesign.css" text="       Xóa thông tin này" textFill="WHITE" fx:id="xoaThongTinHoGD_btn">
+                                          <Button layoutX="257.0" layoutY="17.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="197.0" stylesheets="@dashboardDesign.css" text="       Xóa thông tin này" textFill="WHITE">
                                              <styleClass>
                                                 <String fx:value="funct2-btn" />
                                                 <String fx:value="shadow" />
@@ -752,111 +989,65 @@
                               </AnchorPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="thongTinQTV_form" layoutX="10.0" layoutY="17.0" onDragDetected="#switchForm" prefHeight="757.0" prefWidth="988.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="thongTinQTV_form" layoutX="10.0" layoutY="17.0" onDragDetected="#switchForm" prefHeight="757.0" prefWidth="988.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="38.0" layoutY="38.0" prefHeight="564.0" prefWidth="908.0">
                                  <children>
-                                    <AnchorPane fx:id="themThongTinQTV_form" layoutX="77.0" layoutY="62.0" onDragDetected="#switchFormThongTinQTV" prefHeight="790.0" prefWidth="1156.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                       <children>
-                                          <Button fx:id="suaNhanKhau_btn111" layoutX="363.0" layoutY="458.0" mnemonicParsing="false" onAction="#switchFormSuaHoNhanKhau" prefHeight="35.0" prefWidth="183.0" stylesheets="@dashboardDesign.css" text="         Xác nhận thêm" textFill="WHITE">
-                                             <styleClass>
-                                                <String fx:value="funct4-btn" />
-                                                <String fx:value="shadow" />
-                                             </styleClass>
-                                          </Button>
-                                          <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="376.0" layoutY="483.0" size="1.5em" />
-                                          <Label layoutX="101.0" layoutY="396.0" prefHeight="21.0" prefWidth="99.0" text="Địa chỉ:">
-                                             <font>
-                                                <Font name="Tahoma" size="17.0" />
-                                             </font>
-                                          </Label>
-                                          <TextField layoutX="170.0" layoutY="391.0" prefHeight="31.0" prefWidth="638.0" />
-                                          <Label layoutX="102.0" layoutY="335.0" prefHeight="21.0" prefWidth="99.0" text="Ngày sinh:">
-                                             <font>
-                                                <Font name="Tahoma" size="17.0" />
-                                             </font>
-                                          </Label>
-                                          <TextField layoutX="196.0" layoutY="330.0" prefHeight="31.0" prefWidth="612.0" />
-                                          <Label layoutX="104.0" layoutY="270.0" prefHeight="21.0" prefWidth="135.0" text="Email liên lạc:">
-                                             <font>
-                                                <Font name="Tahoma" size="17.0" />
-                                             </font>
-                                          </Label>
-                                          <TextField layoutX="222.0" layoutY="265.0" prefHeight="31.0" prefWidth="584.0" />
-                                          <Label layoutX="102.0" layoutY="212.0" prefHeight="21.0" prefWidth="120.0" text="Số điện thoại:">
-                                             <font>
-                                                <Font name="Tahoma" size="17.0" />
-                                             </font>
-                                          </Label>
-                                          <TextField layoutX="222.0" layoutY="207.0" prefHeight="31.0" prefWidth="585.0" />
-                                          <Label layoutX="104.0" layoutY="153.0" prefHeight="21.0" prefWidth="99.0" text="Giới tính:">
-                                             <font>
-                                                <Font name="Tahoma" size="17.0" />
-                                             </font>
-                                          </Label>
-                                          <ComboBox fx:id="danhSachGioiTinh_cbb211" layoutX="195.0" layoutY="148.0" prefHeight="31.0" prefWidth="158.0" promptText="Vui lòng chọn..." />
-                                          <TextField layoutX="254.0" layoutY="89.0" prefHeight="31.0" prefWidth="553.0" />
-                                          <Label layoutX="102.0" layoutY="94.0" prefHeight="21.0" prefWidth="148.0" text="Tên quản trị viên:">
-                                             <font>
-                                                <Font name="Tahoma" size="17.0" />
-                                             </font>
-                                          </Label>
-                                          <AnchorPane prefHeight="591.0" prefWidth="908.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                       </children>
-                                       <styleClass>
-                                          <String fx:value="white-bg" />
-                                          <String fx:value="shadow" />
-                                       </styleClass>
-                                    </AnchorPane>
-                                    <AnchorPane fx:id="suaThongTinQTV_form" layoutX="67.0" layoutY="52.0" onDragDetected="#switchFormThongTinQTV" prefHeight="728.0" prefWidth="1079.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane fx:id="suaThongTinQTV_form" layoutX="67.0" layoutY="52.0" onDragDetected="#switchFormThongTinQTV" prefHeight="728.0" prefWidth="1079.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
                                           <AnchorPane layoutY="88.0" prefHeight="503.0" prefWidth="908.0">
                                              <children>
                                                 <AnchorPane fx:id="suaThongTinQTV1_form" onDragDetected="#switchFormSuaThongTinQTV" prefHeight="518.0" prefWidth="908.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <children>
-                                                      <Label layoutX="99.0" layoutY="58.0" prefHeight="21.0" prefWidth="148.0" text="Tên quản trị viên:">
+                                                      <Label layoutX="102.0" layoutY="110.0" prefHeight="21.0" prefWidth="148.0" text="Tên quản trị viên:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="251.0" layoutY="53.0" prefHeight="31.0" prefWidth="553.0" />
-                                                      <TextField layoutX="218.0" layoutY="163.0" prefHeight="31.0" prefWidth="585.0" />
-                                                      <Label layoutX="98.0" layoutY="168.0" prefHeight="21.0" prefWidth="120.0" text="Số điện thoại:">
+                                                      <TextField layoutX="254.0" layoutY="105.0" prefHeight="31.0" prefWidth="553.0" />
+                                                      <TextField layoutX="221.0" layoutY="215.0" prefHeight="31.0" prefWidth="585.0" />
+                                                      <Label layoutX="101.0" layoutY="220.0" prefHeight="21.0" prefWidth="120.0" text="Ngày sinh:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="220.0" layoutY="224.0" prefHeight="31.0" prefWidth="584.0" />
-                                                      <Label layoutX="102.0" layoutY="229.0" prefHeight="21.0" prefWidth="135.0" text="Email liên lạc:">
+                                                      <TextField layoutX="223.0" layoutY="276.0" prefHeight="31.0" prefWidth="584.0" />
+                                                      <Label layoutX="105.0" layoutY="281.0" prefHeight="21.0" prefWidth="135.0" text="Số điện thoại:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="192.0" layoutY="281.0" prefHeight="31.0" prefWidth="612.0" />
-                                                      <Label layoutX="98.0" layoutY="286.0" prefHeight="21.0" prefWidth="99.0" text="Ngày sinh:">
+                                                      <TextField layoutX="195.0" layoutY="333.0" prefHeight="31.0" prefWidth="612.0" />
+                                                      <Label layoutX="101.0" layoutY="338.0" prefHeight="21.0" prefWidth="99.0" text="Email:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="167.0" layoutY="342.0" prefHeight="31.0" prefWidth="638.0" />
-                                                      <Label layoutX="98.0" layoutY="347.0" prefHeight="21.0" prefWidth="99.0" text="Địa chỉ:">
+                                                      <TextField layoutX="170.0" layoutY="394.0" prefHeight="31.0" prefWidth="638.0" />
+                                                      <Label layoutX="101.0" layoutY="399.0" prefHeight="21.0" prefWidth="99.0" text="Địa chỉ:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <Button layoutX="356.0" layoutY="407.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="196.0" stylesheets="@dashboardDesign.css" text="         Gửi yêu cầu sửa" textFill="WHITE">
+                                                      <Button layoutX="356.0" layoutY="446.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="196.0" stylesheets="@dashboardDesign.css" text="         Gửi yêu cầu sửa" textFill="WHITE">
                                                          <styleClass>
                                                             <String fx:value="funct4-btn" />
                                                             <String fx:value="shadow" />
                                                          </styleClass>
                                                       </Button>
-                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="375.0" layoutY="433.0" size="1.5em" wrappingWidth="20.5" />
-                                                      <ComboBox fx:id="danhSachGioiTinh_cbb21" layoutX="189.0" layoutY="109.0" prefHeight="31.0" prefWidth="158.0" promptText="Vui lòng chọn..." />
-                                                      <Label layoutX="98.0" layoutY="114.0" prefHeight="21.0" prefWidth="99.0" text="Giới tính:">
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="370.0" layoutY="471.0" size="1.5em" wrappingWidth="20.5" />
+                                                      <Label layoutX="101.0" layoutY="166.0" prefHeight="21.0" prefWidth="99.0" text="Giới tính:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
+                                                      <TextField layoutX="254.0" layoutY="45.0" prefHeight="31.0" prefWidth="553.0" />
+                                                      <Label layoutX="99.0" layoutY="50.0" prefHeight="21.0" prefWidth="148.0" text="Mã quản trị viên:">
+                                                         <font>
+                                                            <Font name="Tahoma" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="195.0" layoutY="161.0" prefHeight="31.0" prefWidth="609.0" />
                                                    </children>
                                                    <styleClass>
                                                       <String fx:value="shadow" />
@@ -923,63 +1114,106 @@
                                           <String fx:value="shadow" />
                                        </styleClass>
                                     </AnchorPane>
-                                    <AnchorPane layoutX="10.0" layoutY="-4.0" onDragDetected="#switchFormThongTinQTV" prefHeight="591.0" prefWidth="908.0" stylesheets="@dashboardDesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" fx:id="xoaThongTinQTV_form">
-                                       <styleClass>
-                                          <String fx:value="shadow" />
-                                          <String fx:value="white-bg" />
-                                       </styleClass>
-                                    </AnchorPane>
-                                    <AnchorPane fx:id="traCuuThongTinQTV_form" onDragDetected="#switchFormThongTinQTV" prefHeight="570.0" prefWidth="919.0" stylesheets="@dashboardDesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane fx:id="traCuuThongTinQTV_form" onDragDetected="#switchFormThongTinQTV" prefHeight="591.0" prefWidth="908.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <styleClass>
                                           <String fx:value="shadow" />
                                           <String fx:value="white-bg" />
                                        </styleClass>
                                        <children>
-                                          <TableView layoutX="142.0" layoutY="96.0" prefHeight="591.0" prefWidth="908.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                          <TableView layoutX="63.0" layoutY="27.0" prefHeight="253.0" prefWidth="908.0" AnchorPane.bottomAnchor="338.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                             <columns>
-                                              <TableColumn prefWidth="150.0" text="Tên quản trị viên" />
-                                              <TableColumn minWidth="0.0" prefWidth="0.0" text="C2" />
-                                                <TableColumn prefWidth="75.0" text="Giới tính" />
-                                                <TableColumn prefWidth="123.0" text="Ngày sinh" />
-                                                <TableColumn prefWidth="161.0" text="Số điện thoại" />
-                                                <TableColumn prefWidth="126.0" text="Email liên lạc" />
-                                                <TableColumn prefWidth="272.0" text="Địa chỉ " />
+                                              <TableColumn prefWidth="91.0" text="Mã QTV" />
+                                                <TableColumn minWidth="0.0" prefWidth="109.0" text="Họ tên QTV" />
+                                                <TableColumn prefWidth="67.0" text="Giới tính" />
+                                                <TableColumn prefWidth="124.0" text="Ngày sinh" />
+                                                <TableColumn prefWidth="116.0" text="Số điện thoại" />
+                                                <TableColumn prefWidth="164.0" text="Email" />
+                                                <TableColumn prefWidth="236.0" text="Địa chỉ" />
                                             </columns>
                                           </TableView>
+                                          <Label layoutX="36.0" layoutY="271.0" text="Mã quản trị viên:">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="179.0" layoutY="266.0" prefHeight="31.0" prefWidth="275.0" />
+                                          <Label layoutX="37.0" layoutY="538.0" text="Địa chỉ:">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="39.0" layoutY="316.0" text="Họ và tên:">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="31.0" layoutY="363.0" text="Giới tính:">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="36.0" layoutY="407.0" text="Ngày sinh:">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="37.0" layoutY="449.0" text="Số điện thoại:">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="42.0" layoutY="492.0" text="Email:">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="126.0" layoutY="311.0" prefHeight="31.0" prefWidth="329.0" />
+                                          <TextField layoutX="116.0" layoutY="358.0" prefHeight="31.0" prefWidth="340.0" />
+                                          <TextField layoutX="126.0" layoutY="402.0" prefHeight="31.0" prefWidth="330.0" />
+                                          <TextField layoutX="100.0" layoutY="533.0" prefHeight="31.0" prefWidth="356.0" />
+                                          <TextField layoutX="151.0" layoutY="444.0" prefHeight="31.0" prefWidth="303.0" />
+                                          <TextField layoutX="100.0" layoutY="487.0" prefHeight="31.0" prefWidth="355.0" />
+                                          <Separator layoutX="472.0" layoutY="253.0" orientation="VERTICAL" prefHeight="338.0" prefWidth="0.0" />
+                                          <Label layoutX="642.0" layoutY="285.0" text="Tra cứu:">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="633.0" layoutY="400.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="101.0" stylesheets="@dashboardDesign.css" text="Tìm kiếm" textFill="WHITE">
+                                             <styleClass>
+                                                <String fx:value="funct4-btn" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                          <TextField layoutX="520.0" layoutY="348.0" prefHeight="31.0" prefWidth="348.0" promptText="Vui lòng nhập mã QTV cần tra cứu..." />
                                        </children>
                                     </AnchorPane>
                                  </children>
                               </AnchorPane>
                               <AnchorPane layoutX="37.0" layoutY="643.0" prefHeight="74.0" prefWidth="904.0" stylesheets="@dashboardDesign.css">
                                  <children>
-                                    <Button fx:id="traCuuThongTinQTV_btn" layoutX="693.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormThongTinQTV" prefHeight="42.0" prefWidth="190.0" stylesheets="@dashboardDesign.css" text="      Tra cứu thông tin" textFill="WHITE">
+                                    <Button fx:id="suaThongTinQTV_btn" layoutX="531.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchFormThongTinQTV" prefHeight="42.0" prefWidth="310.0" stylesheets="@dashboardDesign.css" text="      Sửa thông tin QTV" textFill="WHITE">
                                        <styleClass>
-                                          <String fx:value="funct1-btn" />
+                                          <String fx:value="funct2-btn" />
                                           <String fx:value="shadow" />
                                        </styleClass>
                                     </Button>
-                                    <Button fx:id="suaThongTinQTV_btn" layoutX="479.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormThongTinQTV" prefHeight="42.0" prefWidth="189.0" stylesheets="@dashboardDesign.css" text="      Sửa thông tin này" textFill="WHITE">
+                                    <Button layoutX="250.0" layoutY="15.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="173.0" stylesheets="@dashboardDesign.css" text="      Xác nhận xóa" textFill="WHITE">
                                        <styleClass>
-                                          <String fx:value="funct1-btn" />
+                                          <String fx:value="funct4-btn" />
                                           <String fx:value="shadow" />
                                        </styleClass>
                                     </Button>
-                                    <Button layoutX="257.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormThongTinQTV" prefHeight="42.0" prefWidth="197.0" stylesheets="@dashboardDesign.css" text="       Xóa thông tin này" textFill="WHITE" fx:id="xoaThongTinQTV_btn">
+                                    <Button layoutX="55.0" layoutY="15.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="172.0" stylesheets="@dashboardDesign.css" text="        Xác nhận thêm" textFill="WHITE">
                                        <styleClass>
-                                          <String fx:value="funct1-btn" />
+                                          <String fx:value="funct4-btn" />
                                           <String fx:value="shadow" />
                                        </styleClass>
                                     </Button>
-                                    <Button fx:id="themThongTinQTV_btn" layoutX="20.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormThongTinQTV" prefHeight="42.0" prefWidth="213.0" stylesheets="@dashboardDesign.css" text="     Thêm mới thông tin" textFill="WHITE">
-                                       <styleClass>
-                                          <String fx:value="funct1-btn" />
-                                          <String fx:value="shadow" />
-                                       </styleClass>
-                                    </Button>
-                                    <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="711.0" layoutY="45.0" size="1.5em" />
-                                    <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="491.0" layoutY="45.0" size="1.5em" />
-                                    <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="274.0" layoutY="45.0" size="1.5em" />
-                                    <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="35.0" layoutY="46.0" size="1.5em" />
+                                    <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="596.0" layoutY="44.0" size="1.5em" />
+                                    <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="266.0" layoutY="43.0" size="1.5em" />
+                                    <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="70.0" layoutY="44.0" size="1.5em" />
+                                    <Separator layoutX="472.0" layoutY="-5.0" orientation="VERTICAL" prefHeight="79.0" prefWidth="9.0" />
                                  </children>
                                  <styleClass>
                                     <String fx:value="white-bg" />
@@ -994,27 +1228,27 @@
                                  <children>
                                     <AnchorPane layoutX="4.0" layoutY="23.0" prefHeight="75.0" prefWidth="904.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <Button layoutX="693.0" layoutY="17.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="190.0" stylesheets="@dashboardDesign.css" text="      Tra cứu khoản thu" textFill="WHITE">
+                                          <Button fx:id="traCuuV2Update_btn" layoutX="693.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormV2Update" prefHeight="42.0" prefWidth="190.0" stylesheets="@dashboardDesign.css" text="      Tra cứu khoản thu" textFill="WHITE">
                                              <styleClass>
-                                                <String fx:value="funct1-btn" />
+                                                <String fx:value="funct2-btn" />
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
-                                          <Button layoutX="479.0" layoutY="17.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="189.0" stylesheets="@dashboardDesign.css" text="      Sửa khoản thu này" textFill="WHITE">
+                                          <Button fx:id="suaV2Update_btn" layoutX="479.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormV2Update" prefHeight="42.0" prefWidth="189.0" stylesheets="@dashboardDesign.css" text="      Sửa khoản thu này" textFill="WHITE">
                                              <styleClass>
-                                                <String fx:value="funct1-btn" />
+                                                <String fx:value="funct2-btn" />
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
                                           <Button layoutX="257.0" layoutY="17.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="197.0" stylesheets="@dashboardDesign.css" text="       Xóa khoản thu này" textFill="WHITE">
                                              <styleClass>
-                                                <String fx:value="funct1-btn" />
+                                                <String fx:value="funct2-btn" />
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
-                                          <Button layoutX="20.0" layoutY="17.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" stylesheets="@dashboardDesign.css" text="     Thêm mới khoản thu" textFill="WHITE">
+                                          <Button fx:id="themV2Update_btn" layoutX="20.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormV2Update" prefHeight="42.0" prefWidth="213.0" stylesheets="@dashboardDesign.css" text="     Thêm mới khoản thu" textFill="WHITE">
                                              <styleClass>
-                                                <String fx:value="funct1-btn" />
+                                                <String fx:value="funct2-btn" />
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
@@ -1030,42 +1264,134 @@
                                     </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane layoutX="37.0" layoutY="142.0" prefHeight="475.0" prefWidth="904.0">
+                              <AnchorPane layoutX="37.0" layoutY="41.0" prefHeight="576.0" prefWidth="904.0">
                                  <children>
-                                    <AnchorPane layoutX="14.0" layoutY="53.0" prefHeight="475.0" prefWidth="904.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane fx:id="suaV2Update_form" layoutX="10.0" layoutY="10.0" onDragDetected="#switchFormV2Update" prefHeight="586.0" prefWidth="914.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <TableView layoutX="193.0" layoutY="75.0" prefHeight="475.0" prefWidth="904.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                             <columns>
-                                                <TableColumn prefWidth="220.0" text="Tên " />
-                                                <TableColumn prefWidth="181.0" text="Phí Gửi Xe" />
-                                                <TableColumn prefWidth="314.0" text="Phí Điện, Nước, Internet" />
-                                                <TableColumn prefWidth="188.0" text="Tình trạng" />
-                                             </columns>
-                                          </TableView>
-                                       </children>
-                                       <styleClass>
-                                          <String fx:value="shadow" />
-                                          <String fx:value="white-bg" />
-                                       </styleClass>
-                                    </AnchorPane>
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane layoutX="35.0" layoutY="31.0" prefHeight="81.0" prefWidth="904.0">
-                                 <children>
-                                    <AnchorPane layoutY="-14.0" prefHeight="83.0" prefWidth="904.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                       <children>
-                                          <Label layoutX="48.0" layoutY="30.0" text="Tên hộ dân:">
+                                          <Label layoutX="347.0" layoutY="37.0" text="SỬA KHOẢN THU">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="156.0" layoutY="101.0" prefHeight="21.0" prefWidth="134.0" text="Mã hộ gia đình:">
                                              <font>
                                                 <Font name="Tahoma" size="17.0" />
                                              </font>
                                           </Label>
-                                          <Label layoutX="493.0" layoutY="29.0" text="Tình trạng khoản thu: ">
+                                          <TextField layoutX="290.0" layoutY="96.0" prefHeight="31.0" prefWidth="460.0" />
+                                          <TextField layoutX="300.0" layoutY="156.0" prefHeight="31.0" prefWidth="449.0" />
+                                          <Label layoutX="155.0" layoutY="161.0" prefHeight="21.0" prefWidth="148.0" text="Mã phí bổ sung:">
                                              <font>
-                                                <Font size="17.0" />
+                                                <Font name="Tahoma" size="17.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="153.0" layoutY="25.0" prefHeight="31.0" prefWidth="289.0" />
-                                          <ComboBox layoutX="667.0" layoutY="26.0" prefHeight="31.0" prefWidth="179.0" promptText="Lựa chọn..." />
+                                          <TextField layoutX="290.0" layoutY="265.0" prefHeight="31.0" prefWidth="460.0" />
+                                          <Label layoutX="156.0" layoutY="270.0" prefHeight="21.0" prefWidth="134.0" text="Phí điện (VND):">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="290.0" layoutY="321.0" prefHeight="31.0" prefWidth="460.0" />
+                                          <Label layoutX="156.0" layoutY="326.0" prefHeight="21.0" prefWidth="134.0" text="Phí nước (VND):">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="319.0" layoutY="379.0" prefHeight="31.0" prefWidth="431.0" />
+                                          <Label layoutX="156.0" layoutY="384.0" prefHeight="21.0" prefWidth="169.0" text="Phí Internet (VND):">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="267.0" layoutY="434.0" prefHeight="31.0" prefWidth="483.0" />
+                                          <Label layoutX="156.0" layoutY="439.0" prefHeight="21.0" prefWidth="134.0" text="Tình trạng: ">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="320.0" layoutY="491.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="266.0" styleClass="funct4-btn" text="       Xác nhận sửa khoản thu" textFill="WHITE" />
+                                          <Label layoutX="155.0" layoutY="216.0" prefHeight="21.0" prefWidth="148.0" text="Phí gửi xe (VND):">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="300.0" layoutY="211.0" prefHeight="31.0" prefWidth="449.0" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="337.0" layoutY="517.0" size="1.5em" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="themV2Update_form" onDragDetected="#switchFormV2Update" prefHeight="576.0" prefWidth="904.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label layoutX="337.0" layoutY="39.0" text="THÊM KHOẢN THU">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="156.0" layoutY="101.0" prefHeight="21.0" prefWidth="134.0" text="Mã hộ gia đình:">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="290.0" layoutY="96.0" prefHeight="31.0" prefWidth="460.0" />
+                                          <TextField layoutX="300.0" layoutY="156.0" prefHeight="31.0" prefWidth="449.0" />
+                                          <Label layoutX="155.0" layoutY="161.0" prefHeight="21.0" prefWidth="148.0" text="Mã phí bổ sung:">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="290.0" layoutY="265.0" prefHeight="31.0" prefWidth="460.0" />
+                                          <Label layoutX="156.0" layoutY="270.0" prefHeight="21.0" prefWidth="134.0" text="Phí điện (VND):">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="290.0" layoutY="321.0" prefHeight="31.0" prefWidth="460.0" />
+                                          <Label layoutX="156.0" layoutY="326.0" prefHeight="21.0" prefWidth="134.0" text="Phí nước (VND):">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="319.0" layoutY="379.0" prefHeight="31.0" prefWidth="431.0" />
+                                          <Label layoutX="156.0" layoutY="384.0" prefHeight="21.0" prefWidth="169.0" text="Phí Internet (VND):">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="267.0" layoutY="434.0" prefHeight="31.0" prefWidth="483.0" />
+                                          <Label layoutX="156.0" layoutY="439.0" prefHeight="21.0" prefWidth="134.0" text="Tình trạng: ">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="320.0" layoutY="491.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="266.0" styleClass="funct4-btn" text="       Xác nhận thêm khoản thu" textFill="WHITE" />
+                                          <Label layoutX="155.0" layoutY="216.0" prefHeight="21.0" prefWidth="148.0" text="Phí gửi xe (VND):">
+                                             <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="300.0" layoutY="211.0" prefHeight="31.0" prefWidth="449.0" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="337.0" layoutY="517.0" size="1.5em" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="traCuuV2Update_form" layoutX="14.0" layoutY="53.0" onDragDetected="#switchFormV2Update" prefHeight="475.0" prefWidth="904.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <TableView layoutY="73.0" prefHeight="504.0" prefWidth="904.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="73.0">
+                                             <columns>
+                                                <TableColumn prefWidth="160.0" text="Mã hộ gia đình" />
+                                                <TableColumn prefWidth="144.0" text="Phí Gửi Xe" />
+                                                <TableColumn prefWidth="150.0" text="Phí điện" />
+                                                <TableColumn prefWidth="150.0" text="Phí nước" />
+                                                <TableColumn prefWidth="163.0" text="Phí Internet" />
+                                                <TableColumn prefWidth="136.0" text="Tình trạng" />
+                                             </columns>
+                                          </TableView>
+                                          <Separator layoutX="303.0" orientation="VERTICAL" prefHeight="73.0" prefWidth="5.0" />
+                                          <Label layoutX="105.0" layoutY="26.0" text="TRA CỨU">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="352.0" layoutY="23.0" prefHeight="31.0" prefWidth="367.0" promptText="Vui lòng nhập mã hộ gia đình cần tra cứu..." />
+                                          <Button layoutX="755.0" layoutY="23.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" styleClass="funct4-btn" text="Tìm kiếm" textFill="WHITE" />
                                        </children>
                                        <styleClass>
                                           <String fx:value="shadow" />
@@ -1073,6 +1399,10 @@
                                        </styleClass>
                                     </AnchorPane>
                                  </children>
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
                               </AnchorPane>
                            </children>
                         </AnchorPane>

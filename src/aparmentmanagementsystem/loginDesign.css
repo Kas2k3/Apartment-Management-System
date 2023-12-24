@@ -4,11 +4,13 @@
     -fx-border-color: #000;
     -fx-border-width: .4px .2px .4px 0px;
 }
+
 .left-form{
     -fx-background-color: #fff;
     -fx-border-color: #000;
     -fx-border-width: .4px 0px .4px .4px;
 }
+
 .close{
     -fx-background-color: transparent;
     -fx-cursor:hand;
@@ -16,6 +18,7 @@
 .close:hover{
     -fx-background-color: #d6370b;
 }
+
 .textfield{
     -fx-background-color: #efefef;
     -fx-font-size: 20px;
@@ -27,6 +30,7 @@
     -fx-background-color: #f5f5f5;
     -fx-border-width: 1.2px;
 }
+
 .login-btn{
     -fx-background-color: #5ab2ff;
     -fx-font-size: 18px;
@@ -37,4 +41,13 @@
 }
 .login-btn:hover{
     -fx-background-color: #1373f9;
+}
+
+
+.forgetpass{
+    -fx-background-color: #ffffff;
+    -fx-cursor:hand;
+}
+.forgetpass:hover{
+    -fx-text-color: #390b5a;
 }

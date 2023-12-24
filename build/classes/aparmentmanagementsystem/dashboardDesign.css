@@ -39,6 +39,7 @@
 .signout:hover{
     -fx-background-color: #ddd;
 }
+
 .white-bg{
     -fx-background-color: #fff;
     -fx-background-radius: 6px;
@@ -58,7 +59,7 @@
 }
 
 .funct1-btn:hover{
-    -fx-background-color: #4d4848;
+    -fx-background-color: #434242;
     -fx-font-size: 16px;
     -fx-font-family: Arial;
     -fx-cursor:hand;
@@ -76,7 +77,7 @@
 }
 
 .funct2-btn:hover{
-    -fx-background-color: #4d4848;
+    -fx-background-color: #646161;
     -fx-font-size: 16px;
     -fx-font-family: Arial;
     -fx-cursor:hand;
@@ -94,7 +95,7 @@
 }
 
 .funct3-btn:hover{
-    -fx-background-color: #4d4848;
+    -fx-background-color: #1e8593;
     -fx-font-size: 16px;
     -fx-font-family: Arial;
     -fx-cursor:hand;
@@ -112,7 +113,7 @@
 }
 
 .funct4-btn:hover{
-    -fx-background-color: #4d4848;
+    -fx-background-color: #227fd0;
     -fx-font-size: 16px;
     -fx-font-family: Arial;
     -fx-cursor:hand;
