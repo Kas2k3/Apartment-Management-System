@@ -106,19 +106,10 @@ public class dashboardController implements Initializable{
     private Button themThongTinHoGD_btn;
     
     @FXML
-    private Button xoaThongTinHoGD_btn;
-    
-    @FXML
     private Button suaThongTinHoGD_btn;
     
     @FXML
     private Button traCuuThongTinHoGD_btn;
-    
-    @FXML
-    private Button suaThongTinQTV_btn;
-    
-    @FXML
-    private Button traCuuThongTinQTV_btn;
     
     @FXML
     private Button suaHoKhau_btn;
@@ -137,12 +128,6 @@ public class dashboardController implements Initializable{
     
     @FXML
     private Button themNhanKhau_btn;
-    
-    @FXML
-    private Button suaThongTinQTV1_btn;
-    
-    @FXML
-    private Button doiMatKhau_btn;
     
     @FXML
     private AnchorPane trangChu_form;
@@ -231,17 +216,6 @@ public class dashboardController implements Initializable{
     @FXML
     private AnchorPane themNhanKhau_form;
     
-    @FXML
-    private AnchorPane suaThongTinQTV_form;
-    
-    @FXML
-    private AnchorPane traCuuThongTinQTV_form;
-    
-    @FXML
-    private AnchorPane suaThongTinQTV1_form;
-    
-    @FXML
-    private AnchorPane doiMatKhau_form;
 
     //OPTION_COMBO_BOX
 //    private String[] trangThai = {"Đã nộp đủ", "Chưa nộp đủ"};
@@ -413,26 +387,6 @@ public class dashboardController implements Initializable{
         } else if(event.getSource() == themNhanKhau_btn){
             themHoKhau_form.setVisible(false);
             themNhanKhau_form.setVisible(true);
-        }
-    } 
-    
-    public void switchFormThongTinQTV(ActionEvent event){
-        if(event.getSource() == suaThongTinQTV_btn){
-            suaThongTinQTV_form.setVisible(true);
-            traCuuThongTinQTV_form.setVisible(false);
-        } else if(event.getSource() == traCuuThongTinQTV_btn){
-            suaThongTinQTV_form.setVisible(false);
-            traCuuThongTinQTV_form.setVisible(true);
-        } 
-    }
-    
-    public void switchFormSuaThongTinQTV(ActionEvent event){
-        if(event.getSource() == suaThongTinQTV1_btn){
-            suaThongTinQTV1_form.setVisible(true);
-            doiMatKhau_form.setVisible(false);
-        } else if(event.getSource() == doiMatKhau_btn){
-            suaThongTinQTV1_form.setVisible(false);
-            doiMatKhau_form.setVisible(true);
         }
     } 
     
