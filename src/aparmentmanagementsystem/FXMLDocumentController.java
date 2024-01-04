@@ -36,6 +36,9 @@ public class FXMLDocumentController implements Initializable {
     private Button forgetPass_btn;
     
     @FXML
+    private AnchorPane logo_form;
+    
+    @FXML
     private AnchorPane forgetPass_form;
     
     //SWITCH
@@ -44,6 +47,13 @@ public class FXMLDocumentController implements Initializable {
             forgetPass_form.setVisible(true);
         }
     }  
+    
+    //closeForgetPass
+    @FXML
+    private void closeForgetPass(MouseEvent event) {
+        forgetPass_form.setVisible(false);
+        logo_form.setVisible(true);
+    }
     
     private Connection connect;
     private PreparedStatement prepare;

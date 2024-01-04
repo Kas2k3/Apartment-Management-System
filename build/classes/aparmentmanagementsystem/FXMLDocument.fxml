@@ -13,7 +13,7 @@
          <children>
             <AnchorPane prefHeight="602.0" prefWidth="1000.0" styleClass="left-form" stylesheets="@loginDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <AnchorPane layoutX="500.0" layoutY="1.0" prefHeight="600.0" prefWidth="501.0" styleClass="right-form" stylesheets="@loginDesign.css">
+                  <AnchorPane fx:id="logo_form" layoutX="500.0" layoutY="1.0" prefHeight="600.0" prefWidth="501.0" styleClass="right-form" stylesheets="@loginDesign.css">
                      <children>
                         <AnchorPane layoutX="-284.0" layoutY="1.4" prefHeight="600.0" prefWidth="501.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
@@ -88,7 +88,7 @@
                               </Label>
                               <Button layoutX="110.0" layoutY="500.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="282.0" styleClass="funct3-btn" stylesheets="@dashboardDesign.css" text="        Gửi yêu cầu lấy lại mật khẩu" textFill="WHITE" />
                               <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="131.0" layoutY="529.0" size="1.5em" />
-                              <Button fx:id="close2" layoutX="434.0" mnemonicParsing="false" onAction="#close" prefHeight="53.0" prefWidth="74.0" styleClass="close" stylesheets="@loginDesign.css" textFill="WHITE">
+                              <Button layoutX="427.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#closeForgetPass" prefHeight="53.0" prefWidth="68.0" styleClass="close" stylesheets="@loginDesign.css" textFill="WHITE">
                                  <font>
                                     <Font size="26.0" />
                                  </font>

@@ -46,6 +46,9 @@ public class dashboardController implements Initializable{
     private Button trangChu_btn;
     
     @FXML
+    private Button doiMatKhau_btn;
+    
+    @FXML
     private Button khoanThu_btn;
     
     @FXML
@@ -215,6 +218,12 @@ public class dashboardController implements Initializable{
     
     @FXML
     private AnchorPane themNhanKhau_form;
+    
+    @FXML
+    private AnchorPane mainQTV_form;
+    
+    @FXML
+    private AnchorPane doiMatKhau_form;
     
 
     //OPTION_COMBO_BOX
@@ -390,6 +399,13 @@ public class dashboardController implements Initializable{
         }
     } 
     
+    public void insertFormQTV(ActionEvent event){
+        if(event.getSource() == doiMatKhau_btn){
+            mainQTV_form.setVisible(false);
+            doiMatKhau_form.setVisible(true);
+        } 
+    }
+    
     public void switchFormV2Update(ActionEvent event){
         if(event.getSource() == traCuuV2Update_btn){
             traCuuV2Update_form.setVisible(true);
@@ -449,6 +465,37 @@ public class dashboardController implements Initializable{
             stage.show();
             }
         }catch(Exception e){e.printStackTrace();}
+    }
+    
+    //Close SubForm
+    @FXML
+    private void closeAddFee(MouseEvent event) {
+        themKhoanThu_form.setVisible(false);
+        traCuuKhoanThu_form.setVisible(true);
+    }
+    
+    @FXML
+    private void closeChangeFee(MouseEvent event) {
+        suaKhoanThu_form.setVisible(false);
+        traCuuKhoanThu_form.setVisible(true);
+    }
+    
+    @FXML
+    private void closeAddInForFamily(MouseEvent event) {
+        themThongTinHoGD_form.setVisible(false);
+        traCuuThongTinHoGD_form.setVisible(true);
+    }
+    
+    @FXML
+    private void closeChangeInForFamily(MouseEvent event) {
+        suaThongTinHoGD_form.setVisible(false);
+        traCuuThongTinHoGD_form.setVisible(true);
+    }
+    
+    @FXML
+    private void closeChangePass(MouseEvent event) {
+        doiMatKhau_form.setVisible(false);
+        mainQTV_form.setVisible(true);
     }
     
     //SHOW_ACCOUNT_NAME
