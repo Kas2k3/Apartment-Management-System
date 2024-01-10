@@ -164,7 +164,7 @@
                                                    <children>
                                                       <TableView fx:id="phiQuanLy_table" prefHeight="598.0" prefWidth="665.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <columns>
-                                                            <TableColumn fx:id="maHoGDPhiKhac_col" prefWidth="169.0" text="Mã Hộ Gia Đình" />
+                                                            <TableColumn fx:id="maHoGDPhiQuanLy_col" prefWidth="169.0" text="Mã Hộ Gia Đình" />
                                                             <TableColumn fx:id="maPhiQuanLy_col" prefWidth="123.0" text="Mã phí" />
                                                             <TableColumn fx:id="phiVanHanh_col" minWidth="0.0" prefWidth="178.0" text="Phí vận hành (VND)" />
                                                             <TableColumn fx:id="tinhTrangPhiQuanLy_col" prefWidth="194.0" text="Tình Trạng" />
@@ -1124,7 +1124,7 @@
                                                 <Font name="Tahoma" size="17.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="126.0" layoutY="311.0" prefHeight="31.0" prefWidth="329.0" />
+                                          <TextField fx:id="hoTenQTV_txt" layoutX="126.0" layoutY="311.0" prefHeight="31.0" prefWidth="329.0" />
                                           <TextField fx:id="gioiTinhQTV_txt" layoutX="116.0" layoutY="358.0" prefHeight="31.0" prefWidth="340.0" />
                                           <TextField fx:id="diaChiQTV_txt" layoutX="100.0" layoutY="533.0" prefHeight="31.0" prefWidth="356.0" />
                                           <TextField fx:id="sdtQTV_txt" layoutX="151.0" layoutY="444.0" prefHeight="31.0" prefWidth="303.0" />
@@ -1150,19 +1150,19 @@
                               </AnchorPane>
                               <AnchorPane layoutX="37.0" layoutY="643.0" prefHeight="74.0" prefWidth="904.0" stylesheets="@dashboardDesign.css">
                                  <children>
-                                    <Button layoutX="328.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#changeQTV" prefHeight="42.0" prefWidth="106.0" stylesheets="@dashboardDesign.css" text="      Sửa" textFill="WHITE">
+                                    <Button layoutX="328.0" layoutY="17.0" mnemonicParsing="false" onAction="#changeQTV" prefHeight="42.0" prefWidth="106.0" stylesheets="@dashboardDesign.css" text="      Sửa" textFill="WHITE">
                                        <styleClass>
                                           <String fx:value="funct4-btn" />
                                           <String fx:value="shadow" />
                                        </styleClass>
                                     </Button>
-                                    <Button layoutX="182.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#deleteQTV" prefHeight="42.0" prefWidth="107.0" stylesheets="@dashboardDesign.css" text="     Xóa" textFill="WHITE">
+                                    <Button layoutX="182.0" layoutY="17.0" mnemonicParsing="false" onAction="#deleteQTV" prefHeight="42.0" prefWidth="107.0" stylesheets="@dashboardDesign.css" text="     Xóa" textFill="WHITE">
                                        <styleClass>
                                           <String fx:value="funct4-btn" />
                                           <String fx:value="shadow" />
                                        </styleClass>
                                     </Button>
-                                    <Button layoutX="39.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#addQTV" prefHeight="42.0" prefWidth="107.0" stylesheets="@dashboardDesign.css" text="      Thêm" textFill="WHITE">
+                                    <Button layoutX="39.0" layoutY="16.0" mnemonicParsing="false" onAction="#addQTV" prefHeight="42.0" prefWidth="107.0" stylesheets="@dashboardDesign.css" text="      Thêm" textFill="WHITE">
                                        <styleClass>
                                           <String fx:value="funct4-btn" />
                                           <String fx:value="shadow" />
