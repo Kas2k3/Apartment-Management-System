@@ -39,6 +39,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import models.HoKhau;
+import models.NhanKhau;
 import models.QuanTriVien;
 
 
@@ -245,6 +247,12 @@ public class dashboardController implements Initializable{
     @FXML
     private TableView<QuanTriVien> QTV_table;
     
+    @FXML
+    private TableView<HoKhau> hoKhau_table;
+    
+     @FXML
+    private TableView<NhanKhau> nhanKhau_table;
+    
     
      @FXML
     private TableColumn<QuanTriVien, String> emailQTV_col;
@@ -266,6 +274,47 @@ public class dashboardController implements Initializable{
     
     @FXML
     private TableColumn<QuanTriVien, String> diaChiQTV_col;
+    
+    @FXML
+    private TableColumn<HoKhau, String> chatLuongChungCu_col;
+    
+    @FXML
+    private TableColumn<HoKhau, String> diaChiHoKhau_col;
+    
+    @FXML
+    private TableColumn<HoKhau, Double> dienTich_col;
+    
+    @FXML
+    private TableColumn<HoKhau, String> maHoKhau_col;
+    
+    @FXML
+    private TableColumn<HoKhau, String> ngaySuaHoKhau_col;
+
+    @FXML
+    private TableColumn<HoKhau, String> ngayTaoHoKhau_col;
+    
+    @FXML
+    private TableColumn<HoKhau, String> tenChuHo_col;
+    
+    @FXML
+    private TableColumn<NhanKhau, String> tenNhanKhau_col;
+    
+    @FXML
+    private TableColumn<NhanKhau, String> quanHeChuHo_col;
+    
+    @FXML
+    private TableColumn<NhanKhau, String> ngaySinhNhanKhau_col;
+    
+    @FXML
+    private TableColumn<NhanKhau, String> maNhanKhau_col;
+      
+    @FXML
+    private TableColumn<NhanKhau, String> gioiTinhNhanKhau_col;
+    
+    @FXML
+    private TableColumn<NhanKhau, String> cccd_col;
+    
+    
     
     @FXML
     private TextField diaChiQTV_txt;
@@ -290,6 +339,74 @@ public class dashboardController implements Initializable{
     
     @FXML
     private TextField searchQTV_txt;
+    
+    @FXML
+    private TextField addChatLuongChungCu_txt;
+
+    @FXML
+    private TextField addDiaChiHoKhau_txt;
+
+    @FXML
+    private TextField addDienTich_txt;
+    
+    @FXML
+    private TextField addTenChuHo_txt;
+    
+    @FXML
+    private DatePicker addNgayTaoHoKhau_txt;
+    
+    @FXML
+    private TextField addMaHoKhau_txt;
+    
+    @FXML
+    private TextField changeChatLuongChungCu_txt;
+
+    @FXML
+    private TextField changeDiaChiHoKhau_txt;
+
+    @FXML
+    private TextField changeDienTich_txt;
+    
+    @FXML
+    private DatePicker changeNgaySuaHoKhau_txt;
+    
+    @FXML
+    private TextField changeTenChuHo_txt;
+    
+    @FXML
+    private TextField changeMaHoKhau_txt;
+    
+    @FXML
+    private TextField searchNhanKhau_txt;
+    
+    @FXML
+    private TextField addGioiTinhNhanKhau_txt;
+    
+    @FXML
+    private TextField addMaNhanKhau_txt;
+    
+    @FXML
+    private DatePicker addNgaySinhNhanKhau_txt;
+    
+    
+    
+    @FXML
+    private TextField changeCCCD_txt;
+    
+    @FXML
+    private TextField changeMaNhanKhau_txt;
+    
+    @FXML
+    private DatePicker changeNgaySinhNhanKhau_txt;
+    
+    @FXML
+    private TextField changeQuanHeChuHo_txt;
+    
+    @FXML
+    private TextField changeTenNhanKhau_txt;
+    
+    @FXML
+    private TextField changeGioiTinhNhanKhau_txt;
     
 
     //OPTION_COMBO_BOX
@@ -325,7 +442,6 @@ public class dashboardController implements Initializable{
 //   
     
     
-    String query = null;
     Connection connect;
     PreparedStatement pst;
     Statement statement;
@@ -333,6 +449,312 @@ public class dashboardController implements Initializable{
     QuanTriVien quantrivien = null;
     
     int myQTVIndex;
+    int myHoKhauIndex;
+    int myNhanKhauIndex;
+    
+    
+    
+    
+    // THÔNG TIN NHÂN KHẨU TỪ ĐÂY
+    
+    
+    public void ChangeNhanKhauClear(){
+        changeMaNhanKhau_txt.setText("");
+        changeTenNhanKhau_txt.setText("");    
+        changeCCCD_txt.setText("");
+        changeGioiTinhNhanKhau_txt.setText("");
+        changeNgaySinhNhanKhau_txt.setValue(null);
+        changeQuanHeChuHo_txt.setText("");
+
+    }
+    
+    public void NhanKhauShowListData(){
+        
+        connect = database.connectDb();
+        ObservableList<NhanKhau> listNhanKhau = FXCollections.observableArrayList();
+        try {
+            pst = connect.prepareStatement("select * from nhankhau");
+            result = pst.executeQuery(); {
+            while(result.next()) {
+                NhanKhau nhankhau = new NhanKhau(result.getString("maNhanKhau"), 
+                result.getString("hoTenNhanKhau"), 
+                result.getString("soCCCD"),
+                result.getString("gioiTinhNhanKhau"),
+                result.getDate("ngaySinhNhanKhau"), 
+                result.getString("quanHeChuHo"));
+                
+                listNhanKhau.add(nhankhau);
+            }
+        }
+            nhanKhau_table.setItems(listNhanKhau);
+            
+            maNhanKhau_col.setCellValueFactory(new PropertyValueFactory<>("maNhanKhau"));
+            tenNhanKhau_col.setCellValueFactory(new PropertyValueFactory<>("hoTenNhanKhau"));
+            cccd_col.setCellValueFactory(new PropertyValueFactory<>("soCCCD"));
+            gioiTinhNhanKhau_col.setCellValueFactory(new PropertyValueFactory<>("gioiTinhNhanKhau" ));
+            ngaySinhNhanKhau_col.setCellValueFactory(new PropertyValueFactory<>("ngaySinhNhanKhau"));
+            quanHeChuHo_col.setCellValueFactory(new PropertyValueFactory<>("quanHeChuHo"));  
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(dashboardController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        nhanKhau_table.setRowFactory( tv -> {
+            TableRow<NhanKhau> NhanKhaurow = new TableRow<>();
+            NhanKhaurow.setOnMouseClicked (event -> {
+                if (event.getClickCount() == 1 && (!NhanKhaurow.isEmpty())){
+                    myNhanKhauIndex = nhanKhau_table.getSelectionModel().getSelectedIndex();
+                    
+                    changeMaNhanKhau_txt.setText(nhanKhau_table.getItems().get(myNhanKhauIndex).getMaNhanKhau());
+                    changeTenNhanKhau_txt.setText(nhanKhau_table.getItems().get(myNhanKhauIndex).getHoTenNhanKhau());
+                    changeCCCD_txt.setText(nhanKhau_table.getItems().get(myNhanKhauIndex).getSoCCCD());
+                    changeGioiTinhNhanKhau_txt.setText(nhanKhau_table.getItems().get(myNhanKhauIndex).getGioiTinhNhanKhau());
+                    changeNgaySinhNhanKhau_txt.setValue(LocalDate.parse(String.valueOf(nhanKhau_table.getItems().get(myNhanKhauIndex).getNgaySinhNhanKhau())));
+                    changeQuanHeChuHo_txt.setText(nhanKhau_table.getItems().get(myNhanKhauIndex).getQuanHeChuHo());
+
+                }
+            });
+            return NhanKhaurow;
+            
+        });
+    }
+    
+    // THÔNG TIN HỘ KHẨU TỪ ĐÂY
+    
+    // THAY ĐỔI THÔNG TIN HỘ KHẨU
+    @FXML
+    void changeHoKhau(ActionEvent event) throws SQLException {
+        
+        connect = database.connectDb();
+        String changeHoKhau = "update hokhau set TenChuHo = ?, DiaChiHoKhau = ?, DienTich = ?, ChatLuongChungCu = ?, NgaySua = ?"
+                + " where MaHoKhau = '" + changeMaHoKhau_txt.getText() + "'";
+        try {
+            Alert alert;
+            
+            if (changeMaHoKhau_txt.getText().isEmpty() 
+                    || changeTenChuHo_txt.getText().isEmpty()
+                    || changeDiaChiHoKhau_txt.getText().isEmpty()
+                    || changeDienTich_txt.getText().isEmpty()
+                    || changeChatLuongChungCu_txt.getText().isEmpty()
+                    || changeNgaySuaHoKhau_txt.getValue() == null) {
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Báo lỗi");
+            alert.setHeaderText((null));
+            alert.setContentText("Xin hãy điền đầy đủ thông tin!");
+            alert.showAndWait();
+            HoKhauShowListData();
+            
+            } else {
+                alert = new Alert(AlertType.CONFIRMATION);
+                alert.setTitle("Xác nhận sửa");
+                alert.setHeaderText(null);
+                alert.setContentText("Bạn có chắc muốn SỬA hộ khẩu # " + changeMaHoKhau_txt.getText() + "?");
+
+                Optional<ButtonType> option = alert.showAndWait();
+
+                if (option.get().equals(ButtonType.OK)){
+                    pst = connect.prepareStatement(changeHoKhau);
+                    pst.setString(1, changeTenChuHo_txt.getText());
+                    pst.setString(2, changeDiaChiHoKhau_txt.getText());
+                    pst.setString(3, changeDienTich_txt.getText());
+                    pst.setString(4, changeChatLuongChungCu_txt.getText());
+                    pst.setString(5, String.valueOf(changeNgaySuaHoKhau_txt.getValue()));
+
+                    pst.executeUpdate();
+                    
+                    alert = new Alert(AlertType.INFORMATION);
+                    alert.setTitle("Thông báo sửa hộ khẩu");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Sửa hộ khẩu thành công!");
+                    alert.showAndWait();
+                    
+                    // UPDATE QTV TABLEVIEW
+                    HoKhauShowListData();
+                    //TO CLEAR THE FIELDS
+                    ChangeHoKhauClear();
+                }
+            }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+    }
+    
+    @FXML
+    void deleteHoKhau(ActionEvent event) {
+        
+        connect = database.connectDb();
+        HoKhau selectedHoKhauRow = hoKhau_table.getSelectionModel().getSelectedItem();
+        
+        try {
+        if (selectedHoKhauRow != null) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Xác nhận xóa");
+            alert.setHeaderText("");
+            alert.setContentText("Bạn có muốn XÓA hộ khẩu này?");
+
+            ButtonType rs = alert.showAndWait().orElse(ButtonType.CANCEL);
+
+            if (rs == ButtonType.OK) {
+                pst = connect.prepareStatement("delete from hokhau where MaHoKhau = ?");
+                pst.setString(1, selectedHoKhauRow.getMaHoKhau());
+                int rowsAffected = pst.executeUpdate();
+                
+                if (rowsAffected > 0) {
+                    hoKhau_table.getItems().remove(selectedHoKhauRow);
+                }
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Báo lỗi");
+            alert.setHeaderText("Không có hộ khẩu nào được chọn!");
+            alert.setContentText("Hãy chọn hộ khẩu muốn XÓA!");
+            alert.showAndWait();
+            HoKhauShowListData();
+        }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    void addHoKhau(MouseEvent event) {
+        String insertHoKhau = "insert into hokhau (MaHoKhau,TenChuHo,DiaChiHoKhau,DienTich,ChatLuongChungCu,NgayTao) values(?,?,?,?,?,?)";
+        
+        connect = database.connectDb();
+        
+        try {
+            Alert alert;
+            
+            if (addMaHoKhau_txt.getText().isEmpty() 
+                    || addTenChuHo_txt.getText().isEmpty()
+                    || addDiaChiHoKhau_txt.getText().isEmpty()
+                    || addDienTich_txt.getText().isEmpty()
+                    || addChatLuongChungCu_txt.getText().isEmpty()
+                    || addNgayTaoHoKhau_txt.getValue() == null){
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Báo lỗi");
+            alert.setHeaderText((null));
+            alert.setContentText("Xin hãy điền đầy đủ thông tin");
+            alert.showAndWait();
+            HoKhauShowListData();
+            
+            } else {
+                //CHECK IF HoKhau IS EXIST
+                String checkHoKhau = "select MaHoKhau from hokhau where MaHoKhau = '" 
+                        + addMaHoKhau_txt.getText() + "'";
+                
+                statement = connect.createStatement();
+                result = statement.executeQuery(checkHoKhau);
+                
+                
+                if (result.next()){
+                   alert = new Alert(AlertType.ERROR);
+                   alert.setTitle("Báo lỗi");
+                   alert.setHeaderText(null);
+                   alert.setContentText("Hộ khẩu #" + addMaHoKhau_txt.getText() + "đã tồn tại!");
+                   alert.showAndWait();
+                   AddHoKhauClear();
+                } else {
+                    pst = connect.prepareStatement(insertHoKhau);
+                    pst.setString(1, addMaHoKhau_txt.getText());
+                    pst.setString(2, addTenChuHo_txt.getText());
+                    pst.setString(3, addDiaChiHoKhau_txt.getText());
+                    pst.setString(4, addDienTich_txt.getText());
+                    pst.setString(5, addChatLuongChungCu_txt.getText());
+                    pst.setString(6, String.valueOf(addNgayTaoHoKhau_txt.getValue()));
+                    
+                    pst.executeUpdate();
+                    
+                    alert = new Alert(AlertType.INFORMATION);
+                    alert.setTitle("Thông báo");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Thêm hộ khẩu thành công");
+                    alert.showAndWait();
+                    
+                    // UPDATE QTV TABLEVIEW
+                    HoKhauShowListData();
+                    //TO CLEAR THE FIELDS
+                    AddHoKhauClear();
+                }
+            }
+        } catch (SQLException e){
+        }
+
+    }
+    
+    
+    public void AddHoKhauClear(){
+        addMaHoKhau_txt.setText("");
+        addTenChuHo_txt.setText("");
+        addDiaChiHoKhau_txt.setText("");
+        addDienTich_txt.setText("");
+        addChatLuongChungCu_txt.setText("");
+        addNgayTaoHoKhau_txt.setValue(null);
+    }
+    
+    public void ChangeHoKhauClear(){
+        changeMaHoKhau_txt.setText("");
+        changeTenChuHo_txt.setText("");
+        changeDiaChiHoKhau_txt.setText("");
+        changeDienTich_txt.setText("");
+        changeChatLuongChungCu_txt.setText("");
+        changeNgaySuaHoKhau_txt.setValue(null);
+    }
+    
+    public void HoKhauShowListData(){
+        
+        connect = database.connectDb();
+        ObservableList<HoKhau> listHoKhau = FXCollections.observableArrayList();
+        try {
+            pst = connect.prepareStatement("select * from hokhau");
+            result = pst.executeQuery(); {
+            while(result.next()) {
+                HoKhau hokhau = new HoKhau(result.getString("maHoKhau"), 
+                result.getString("tenChuHo"), 
+                result.getString("diaChiHoKhau"),
+                result.getDouble("dienTich"), 
+                result.getString("chatLuongChungCu"),
+                result.getDate("ngayTao"), 
+                result.getDate("ngaySua"));
+                
+                listHoKhau.add(hokhau);
+            }
+        }
+            hoKhau_table.setItems(listHoKhau);
+            
+            maHoKhau_col.setCellValueFactory(new PropertyValueFactory<>("maHoKhau"));
+            tenChuHo_col.setCellValueFactory(new PropertyValueFactory<>("tenChuHo"));
+            diaChiHoKhau_col.setCellValueFactory(new PropertyValueFactory<>("diaChiHoKhau"));
+            dienTich_col.setCellValueFactory(new PropertyValueFactory<>("dienTich"));
+            chatLuongChungCu_col.setCellValueFactory(new PropertyValueFactory<>("chatLuongChungCu"));
+            ngayTaoHoKhau_col.setCellValueFactory(new PropertyValueFactory<>("ngayTao"));  
+            ngaySuaHoKhau_col.setCellValueFactory(new PropertyValueFactory<>("ngaySua"));
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(dashboardController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        hoKhau_table.setRowFactory( tv -> {
+            TableRow<HoKhau> HoKhaurow = new TableRow<>();
+            HoKhaurow.setOnMouseClicked (event -> {
+                if (event.getClickCount() == 1 && (!HoKhaurow.isEmpty())){
+                    myHoKhauIndex = hoKhau_table.getSelectionModel().getSelectedIndex();
+                    
+                    changeMaHoKhau_txt.setText(hoKhau_table.getItems().get(myHoKhauIndex).getMaHoKhau());
+                    changeTenChuHo_txt.setText(hoKhau_table.getItems().get(myHoKhauIndex).getTenChuHo());
+                    changeDiaChiHoKhau_txt.setText(hoKhau_table.getItems().get(myHoKhauIndex).getDiaChiHoKhau());
+                    changeDienTich_txt.setText(String.valueOf(hoKhau_table.getItems().get(myHoKhauIndex).getDienTich()));
+                    changeChatLuongChungCu_txt.setText(hoKhau_table.getItems().get(myHoKhauIndex).getChatLuongChungCu());
+                    changeNgaySuaHoKhau_txt.setValue(LocalDate.parse(String.valueOf(hoKhau_table.getItems().get(myHoKhauIndex).getNgaySua())));
+                    
+                }
+            });
+            return HoKhaurow;
+            
+        });
+    }
+    
+    
     
     
     // TÌM KIẾM QUẢN TRỊ VIÊN
@@ -372,63 +794,62 @@ public class dashboardController implements Initializable{
     
     // THAY ĐỔI THÔNG TIN QUẢN TRỊ VIÊN
     @FXML
-    void changeQTV(ActionEvent event) {
-        String updateData = "UPDATE quantrivien SET "
-                + "MaQTV = '" + maQTV_txt.getText()
-                + "', HoTen = '" + hoTenQTV_txt.getText()
-                + "', GioiTinh = '" + gioiTinhQTV_txt.getText()
-                + "', NgaySinh = '" + ngaySinhQTV_txt.getValue()
-                + "', SDT = '" + sdtQTV_txt.getText()
-                + "', Email = '" + emailQTV_txt.getText()
-                + "', DiaChi = '" + diaChiQTV_txt.getText()
-                + "'";
-
+    void changeQTV(ActionEvent event) throws SQLException {
+        
         connect = database.connectDb();
-
+        String changeQTV = "update quantrivien set HoTen = ?, GioiTinh = ?, NgaySinh = ?, SDT = ?, Email = ?, DiaChi = ?"
+                + " where MaQTV = '" + maQTV_txt.getText() + "'";
         try {
             Alert alert;
-            if (maQTV_txt.getText().isEmpty()
+            
+            if (maQTV_txt.getText().isEmpty() 
                     || hoTenQTV_txt.getText().isEmpty()
                     || gioiTinhQTV_txt.getText().isEmpty()
                     || ngaySinhQTV_txt.getValue() == null
                     || sdtQTV_txt.getText().isEmpty()
                     || emailQTV_txt.getText().isEmpty()
                     || diaChiQTV_txt.getText().isEmpty()) {
-                alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error Message");
-                alert.setHeaderText(null);
-                alert.setContentText("Please fill all blank fields");
-                alert.showAndWait();
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Báo lỗi");
+            alert.setHeaderText((null));
+            alert.setContentText("Xin hãy điền đầy đủ thông tin!");
+            alert.showAndWait();
+            QTVShowListData();
+            
             } else {
-
                 alert = new Alert(AlertType.CONFIRMATION);
-                alert.setTitle("Confirmation Message");
+                alert.setTitle("Xác nhận sửa");
                 alert.setHeaderText(null);
-                alert.setContentText("Are you sure you want to UPDATE Student #" + maQTV_txt.getText() + "?");
+                alert.setContentText("Bạn có chắc muốn SỬA quản trị viên # " + maQTV_txt.getText() + "?");
+
                 Optional<ButtonType> option = alert.showAndWait();
 
-                if (option.get().equals(ButtonType.OK)) {
-                    statement = connect.createStatement();
-                    statement.executeUpdate(updateData);
-
+                if (option.get().equals(ButtonType.OK)){
+                    pst = connect.prepareStatement(changeQTV);
+                    pst.setString(1, hoTenQTV_txt.getText());
+                    pst.setString(2, gioiTinhQTV_txt.getText());
+                    pst.setString(3, String.valueOf(ngaySinhQTV_txt.getValue()));
+                    pst.setString(4, sdtQTV_txt.getText());
+                    pst.setString(5, emailQTV_txt.getText());
+                    pst.setString(6, diaChiQTV_txt.getText());
+                    
+                    pst.executeUpdate();
+                    
                     alert = new Alert(AlertType.INFORMATION);
-                    alert.setTitle("Information Message");
+                    alert.setTitle("Thông báo sửa quản trị viên");
                     alert.setHeaderText(null);
-                    alert.setContentText("Successfully Updated!");
+                    alert.setContentText("Sửa quản trị viên thành công!");
                     alert.showAndWait();
-                
-                    // TO UPDATE THE TABLEVIEW
+                    
+                    // UPDATE QTV TABLEVIEW
                     QTVShowListData();
-                    // TO CLEAR THE FIELDS
+                    //TO CLEAR THE FIELDS
                     QTVClear();
                 }
-                else {
-                    return;
-                }
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
     }
     
     
@@ -629,8 +1050,6 @@ public class dashboardController implements Initializable{
         });
     }
     
-    
-        
     
     
     public void switchForm(ActionEvent event){
@@ -936,11 +1355,6 @@ public class dashboardController implements Initializable{
 
 
     @FXML
-    void changeHoKhau(ActionEvent event) {
-
-    }
-
-    @FXML
     void changeNhanKhau(ActionEvent event) {
 
     }
@@ -948,13 +1362,6 @@ public class dashboardController implements Initializable{
 
     @FXML
     void closeChangeInForFamily(ActionEvent event) {
-
-    }
-
-
-
-    @FXML
-    void addHoKhau(ActionEvent event) {
 
     }
 
@@ -1006,6 +1413,8 @@ public class dashboardController implements Initializable{
         displayUsername();
 //        trangThaiNopTien();
         QTVShowListData();
+        HoKhauShowListData();
+        NhanKhauShowListData();
 
     }
     
