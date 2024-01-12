@@ -1284,6 +1284,12 @@ public class dashboardController implements Initializable{
     }
     
     @FXML
+    private void closeAddV2Update(MouseEvent event) {
+        themV2Update_form.setVisible(false);
+        traCuuV2Update_form.setVisible(true);
+    }
+    
+    @FXML
     private void closeChangeInForFamily(MouseEvent event) {
         suaThongTinHoGD_form.setVisible(false);
         traCuuThongTinHoGD_form.setVisible(true);
@@ -1295,6 +1301,11 @@ public class dashboardController implements Initializable{
         mainQTV_form.setVisible(true);
     }
     
+    @FXML
+    private void closeChangeV2Update(MouseEvent event) {
+        suaV2Update_form.setVisible(false);
+        traCuuV2Update_form.setVisible(true);
+    }
 
     @FXML
     void searchMaHoGiaDinh(ActionEvent event) {
