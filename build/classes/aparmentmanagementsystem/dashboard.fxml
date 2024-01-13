@@ -666,7 +666,7 @@
                               </AnchorPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="thongTinHoGD_form" layoutX="10.0" layoutY="10.0" onDragDetected="#switchForm" prefHeight="750.0" prefWidth="988.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="thongTinHoGD_form" layoutX="10.0" layoutY="10.0" onDragDetected="#switchForm" prefHeight="750.0" prefWidth="988.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="37.0" layoutY="29.0" prefHeight="588.0" prefWidth="904.0">
                                  <children>
@@ -724,8 +724,8 @@
                                           <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="204.0" layoutY="41.0" size="1.5em" text="" />
                                           <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="46.0" layoutY="41.0" size="1.5em" text="" />
                                           <Separator layoutX="351.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="64.0" prefWidth="8.0" />
-                                          <TextField fx:id="searchNhanKhau_txt" layoutX="421.0" layoutY="16.0" prefHeight="34.0" prefWidth="310.0" promptText="Tra cứu thông tin nhân khẩu..." />
-                                          <Button layoutX="766.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#searchNhanKhau" styleClass="funct4-btn" text="Tìm kiếm" textFill="WHITE" />
+                                          <TextField fx:id="searchHoKhau_txt" layoutX="421.0" layoutY="16.0" prefHeight="34.0" prefWidth="194.0" promptText="Tra cứu thông tin hộ khẩu..." />
+                                          <TextField fx:id="searchNhanKhau_txt" layoutX="649.0" layoutY="15.0" prefHeight="34.0" prefWidth="191.0" promptText="Tra cứu thông tin nhân khẩu..." />
                                        </children>
                                        <styleClass>
                                           <String fx:value="white-bg" />
@@ -736,7 +736,7 @@
                                        <children>
                                           <AnchorPane layoutY="65.0" prefHeight="526.0" prefWidth="908.0" styleClass="white-bg">
                                              <children>
-                                                <AnchorPane fx:id="suaHoKhau_form" onDragDetected="#switchFormSuaHoNhanKhau" prefHeight="518.0" prefWidth="908.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <AnchorPane fx:id="suaHoKhau_form" onDragDetected="#switchFormSuaHoNhanKhau" prefHeight="518.0" prefWidth="908.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <styleClass>
                                                       <String fx:value="shadow" />
                                                       <String fx:value="white-bg" />
@@ -772,22 +772,29 @@
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <Button layoutX="356.0" layoutY="441.0" mnemonicParsing="false" onAction="#changeHoKhau" prefHeight="35.0" prefWidth="196.0" stylesheets="@dashboardDesign.css" text="         Gửi yêu cầu sửa" textFill="WHITE">
+                                                      <Button layoutX="242.0" layoutY="442.0" mnemonicParsing="false" onAction="#changeHoKhau" prefHeight="35.0" prefWidth="196.0" stylesheets="@dashboardDesign.css" text="         Gửi yêu cầu sửa" textFill="WHITE">
                                                          <styleClass>
                                                             <String fx:value="funct4-btn" />
                                                             <String fx:value="shadow" />
                                                          </styleClass>
                                                       </Button>
-                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="375.0" layoutY="467.0" size="1.5em" wrappingWidth="20.5" />
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="261.0" layoutY="468.0" size="1.5em" wrappingWidth="20.5" />
                                                       <Label layoutX="102.0" layoutY="379.0" prefHeight="21.0" prefWidth="156.0" text="Ngày sửa hộ khẩu:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
                                                       <DatePicker fx:id="changeNgaySuaHoKhau_txt" layoutX="258.0" layoutY="374.0" prefHeight="31.0" prefWidth="550.0" />
+                                                      <Button layoutX="474.0" layoutY="442.0" mnemonicParsing="false" onAction="#deleteHoKhau" onMouseClicked="#delete" prefHeight="37.0" prefWidth="198.0" stylesheets="@dashboardDesign.css" text="       Xóa thông tin này" textFill="WHITE">
+                                                         <styleClass>
+                                                            <String fx:value="funct4-btn" />
+                                                            <String fx:value="shadow" />
+                                                         </styleClass>
+                                                      </Button>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="TRASH" layoutX="489.0" layoutY="465.0" size="1.5em" />
                                                    </children>
                                                 </AnchorPane>
-                                                <AnchorPane fx:id="suaNhanKhau_form" onDragDetected="#switchFormSuaHoNhanKhau" prefHeight="526.0" prefWidth="908.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <AnchorPane fx:id="suaNhanKhau_form" onDragDetected="#switchFormSuaHoNhanKhau" prefHeight="526.0" prefWidth="908.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <children>
                                                       <Label layoutX="102.0" layoutY="50.0" prefHeight="21.0" prefWidth="118.0" text="Mã nhân khẩu:">
                                                          <font>
@@ -812,13 +819,13 @@
                                                             <Font name="Tahoma" size="17.0" />
                                                          </font>
                                                       </Label>
-                                                      <Button layoutX="356.0" layoutY="445.0" mnemonicParsing="false" onAction="#changeNhanKhau" prefHeight="35.0" prefWidth="196.0" stylesheets="@dashboardDesign.css" text="         Gửi yêu cầu sửa" textFill="WHITE">
+                                                      <Button layoutX="238.0" layoutY="440.0" mnemonicParsing="false" onAction="#changeNhanKhau" prefHeight="35.0" prefWidth="196.0" stylesheets="@dashboardDesign.css" text="         Gửi yêu cầu sửa" textFill="WHITE">
                                                          <styleClass>
                                                             <String fx:value="funct4-btn" />
                                                             <String fx:value="shadow" />
                                                          </styleClass>
                                                       </Button>
-                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="376.0" layoutY="470.0" size="1.5em" wrappingWidth="20.5" />
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="258.0" layoutY="465.0" size="1.5em" wrappingWidth="20.5" />
                                                       <Label layoutX="97.0" layoutY="187.0" prefHeight="21.0" prefWidth="99.0" text="Số CCCD:">
                                                          <font>
                                                             <Font name="Tahoma" size="17.0" />
@@ -832,6 +839,13 @@
                                                       <TextField fx:id="changeQuanHeChuHo_txt" layoutX="271.0" layoutY="389.0" prefHeight="31.0" prefWidth="536.0" />
                                                       <TextField fx:id="changeCCCD_txt" layoutX="186.0" layoutY="182.0" prefHeight="31.0" prefWidth="618.0" />
                                                       <DatePicker fx:id="changeNgaySinhNhanKhau_txt" layoutX="201.0" layoutY="248.0" prefHeight="31.0" prefWidth="604.0" />
+                                                      <Button layoutX="471.0" layoutY="441.0" mnemonicParsing="false" onAction="#deleteNhanKhau" onMouseClicked="#delete" prefHeight="35.0" prefWidth="198.0" stylesheets="@dashboardDesign.css" text="       Xóa thông tin này" textFill="WHITE">
+                                                         <styleClass>
+                                                            <String fx:value="funct4-btn" />
+                                                            <String fx:value="shadow" />
+                                                         </styleClass>
+                                                      </Button>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="TRASH" layoutX="488.0" layoutY="464.0" size="1.5em" />
                                                    </children>
                                                    <styleClass>
                                                       <String fx:value="shadow" />
@@ -849,7 +863,7 @@
                                           </Button>
                                           <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="212.0" layoutY="41.0" size="1.5em" />
                                           <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="488.0" layoutY="40.0" size="1.5em" />
-                                          <Button layoutX="861.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#closeChangeInForFamily" prefHeight="30.0" prefWidth="47.0" styleClass="close" stylesheets="@dashboardDesign.css">
+                                          <Button layoutX="861.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#closeChangeInforFamily" prefHeight="30.0" prefWidth="47.0" styleClass="close" stylesheets="@dashboardDesign.css">
                                              <graphic>
                                                 <FontAwesomeIcon glyphName="CLOSE" size="1.3em" text="" />
                                              </graphic>
@@ -972,7 +986,7 @@
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </AnchorPane>
-                                          <Button fx:id="themNhanKhau_btn1" layoutX="469.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchFormThemHoNhanKhau" prefHeight="35.0" prefWidth="256.0" styleClass="funct3-btn" stylesheets="@dashboardDesign.css" text="      Thêm thông tin nhân khẩu" textFill="WHITE" />
+                                          <Button fx:id="themNhanKhau_btn" layoutX="469.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchFormThemHoNhanKhau" prefHeight="35.0" prefWidth="256.0" styleClass="funct3-btn" stylesheets="@dashboardDesign.css" text="      Thêm thông tin nhân khẩu" textFill="WHITE" />
                                           <Button fx:id="themHoKhau_btn" layoutX="191.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchFormThemHoNhanKhau" prefHeight="33.0" prefWidth="245.0" stylesheets="@dashboardDesign.css" text="      Thêm thông tin hộ khẩu" textFill="WHITE">
                                              <styleClass>
                                                 <String fx:value="funct3-btn" />
@@ -981,7 +995,7 @@
                                           </Button>
                                           <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="212.0" layoutY="41.0" size="1.5em" />
                                           <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="488.0" layoutY="40.0" size="1.5em" />
-                                          <Button layoutX="861.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#closeAddInForFamily" prefHeight="30.0" prefWidth="47.0" styleClass="close" stylesheets="@dashboardDesign.css">
+                                          <Button layoutX="861.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#closeAddInforFamily" prefHeight="30.0" prefWidth="47.0" styleClass="close" stylesheets="@dashboardDesign.css">
                                              <graphic>
                                                 <FontAwesomeIcon glyphName="CLOSE" size="1.3em" text="" />
                                              </graphic>
@@ -998,34 +1012,27 @@
                                  <children>
                                     <AnchorPane layoutX="4.0" layoutY="23.0" prefHeight="75.0" prefWidth="904.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <Button fx:id="traCuuThongTinHoGD_btn" layoutX="693.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormThongTinHoGD" prefHeight="42.0" prefWidth="190.0" stylesheets="@dashboardDesign.css" text="      Tra cứu thông tin" textFill="WHITE">
+                                          <Button fx:id="traCuuThongTinHoGD_btn" layoutX="637.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormThongTinHoGD" prefHeight="42.0" prefWidth="197.0" stylesheets="@dashboardDesign.css" text="      Tra cứu thông tin" textFill="WHITE">
                                              <styleClass>
                                                 <String fx:value="funct2-btn" />
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
-                                          <Button fx:id="suaThongTinHoGD_btn" layoutX="479.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormThongTinHoGD" prefHeight="42.0" prefWidth="189.0" stylesheets="@dashboardDesign.css" text="      Sửa thông tin" textFill="WHITE">
+                                          <Button fx:id="suaThongTinHoGD_btn" layoutX="369.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchFormThongTinHoGD" prefHeight="42.0" prefWidth="196.0" stylesheets="@dashboardDesign.css" text="      Sửa thông tin" textFill="WHITE">
                                              <styleClass>
                                                 <String fx:value="funct2-btn" />
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
-                                          <Button layoutX="257.0" layoutY="17.0" mnemonicParsing="false" onAction="#deleteHoKhau" onMouseClicked="#delete" prefHeight="42.0" prefWidth="197.0" stylesheets="@dashboardDesign.css" text="       Xóa thông tin này" textFill="WHITE">
+                                          <Button fx:id="themThongTinHoGD_btn" layoutX="76.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchFormThongTinHoGD" prefHeight="42.0" prefWidth="219.0" stylesheets="@dashboardDesign.css" text="     Thêm mới thông tin" textFill="WHITE">
                                              <styleClass>
                                                 <String fx:value="funct2-btn" />
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
-                                          <Button fx:id="themThongTinHoGD_btn" layoutX="20.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchFormThongTinHoGD" prefHeight="42.0" prefWidth="213.0" stylesheets="@dashboardDesign.css" text="     Thêm mới thông tin" textFill="WHITE">
-                                             <styleClass>
-                                                <String fx:value="funct2-btn" />
-                                                <String fx:value="shadow" />
-                                             </styleClass>
-                                          </Button>
-                                          <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="711.0" layoutY="45.0" size="1.5em" text="" />
-                                          <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="491.0" layoutY="45.0" size="1.5em" />
-                                          <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="274.0" layoutY="45.0" size="1.5em" />
-                                          <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="35.0" layoutY="46.0" size="1.5em" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="655.0" layoutY="45.0" size="1.5em" text="" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="389.0" layoutY="44.0" size="1.5em" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="91.0" layoutY="45.0" size="1.5em" />
                                        </children>
                                        <styleClass>
                                           <String fx:value="white-bg" />
@@ -1176,7 +1183,7 @@
                                        </styleClass>
                                     </Button>
                                     <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="340.0" layoutY="45.0" size="1.5em" />
-                                    <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="198.0" layoutY="45.0" size="1.5em" />
+                                    <FontAwesomeIcon fill="WHITE" glyphName="TRASH" layoutX="198.0" layoutY="45.0" size="1.5em" />
                                     <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="54.0" layoutY="45.0" size="1.5em" text="" />
                                     <Button fx:id="doiMatKhau_btn" layoutX="601.0" layoutY="17.0" mnemonicParsing="false" onAction="#insertFormQTV" prefHeight="40.0" prefWidth="180.0" stylesheets="@dashboardDesign.css" text="Đổi mật khẩu" textFill="WHITE">
                                        <styleClass>
@@ -1225,7 +1232,7 @@
                                           </Button>
                                           <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="711.0" layoutY="45.0" size="1.5em" />
                                           <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="491.0" layoutY="45.0" size="1.5em" />
-                                          <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="274.0" layoutY="45.0" size="1.5em" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="TRASH" layoutX="274.0" layoutY="45.0" size="1.5em" />
                                           <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="35.0" layoutY="46.0" size="1.5em" />
                                        </children>
                                        <styleClass>
@@ -1288,6 +1295,11 @@
                                           </Label>
                                           <TextField layoutX="300.0" layoutY="211.0" prefHeight="31.0" prefWidth="449.0" />
                                           <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="337.0" layoutY="517.0" size="1.5em" />
+                                          <Button layoutX="857.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#closeChangeV2Update" prefHeight="30.0" prefWidth="47.0" styleClass="close" stylesheets="@dashboardDesign.css">
+                                             <graphic>
+                                                <FontAwesomeIcon glyphName="CLOSE" size="1.3em" text="" />
+                                             </graphic>
+                                          </Button>
                                        </children>
                                     </AnchorPane>
                                     <AnchorPane fx:id="themV2Update_form" onDragDetected="#switchFormV2Update" prefHeight="576.0" prefWidth="904.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -1341,6 +1353,11 @@
                                           </Label>
                                           <TextField layoutX="300.0" layoutY="211.0" prefHeight="31.0" prefWidth="449.0" />
                                           <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="337.0" layoutY="517.0" size="1.5em" />
+                                          <Button layoutX="857.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#closeAddV2Update" prefHeight="30.0" prefWidth="47.0" styleClass="close" stylesheets="@dashboardDesign.css">
+                                             <graphic>
+                                                <FontAwesomeIcon glyphName="CLOSE" size="1.3em" text="" />
+                                             </graphic>
+                                          </Button>
                                        </children>
                                     </AnchorPane>
                                     <AnchorPane fx:id="traCuuV2Update_form" layoutX="14.0" layoutY="53.0" onDragDetected="#switchFormV2Update" prefHeight="475.0" prefWidth="904.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">

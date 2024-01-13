@@ -159,7 +159,7 @@
                                  </children>
                               </AnchorPane>
                            </children></AnchorPane>
-                        <AnchorPane fx:id="khoanThu_form" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="khoanThu_form" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="37.0" layoutY="29.0" prefHeight="588.0" prefWidth="904.0">
                                  <children>
@@ -249,7 +249,7 @@
                                                 <String fx:value="shadow" />
                                              </styleClass>
                                           </Button>
-                                          <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="36.0" layoutY="534.0" size="1.5em" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="TRASH" layoutX="36.0" layoutY="534.0" size="1.5em" />
                                           <Separator layoutY="462.0" prefHeight="7.0" prefWidth="239.0" />
                                        </children>
                                        <styleClass>
@@ -670,7 +670,7 @@
                            <children>
                               <AnchorPane layoutX="37.0" layoutY="29.0" prefHeight="588.0" prefWidth="904.0">
                                  <children>
-                                    <AnchorPane fx:id="traCuuThongTinHoGD_form" layoutX="47.0" layoutY="32.0" onDragDetected="#switchFormThongTinHoGD" prefHeight="634.0" prefWidth="955.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane fx:id="traCuuThongTinHoGD_form" layoutX="47.0" layoutY="32.0" onDragDetected="#switchFormThongTinHoGD" prefHeight="634.0" prefWidth="955.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
                                           <AnchorPane layoutY="65.0" prefHeight="526.0" prefWidth="908.0">
                                              <styleClass>
@@ -724,8 +724,8 @@
                                           <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="204.0" layoutY="41.0" size="1.5em" text="" />
                                           <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="46.0" layoutY="41.0" size="1.5em" text="" />
                                           <Separator layoutX="351.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="64.0" prefWidth="8.0" />
-                                          <TextField fx:id="searchNhanKhau_txt" layoutX="421.0" layoutY="16.0" prefHeight="34.0" prefWidth="310.0" promptText="Tra cứu thông tin nhân khẩu..." />
-                                          <Button layoutX="766.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#searchNhanKhau" styleClass="funct4-btn" text="Tìm kiếm" textFill="WHITE" />
+                                          <TextField fx:id="searchHoKhau_txt" layoutX="421.0" layoutY="16.0" prefHeight="34.0" prefWidth="194.0" promptText="Tra cứu thông tin hộ khẩu..." />
+                                          <TextField fx:id="searchNhanKhau_txt" layoutX="649.0" layoutY="15.0" prefHeight="34.0" prefWidth="191.0" promptText="Tra cứu thông tin nhân khẩu..." />
                                        </children>
                                        <styleClass>
                                           <String fx:value="white-bg" />
@@ -845,7 +845,7 @@
                                                             <String fx:value="shadow" />
                                                          </styleClass>
                                                       </Button>
-                                                      <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="488.0" layoutY="464.0" size="1.5em" />
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="TRASH" layoutX="488.0" layoutY="464.0" size="1.5em" />
                                                    </children>
                                                    <styleClass>
                                                       <String fx:value="shadow" />
@@ -863,7 +863,7 @@
                                           </Button>
                                           <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="212.0" layoutY="41.0" size="1.5em" />
                                           <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="488.0" layoutY="40.0" size="1.5em" />
-                                          <Button layoutX="861.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#closeChangeInForFamily" prefHeight="30.0" prefWidth="47.0" styleClass="close" stylesheets="@dashboardDesign.css">
+                                          <Button layoutX="861.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#closeChangeInforFamily" prefHeight="30.0" prefWidth="47.0" styleClass="close" stylesheets="@dashboardDesign.css">
                                              <graphic>
                                                 <FontAwesomeIcon glyphName="CLOSE" size="1.3em" text="" />
                                              </graphic>
@@ -874,7 +874,7 @@
                                           <String fx:value="shadow" />
                                        </styleClass>
                                     </AnchorPane>
-                                    <AnchorPane fx:id="themThongTinHoGD_form" onDragDetected="#switchFormThongTinHoGD" prefHeight="676.0" prefWidth="1012.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane fx:id="themThongTinHoGD_form" onDragDetected="#switchFormThongTinHoGD" prefHeight="676.0" prefWidth="1012.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
                                           <AnchorPane layoutY="65.0" prefHeight="526.0" prefWidth="908.0">
                                              <children>
@@ -995,7 +995,7 @@
                                           </Button>
                                           <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="212.0" layoutY="41.0" size="1.5em" />
                                           <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="488.0" layoutY="40.0" size="1.5em" />
-                                          <Button layoutX="861.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#closeAddInForFamily" prefHeight="30.0" prefWidth="47.0" styleClass="close" stylesheets="@dashboardDesign.css">
+                                          <Button layoutX="861.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#closeAddInforFamily" prefHeight="30.0" prefWidth="47.0" styleClass="close" stylesheets="@dashboardDesign.css">
                                              <graphic>
                                                 <FontAwesomeIcon glyphName="CLOSE" size="1.3em" text="" />
                                              </graphic>
@@ -1183,7 +1183,7 @@
                                        </styleClass>
                                     </Button>
                                     <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="340.0" layoutY="45.0" size="1.5em" />
-                                    <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="198.0" layoutY="45.0" size="1.5em" />
+                                    <FontAwesomeIcon fill="WHITE" glyphName="TRASH" layoutX="198.0" layoutY="45.0" size="1.5em" />
                                     <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="54.0" layoutY="45.0" size="1.5em" text="" />
                                     <Button fx:id="doiMatKhau_btn" layoutX="601.0" layoutY="17.0" mnemonicParsing="false" onAction="#insertFormQTV" prefHeight="40.0" prefWidth="180.0" stylesheets="@dashboardDesign.css" text="Đổi mật khẩu" textFill="WHITE">
                                        <styleClass>
@@ -1200,7 +1200,7 @@
                               </AnchorPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="v2Update_form" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0">
+                        <AnchorPane fx:id="v2Update_form" onDragDetected="#switchForm" prefHeight="740.0" prefWidth="978.0" visible="false">
                            <children>
                               <AnchorPane layoutX="35.0" layoutY="648.0" prefHeight="75.0" prefWidth="904.0" styleClass="shadow" stylesheets="@dashboardDesign.css">
                                  <children>
@@ -1232,7 +1232,7 @@
                                           </Button>
                                           <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="711.0" layoutY="45.0" size="1.5em" />
                                           <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="491.0" layoutY="45.0" size="1.5em" />
-                                          <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="274.0" layoutY="45.0" size="1.5em" />
+                                          <FontAwesomeIcon fill="WHITE" glyphName="TRASH" layoutX="274.0" layoutY="45.0" size="1.5em" />
                                           <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="35.0" layoutY="46.0" size="1.5em" />
                                        </children>
                                        <styleClass>
@@ -1244,7 +1244,7 @@
                               </AnchorPane>
                               <AnchorPane layoutX="37.0" layoutY="41.0" prefHeight="576.0" prefWidth="904.0">
                                  <children>
-                                    <AnchorPane fx:id="suaV2Update_form" layoutX="10.0" layoutY="10.0" onDragDetected="#switchFormV2Update" prefHeight="586.0" prefWidth="914.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane fx:id="suaV2Update_form" layoutX="10.0" layoutY="10.0" onDragDetected="#switchFormV2Update" prefHeight="586.0" prefWidth="914.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
                                           <Label layoutX="347.0" layoutY="37.0" text="SỬA KHOẢN THU">
                                              <font>
@@ -1360,7 +1360,7 @@
                                           </Button>
                                        </children>
                                     </AnchorPane>
-                                    <AnchorPane fx:id="traCuuV2Update_form" layoutX="14.0" layoutY="53.0" onDragDetected="#switchFormV2Update" prefHeight="475.0" prefWidth="904.0" stylesheets="@dashboardDesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane fx:id="traCuuV2Update_form" layoutX="14.0" layoutY="53.0" onDragDetected="#switchFormV2Update" prefHeight="475.0" prefWidth="904.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
                                           <TableView layoutY="73.0" prefHeight="504.0" prefWidth="904.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="73.0">
                                              <columns>

@@ -579,6 +579,9 @@ public class dashboardController implements Initializable{
             }
     }
     
+     @FXML
+    void deleteNhanKhau(ActionEvent event){};
+    
     @FXML
     void deleteHoKhau(ActionEvent event) {
         
@@ -1278,7 +1281,7 @@ public class dashboardController implements Initializable{
     }
     
     @FXML
-    private void closeAddInForFamily(MouseEvent event) {
+    private void closeAddInforFamily(MouseEvent event) {
         themThongTinHoGD_form.setVisible(false);
         traCuuThongTinHoGD_form.setVisible(true);
     }
@@ -1290,7 +1293,7 @@ public class dashboardController implements Initializable{
     }
     
     @FXML
-    private void closeChangeInForFamily(MouseEvent event) {
+    private void closeChangeInforFamily(MouseEvent event) {
         suaThongTinHoGD_form.setVisible(false);
         traCuuThongTinHoGD_form.setVisible(true);
     }
