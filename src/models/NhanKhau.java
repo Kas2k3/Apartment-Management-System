@@ -16,7 +16,7 @@ public class NhanKhau {
     Date ngaySinhNhanKhau;
     String quanHeChuHo;    
     
-    public NhanKhau(String maNhanKhau, String hoTenNhanKhau, String soCCCD, String gioiTinhNhanKhau, Date ngaySinhNhanKhau, String quanheChuHo){
+    public NhanKhau(String maNhanKhau, String hoTenNhanKhau, String soCCCD, String gioiTinhNhanKhau, Date ngaySinhNhanKhau, String quanHeChuHo){
         this.maNhanKhau = maNhanKhau;
         this.hoTenNhanKhau = hoTenNhanKhau;
         this.soCCCD = soCCCD;

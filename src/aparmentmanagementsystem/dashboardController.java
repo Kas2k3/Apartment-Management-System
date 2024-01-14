@@ -30,6 +30,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
@@ -41,6 +42,10 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import models.HoKhau;
 import models.NhanKhau;
+import models.PhiDichVu;
+import models.PhiKhac;
+import models.PhiMoi;
+import models.PhiQuanLy;
 import models.QuanTriVien;
 
 
@@ -250,11 +255,23 @@ public class dashboardController implements Initializable{
     @FXML
     private TableView<HoKhau> hoKhau_table;
     
-     @FXML
+    @FXML
     private TableView<NhanKhau> nhanKhau_table;
+     
+    @FXML
+    private TableView<PhiMoi> phiMoi_table;
+    
+    @FXML
+    private TableView<PhiDichVu> phiDichVu_table;
+    
+    @FXML
+    private TableView<PhiKhac> phiKhac_table;
+    
+    @FXML
+    private TableView<PhiQuanLy> phiQuanLy_table;
     
     
-     @FXML
+    @FXML
     private TableColumn<QuanTriVien, String> emailQTV_col;
 
     @FXML
@@ -314,8 +331,77 @@ public class dashboardController implements Initializable{
     @FXML
     private TableColumn<NhanKhau, String> cccd_col;
     
+    @FXML
+    private TableColumn<PhiMoi, String> maHoGDPhiMoi_col;
+    
+    @FXML
+    private TableColumn<PhiMoi, Double> phiDien_col;
+
+    @FXML
+    private TableColumn<PhiMoi, Double> phiGuiXe_col;
+
+    @FXML
+    private TableColumn<PhiMoi, Double> phiInternet_col;
+    
+    @FXML
+    private TableColumn<PhiMoi, Double> phiNuoc_col;
+    
+    @FXML
+    private TableColumn<PhiMoi, Double> tinhTrangPhiMoi_col;
+    
+    @FXML
+    private TableColumn<PhiDichVu, String> maHoGDPhiDichVu_col;
+
+    @FXML
+    private TableColumn<PhiKhac, String> maHoGDPhiKhac_col;
+    
+    @FXML
+    private TableColumn<PhiQuanLy, String> maHoGDPhiQuanLy_col;
+    
+    @FXML
+    private TableColumn<PhiDichVu, String> maPhiDichVu_col;
+
+    @FXML
+    private TableColumn<PhiKhac, String> maPhiKhac_col;
+
+    @FXML
+    private TableColumn<PhiQuanLy, String> maPhiQuanLy_col;
+    
+    @FXML
+    private TableColumn<PhiDichVu, String> phiAnNinh_col;
+
+    @FXML
+    private TableColumn<PhiDichVu, String> phiBaoTri_col;
+    
+    @FXML
+    private TableColumn<PhiDichVu, String> phiSHC_col;
+
+    @FXML
+    private TableColumn<PhiQuanLy, String> phiVanHanh_col;
+
+    @FXML
+    private TableColumn<PhiDichVu, String> phiVeSinh_col;
+    
+    @FXML
+    private TableColumn<PhiKhac, String> quyBienDao_col;
+    
+    @FXML
+    private TableColumn<PhiKhac, String> quyKhuyenHoc_col;
+    
+    @FXML
+    private TableColumn<PhiKhac, String> quyTuThien_col;
+    
+    @FXML
+    private TableColumn<PhiDichVu, String> tinhTrangPhiDichVu_col;
+
+    @FXML
+    private TableColumn<PhiKhac, String> tinhTrangPhiKhac_col;
+
+    @FXML
+    private TableColumn<PhiQuanLy, String> tinhTrangPhiQuanLy_col;
     
     
+
     @FXML
     private TextField diaChiQTV_txt;
     
@@ -388,6 +474,24 @@ public class dashboardController implements Initializable{
     @FXML
     private DatePicker addNgaySinhNhanKhau_txt;
     
+    @FXML
+    private TextField addTenNhanKhau_txt;
+    
+    @FXML
+    private TextField addQuanHeChuHo_txt;
+    
+    @FXML
+    private TextField addCCCD_txt;
+    
+    @FXML
+    private TextField account_txt;
+    
+    @FXML
+    private PasswordField newPassword_txt;
+    
+    @FXML
+    private PasswordField currentPassword_txt;
+    
     
     
     @FXML
@@ -407,6 +511,154 @@ public class dashboardController implements Initializable{
     
     @FXML
     private TextField changeGioiTinhNhanKhau_txt;
+    
+    
+    @FXML
+    private TextField changeMaHoPhiMoi_txt;
+    
+    @FXML
+    private TextField changePhiDien_txt;
+
+    @FXML
+    private TextField changePhiGuiXe_txt;
+
+    @FXML
+    private TextField changePhiInternet_txt;
+
+    @FXML
+    private TextField changePhiNuoc_txt;
+    
+    @FXML
+    private TextField changeTinhTrangPhiMoi_txt;
+    
+    @FXML
+    private TextField searchPhiMoi_txt;
+    
+    @FXML
+    private TextField addTinhTrangPhiMoi_txt;
+    
+    @FXML
+    private TextField addPhiDien_txt;
+
+    @FXML
+    private TextField addPhiGuiXe_txt;
+
+    @FXML
+    private TextField addPhiInternet_txt;
+
+    @FXML
+    private TextField addPhiNuoc_txt;
+    
+    @FXML
+    private TextField addMaHoPhiMoi_txt;
+    
+    @FXML
+    private TextField addMaHoKhauPhiQuanLy_txt;
+    
+    @FXML
+    private TextField addMaHoKhauPhiKhac_txt;
+    
+    @FXML
+    private TextField addMaPhiKhac_txt;
+    
+    @FXML
+    private TextField addMaPhiQuanLy_txt;
+    
+    @FXML
+    private TextField addMaPhiDichVu_txt;
+    
+    @FXML
+    private TextField addPhiVanHanh_txt;
+    
+    @FXML
+    private TextField addMaHoKhauPhiDichVu_txt;
+    
+    @FXML
+    private TextField addPhiSHC_txt;
+    
+    @FXML
+    private TextField addPhiVeSinh_txt;
+    
+    @FXML
+    private TextField addPhiAnNinh_txt;
+    
+    @FXML
+    private TextField addPhiBaoTri_txt;
+    
+    @FXML
+    private TextField addTinhTrangPhiDichVu_txt;    
+    
+    @FXML
+    private TextField addQuyBienDao_txt;
+
+    @FXML
+    private TextField addQuyKhuyenHoc_txt;
+
+    @FXML
+    private TextField addQuyTuThien_txt;
+
+    @FXML
+    private TextField addTinhTrangPhiKhac_txt;
+    
+    @FXML
+    private TextField addTinhTrangPhiQuanLy_txt;
+    
+    @FXML
+    private TextField changeMaHoKhauPhiDichVu_txt;
+
+    @FXML
+    private TextField changeMaHoKhauPhiKhac_txt;
+
+    @FXML
+    private TextField changeMaHoKhauPhiQuanLy_txt;
+    
+    @FXML
+    private TextField changeMaPhiDichVu_txt;
+
+    @FXML
+    private TextField changeMaPhiKhac_txt;
+
+    @FXML
+    private TextField changeMaPhiQuanLy_txt;
+    
+    @FXML
+    private TextField changePhiAnNinh_txt;
+
+    @FXML
+    private TextField changePhiBaoTri_txt;
+    
+    @FXML
+    private TextField changePhiSHC_txt;
+
+    @FXML
+    private TextField changePhiVanHanh_txt;
+
+    @FXML
+    private TextField changePhiVeSinh_txt;
+    
+    @FXML
+    private TextField changeQuyBienDao_txt;
+
+    @FXML
+    private TextField changeQuyKhuyenHoc_txt;
+
+    @FXML
+    private TextField changeQuyTuThien_txt;
+    
+    @FXML
+    private TextField changeTinhTrangPhiDichVu_txt;
+
+    @FXML
+    private TextField changeTinhTrangPhiKhac_txt;
+    
+    @FXML
+    private TextField changeTinhTrangPhiQuanLy_txt;
+    
+    
+    
+    
+    
+    
     
 
     //OPTION_COMBO_BOX
@@ -446,17 +698,1089 @@ public class dashboardController implements Initializable{
     PreparedStatement pst;
     Statement statement;
     ResultSet result;
-    QuanTriVien quantrivien = null;
     
     int myQTVIndex;
     int myHoKhauIndex;
     int myNhanKhauIndex;
+    int myPhiMoiIndex;
+    int myPhiQLIndex;
+    int myPhiDVIndex;
+    int myPhiKhacIndex;
     
     
+    // THÔNG TIN PHÍ KHÁC (QUỸ KHUYÊN GÓP)
     
+    @FXML
+    void changePhiKhac(ActionEvent event) throws SQLException {
+        
+        connect = database.connectDb();
+        String changePhiKhac = "update phikhac set MaPhiKhac = ?, QuyBienDao = ?, QuyKhuyenHoc = ?, QuyTuThien = ?, TinhTrangPhiKhac = ?"
+                + " where MaHoGDPhiKhac = '" + changeMaHoKhauPhiKhac_txt.getText() + "'";
+        try {
+            
+            Alert alert;
+            
+            if (changeMaHoKhauPhiKhac_txt.getText().isEmpty() 
+                    || changeMaPhiKhac_txt.getText().isEmpty()
+                    || changeQuyBienDao_txt.getText().isEmpty()
+                    || changeQuyKhuyenHoc_txt.getText().isEmpty()
+                    || changeQuyTuThien_txt.getText().isEmpty()
+                    || changeTinhTrangPhiKhac_txt.getText().isEmpty()) {
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Báo lỗi");
+            alert.setHeaderText((null));
+            alert.setContentText("Xin hãy điền đầy đủ thông tin!");
+            alert.showAndWait();
+            PhiKhacShowListData();
+            
+            } else {
+                alert = new Alert(AlertType.CONFIRMATION);
+                alert.setTitle("Xác nhận sửa");
+                alert.setHeaderText(null);
+                alert.setContentText("Bạn có chắc muốn SỬA phí quyên góp của hộ # " + changeMaHoKhauPhiDichVu_txt.getText() + "?");
+
+                Optional<ButtonType> option = alert.showAndWait();
+
+                if (option.get().equals(ButtonType.OK)){
+                    pst = connect.prepareStatement(changePhiKhac);
+                    pst.setString(1, changeMaPhiKhac_txt.getText());
+                    pst.setString(2, changeQuyBienDao_txt.getText());
+                    pst.setString(3, changeQuyKhuyenHoc_txt.getText());
+                    pst.setString(4, changeQuyTuThien_txt.getText());
+                    pst.setString(5, changeTinhTrangPhiKhac_txt.getText());
+                    pst.executeUpdate();
+                    
+                    alert = new Alert(AlertType.INFORMATION);
+                    alert.setTitle("Thông báo sửa phí");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Sửa phí thành công!");
+                    alert.showAndWait();
+                    
+                    // UPDATE TABLEVIEW
+                    PhiKhacShowListData();
+                    //TO CLEAR THE FIELDS
+                    ChangePhiKhacClear();
+                }
+            }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+    }
+    
+    // Thêm thông tin phi quyên góp
+    @FXML
+    public void addPhiKhac(ActionEvent event) {
+    String insertPhiKhac = "insert into phikhac (MaHoGDPhiKhac,MaPhiKhac,QuyBienDao,QuyKhuyenHoc,QuyTuThien,TinhTrangPhiKhac) values(?,?,?,?,?,?)";
+
+    connect = database.connectDb();
+
+    try {
+        Alert alert;
+
+        if (addMaHoKhauPhiKhac_txt.getText().isEmpty()
+                || addMaPhiKhac_txt.getText().isEmpty()
+                || addQuyBienDao_txt.getText().isEmpty()
+                || addQuyKhuyenHoc_txt.getText().isEmpty()
+                || addQuyTuThien_txt.getText().isEmpty()
+                || addTinhTrangPhiKhac_txt.getText().isEmpty()) {
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Báo lỗi");
+            alert.setHeaderText((null));
+            alert.setContentText("Xin hãy điền đầy đủ thông tin");
+            alert.showAndWait();
+            PhiKhacShowListData();
+
+        } else {
+            // CHECK IF EXIST
+            String checkPhiKhac = "select MaHoGDPhiKhac from phikhac where MaHoGDPhiKhac = '"
+                    + addMaHoKhauPhiKhac_txt.getText() + "'";
+
+            statement = connect.createStatement();
+            result = statement.executeQuery(checkPhiKhac);
+
+            if (result.next()) {
+                alert = new Alert(AlertType.ERROR);
+                alert.setTitle("Báo lỗi");
+                alert.setHeaderText(null);
+                alert.setContentText("Hộ khẩu #" + addMaHoKhauPhiKhac_txt.getText() + "đã tồn tại!");
+                alert.showAndWait();
+                AddPhiKhacClear();
+            } else {
+                pst = connect.prepareStatement(insertPhiKhac);
+                pst.setString(1, addMaHoKhauPhiKhac_txt.getText());
+                pst.setString(2, addMaPhiKhac_txt.getText());
+                pst.setString(3, addQuyBienDao_txt.getText());
+                pst.setString(4, addQuyKhuyenHoc_txt.getText());
+                pst.setString(5, addQuyTuThien_txt.getText());
+                pst.setString(6, addTinhTrangPhiKhac_txt.getText());
+
+                pst.executeUpdate();
+
+                alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Thông báo");
+                alert.setHeaderText(null);
+                alert.setContentText("Thêm phí quyên góp thành công");
+                alert.showAndWait();
+
+                // UPDATE  TABLEVIEW
+                PhiKhacShowListData();
+                // TO CLEAR THE FIELDS
+                AddPhiKhacClear();
+            }
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
+    
+    public void AddPhiKhacClear(){
+        addMaHoKhauPhiKhac_txt.setText("");
+        addMaPhiKhac_txt.setText("");
+        addQuyBienDao_txt.setText("");
+        addQuyKhuyenHoc_txt.setText("");
+        addQuyTuThien_txt.setText("");
+        addTinhTrangPhiKhac_txt.setText("");
+    }
+    
+    public void ChangePhiKhacClear(){
+        changeMaHoKhauPhiKhac_txt.setText("");
+        changeMaPhiKhac_txt.setText("");
+        changeQuyBienDao_txt.setText("");
+        changeQuyKhuyenHoc_txt.setText("");
+        changeQuyTuThien_txt.setText("");
+        changeTinhTrangPhiKhac_txt.setText("");
+    }
+
+    public void PhiKhacShowListData(){
+        
+        connect = database.connectDb();
+        ObservableList<PhiKhac> listPhiKhac = FXCollections.observableArrayList();
+        try {
+            pst = connect.prepareStatement("select * from phikhac");
+            result = pst.executeQuery(); {
+            while(result.next()) {
+                PhiKhac phikhac = new PhiKhac(result.getString("maHoGDPhiKhac"), 
+                result.getString("maPhiKhac"), 
+                result.getDouble("quyBienDao"),
+                result.getDouble("quyKhuyenHoc"),
+                result.getDouble("quyTuThien"),
+                result.getString("tinhTrangPhiKhac"));
+                
+                listPhiKhac.add(phikhac);
+            }
+        }
+            phiKhac_table.setItems(listPhiKhac);
+            
+            maHoGDPhiKhac_col.setCellValueFactory(new PropertyValueFactory<>("maHoGDPhiKhac"));
+            maPhiKhac_col.setCellValueFactory(new PropertyValueFactory<>("maPhiKhac"));
+            quyBienDao_col.setCellValueFactory(new PropertyValueFactory<>("quyBienDao"));
+            quyKhuyenHoc_col.setCellValueFactory(new PropertyValueFactory<>("quyKhuyenHoc"));
+            quyTuThien_col.setCellValueFactory(new PropertyValueFactory<>("quyTuThien"));
+            tinhTrangPhiKhac_col.setCellValueFactory(new PropertyValueFactory<>("tinhTrangPhiKhac"));  
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(dashboardController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        phiKhac_table.setRowFactory( tv -> {
+            TableRow<PhiKhac> phirow = new TableRow<>();
+            phirow.setOnMouseClicked (event -> {
+                if (event.getClickCount() == 1 && (!phirow.isEmpty())){
+                    myPhiKhacIndex = phiKhac_table.getSelectionModel().getSelectedIndex();
+                    
+                    changeMaHoKhauPhiKhac_txt.setText(phiKhac_table.getItems().get(myPhiKhacIndex).getMaHoGDPhiKhac());
+                    changeMaPhiKhac_txt.setText(phiKhac_table.getItems().get(myPhiKhacIndex).getMaPhiKhac());
+                    changeQuyBienDao_txt.setText(String.valueOf(phiKhac_table.getItems().get(myPhiKhacIndex).getQuyBienDao()));
+                    changeQuyKhuyenHoc_txt.setText(String.valueOf(phiKhac_table.getItems().get(myPhiKhacIndex).getQuyKhuyenHoc()));
+                    changeQuyTuThien_txt.setText(String.valueOf(phiKhac_table.getItems().get(myPhiKhacIndex).getQuyTuThien()));
+                    changeTinhTrangPhiKhac_txt.setText(phiKhac_table.getItems().get(myPhiKhacIndex).getTinhTrangPhiKhac());
+                    
+                }
+            });
+            return phirow;
+            
+        });
+
+    }
+    
+    
+    //THÔNG TIN PHÍ DỊCH VỤ CHUNG CƯ
+    
+    @FXML
+    void changePhiDichVu(ActionEvent event) throws SQLException {
+        
+        connect = database.connectDb();
+        String changePhiDV = "update phidichvu set MaPhiDichVu = ?, PhiVeSinh = ?, PhiBaoTri = ?, PhiSHC = ?, PhiAnNinh = ?, TinhTrangPhiDichVu = ?"
+                + " where MaHoGDPhiDichVu = '" + changeMaHoKhauPhiDichVu_txt.getText() + "'";
+        try {
+            
+            Alert alert;
+            
+            if (changeMaHoKhauPhiDichVu_txt.getText().isEmpty() 
+                    || changeMaPhiDichVu_txt.getText().isEmpty()
+                    || changePhiVeSinh_txt.getText().isEmpty()
+                    || changePhiBaoTri_txt.getText().isEmpty()
+                    || changePhiSHC_txt.getText().isEmpty()
+                    || changePhiAnNinh_txt.getText().isEmpty()
+                    || changeTinhTrangPhiDichVu_txt.getText().isEmpty()) {
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Báo lỗi");
+            alert.setHeaderText((null));
+            alert.setContentText("Xin hãy điền đầy đủ thông tin!");
+            alert.showAndWait();
+            PhiDichVuShowListData();
+            
+            } else {
+                alert = new Alert(AlertType.CONFIRMATION);
+                alert.setTitle("Xác nhận sửa");
+                alert.setHeaderText(null);
+                alert.setContentText("Bạn có chắc muốn SỬA phí dịch vụ của hộ # " + changeMaHoKhauPhiDichVu_txt.getText() + "?");
+
+                Optional<ButtonType> option = alert.showAndWait();
+
+                if (option.get().equals(ButtonType.OK)){
+                    pst = connect.prepareStatement(changePhiDV);
+                    pst.setString(1, changeMaPhiDichVu_txt.getText());
+                    pst.setString(2, changePhiVeSinh_txt.getText());
+                    pst.setString(3, changePhiBaoTri_txt.getText());
+                    pst.setString(4, changePhiSHC_txt.getText());
+                    pst.setString(5, changePhiAnNinh_txt.getText());
+                    pst.setString(6, changeTinhTrangPhiDichVu_txt.getText());
+                    pst.executeUpdate();
+                    
+                    alert = new Alert(AlertType.INFORMATION);
+                    alert.setTitle("Thông báo sửa phí");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Sửa phí thành công!");
+                    alert.showAndWait();
+                    
+                    // UPDATE TABLEVIEW
+                    PhiDichVuShowListData();
+                    //TO CLEAR THE FIELDS
+                    ChangePhiDichVuClear();
+                }
+            }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+    }
+    
+    // Thêm thông tin phi cap nhat
+    @FXML
+    public void addPhiDichVu(ActionEvent event) {
+    String insertPhiDV = "insert into phidichvu (MaHoGDPhiDichVu,MaPhiDichVu,PhiVeSinh,PhiBaoTri,PhiSHC,PhiAnNinh,TinhTrangPhiDichVu) values(?,?,?,?,?,?,?)";
+
+    connect = database.connectDb();
+
+    try {
+        Alert alert;
+
+        if (addMaHoKhauPhiDichVu_txt.getText().isEmpty()
+                || addMaPhiDichVu_txt.getText().isEmpty()
+                || addPhiVeSinh_txt.getText().isEmpty()
+                || addPhiBaoTri_txt.getText().isEmpty()
+                || addPhiSHC_txt.getText().isEmpty()
+                || addPhiAnNinh_txt.getText().isEmpty()
+                || addTinhTrangPhiDichVu_txt.getText().isEmpty()) {
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Báo lỗi");
+            alert.setHeaderText((null));
+            alert.setContentText("Xin hãy điền đầy đủ thông tin");
+            alert.showAndWait();
+            PhiDichVuShowListData();
+
+        } else {
+            // CHECK IF EXIST
+            String checkPhiDV = "select MaHoGDPhiDichVu from phidichvu where MaHoGDPhiDichVu = '"
+                    + addMaHoKhauPhiDichVu_txt.getText() + "'";
+
+            statement = connect.createStatement();
+            result = statement.executeQuery(checkPhiDV);
+
+            if (result.next()) {
+                alert = new Alert(AlertType.ERROR);
+                alert.setTitle("Báo lỗi");
+                alert.setHeaderText(null);
+                alert.setContentText("Hộ khẩu #" + addMaHoKhauPhiDichVu_txt.getText() + "đã tồn tại!");
+                alert.showAndWait();
+                AddPhiDichVuClear();
+            } else {
+                pst = connect.prepareStatement(insertPhiDV);
+                pst.setString(1, addMaHoKhauPhiDichVu_txt.getText());
+                pst.setString(2, addMaPhiDichVu_txt.getText());
+                pst.setString(3, addPhiVeSinh_txt.getText());
+                pst.setString(4, addPhiBaoTri_txt.getText());
+                pst.setString(5, addPhiSHC_txt.getText());
+                pst.setString(6, addPhiAnNinh_txt.getText());
+                pst.setString(7, addTinhTrangPhiDichVu_txt.getText());
+
+                pst.executeUpdate();
+
+                alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Thông báo");
+                alert.setHeaderText(null);
+                alert.setContentText("Thêm phí dịch vụ thành công");
+                alert.showAndWait();
+
+                // UPDATE  TABLEVIEW
+                PhiDichVuShowListData();
+                // TO CLEAR THE FIELDS
+                AddPhiDichVuClear();
+            }
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
+    
+    public void AddPhiDichVuClear(){
+        addMaHoKhauPhiDichVu_txt.setText("");
+        addMaPhiDichVu_txt.setText("");
+        addPhiVeSinh_txt.setText("");
+        addPhiBaoTri_txt.setText("");
+        addPhiSHC_txt.setText("");
+        addPhiAnNinh_txt.setText("");
+        addTinhTrangPhiDichVu_txt.setText("");
+    }
+    
+    public void ChangePhiDichVuClear(){
+        changeMaHoKhauPhiDichVu_txt.setText("");
+        changeMaPhiDichVu_txt.setText("");
+        changePhiVeSinh_txt.setText("");
+        changePhiBaoTri_txt.setText("");
+        changePhiSHC_txt.setText("");
+        changePhiAnNinh_txt.setText("");
+        changeTinhTrangPhiDichVu_txt.setText("");
+    }
+
+    public void PhiDichVuShowListData(){
+        
+        connect = database.connectDb();
+        ObservableList<PhiDichVu> listPhiDV = FXCollections.observableArrayList();
+        try {
+            pst = connect.prepareStatement("select * from phidichvu");
+            result = pst.executeQuery(); {
+            while(result.next()) {
+                PhiDichVu phidv = new PhiDichVu(result.getString("maHoGDPhiDichVu"), 
+                result.getString("maPhiDichVu"), 
+                result.getDouble("phiVeSinh"),
+                result.getDouble("phiBaoTri"),
+                result.getDouble("phiSHC"),
+                result.getDouble("phiAnNinh"),
+                result.getString("tinhTrangPhiDichVu"));
+                
+                listPhiDV.add(phidv);
+            }
+        }
+            phiDichVu_table.setItems(listPhiDV);
+            
+            maHoGDPhiDichVu_col.setCellValueFactory(new PropertyValueFactory<>("maHoGDPhiDichVu"));
+            maPhiDichVu_col.setCellValueFactory(new PropertyValueFactory<>("maPhiDichVu"));
+            phiVeSinh_col.setCellValueFactory(new PropertyValueFactory<>("phiVeSinh"));
+            phiBaoTri_col.setCellValueFactory(new PropertyValueFactory<>("phiBaoTri"));
+            phiSHC_col.setCellValueFactory(new PropertyValueFactory<>("phiSHC"));
+            phiAnNinh_col.setCellValueFactory(new PropertyValueFactory<>("phiAnNinh"));
+            tinhTrangPhiDichVu_col.setCellValueFactory(new PropertyValueFactory<>("tinhTrangPhiDichVu"));  
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(dashboardController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        phiDichVu_table.setRowFactory( tv -> {
+            TableRow<PhiDichVu> phiDVrow = new TableRow<>();
+            phiDVrow.setOnMouseClicked (event -> {
+                if (event.getClickCount() == 1 && (!phiDVrow.isEmpty())){
+                    myPhiDVIndex = phiDichVu_table.getSelectionModel().getSelectedIndex();
+                    
+                    changeMaHoKhauPhiDichVu_txt.setText(phiDichVu_table.getItems().get(myPhiDVIndex).getMaHoGDPhiDichVu());
+                    changeMaPhiDichVu_txt.setText(phiDichVu_table.getItems().get(myPhiDVIndex).getMaPhiDichVu());
+                    changePhiVeSinh_txt.setText(String.valueOf(phiDichVu_table.getItems().get(myPhiDVIndex).getPhiVeSinh()));
+                    changePhiBaoTri_txt.setText(String.valueOf(phiDichVu_table.getItems().get(myPhiDVIndex).getPhiBaoTri()));
+                    changePhiSHC_txt.setText(String.valueOf(phiDichVu_table.getItems().get(myPhiDVIndex).getPhiSHC()));
+                    changePhiAnNinh_txt.setText(String.valueOf(phiDichVu_table.getItems().get(myPhiDVIndex).getPhiAnNinh()));
+                    changeTinhTrangPhiDichVu_txt.setText(phiDichVu_table.getItems().get(myPhiDVIndex).getTinhTrangPhiDichVu());
+                    
+                }
+            });
+            return phiDVrow;
+            
+        });
+
+    }
+    
+ 
+    //THÔNG TIN PHÍ QUẢN LÝ CHUNG CƯ 
+
+    @FXML
+    void changePhiQuanLy(ActionEvent event) throws SQLException {
+        
+        connect = database.connectDb();
+        String changePhiQL = "update phiquanly set MaPhiQuanLy = ?, PhiVanHanh = ?, TinhTrangPhiQuanLy = ?"
+                + " where MaHoGDPhiQuanLy = '" + changeMaHoKhauPhiQuanLy_txt.getText() + "'";
+        try {
+            
+            Alert alert;
+            
+            if (changeMaHoKhauPhiQuanLy_txt.getText().isEmpty() 
+                    || changeMaPhiQuanLy_txt.getText().isEmpty()
+                    || changePhiVanHanh_txt.getText().isEmpty()
+                    || changeTinhTrangPhiQuanLy_txt.getText().isEmpty()) {
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Báo lỗi");
+            alert.setHeaderText((null));
+            alert.setContentText("Xin hãy điền đầy đủ thông tin!");
+            alert.showAndWait();
+            PhiMoiShowListData();
+            
+            } else {
+                alert = new Alert(AlertType.CONFIRMATION);
+                alert.setTitle("Xác nhận sửa");
+                alert.setHeaderText(null);
+                alert.setContentText("Bạn có chắc muốn SỬA phí quản lý của hộ # " + changeMaHoKhauPhiQuanLy_txt.getText() + "?");
+
+                Optional<ButtonType> option = alert.showAndWait();
+
+                if (option.get().equals(ButtonType.OK)){
+                    pst = connect.prepareStatement(changePhiQL);
+                    pst.setString(1, changeMaPhiQuanLy_txt.getText());
+                    pst.setString(2, changePhiVanHanh_txt.getText());
+                    pst.setString(3, changeTinhTrangPhiQuanLy_txt.getText());
+
+                    pst.executeUpdate();
+                    
+                    alert = new Alert(AlertType.INFORMATION);
+                    alert.setTitle("Thông báo sửa phí");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Sửa phí thành công!");
+                    alert.showAndWait();
+                    
+                    // UPDATE TABLEVIEW
+                    PhiQuanLyShowListData();
+                    //TO CLEAR THE FIELDS
+                    ChangePhiQuanLyClear();
+                }
+            }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+    }
+    
+    // Thêm thông tin phi cap nhat
+    @FXML
+    public void addPhiQuanLy(ActionEvent event) {
+    String insertPhiQL = "insert into phiquanly (MaHoGDPhiQuanLy,MaPhiQuanLy,PhiVanHanh,TinhTrangPhiQuanLy) values(?,?,?,?)";
+
+    connect = database.connectDb();
+
+    try {
+        Alert alert;
+
+        if (addMaHoKhauPhiQuanLy_txt.getText().isEmpty()
+                || addMaPhiQuanLy_txt.getText().isEmpty()
+                || addPhiVanHanh_txt.getText().isEmpty()
+                || addTinhTrangPhiQuanLy_txt.getText().isEmpty()) {
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Báo lỗi");
+            alert.setHeaderText((null));
+            alert.setContentText("Xin hãy điền đầy đủ thông tin");
+            alert.showAndWait();
+            PhiMoiShowListData();
+
+        } else {
+            // CHECK IF EXIST
+            String checkPhiQL = "select MaHoGDPhiQuanLy from phiquanly where MaHoGDPhiQuanLy = '"
+                    + addMaHoKhauPhiQuanLy_txt.getText() + "'";
+
+            statement = connect.createStatement();
+            result = statement.executeQuery(checkPhiQL);
+
+            if (result.next()) {
+                alert = new Alert(AlertType.ERROR);
+                alert.setTitle("Báo lỗi");
+                alert.setHeaderText(null);
+                alert.setContentText("Hộ khẩu #" + addMaHoKhauPhiQuanLy_txt.getText() + "đã tồn tại!");
+                alert.showAndWait();
+                AddPhiMoiClear();
+            } else {
+                pst = connect.prepareStatement(insertPhiQL);
+                pst.setString(1, addMaHoKhauPhiQuanLy_txt.getText());
+                pst.setString(2, addMaPhiQuanLy_txt.getText());
+                pst.setString(3, addPhiVanHanh_txt.getText());
+                pst.setString(4, addTinhTrangPhiQuanLy_txt.getText());
+
+                pst.executeUpdate();
+
+                alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Thông báo");
+                alert.setHeaderText(null);
+                alert.setContentText("Thêm phí quản lý thành công");
+                alert.showAndWait();
+
+                // UPDATE  TABLEVIEW
+                PhiQuanLyShowListData();
+                // TO CLEAR THE FIELDS
+                AddPhiQuanLyClear();
+            }
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
+    
+    public void AddPhiQuanLyClear(){
+        addMaHoKhauPhiQuanLy_txt.setText("");
+        addMaPhiQuanLy_txt.setText("");
+        addPhiVanHanh_txt.setText("");
+        addTinhTrangPhiQuanLy_txt.setText("");
+    }
+    
+    public void ChangePhiQuanLyClear(){
+        changeMaHoKhauPhiQuanLy_txt.setText("");
+        changeMaPhiQuanLy_txt.setText("");
+        changePhiVanHanh_txt.setText("");
+        changeTinhTrangPhiQuanLy_txt.setText("");
+    }
+
+    public void PhiQuanLyShowListData(){
+        
+        connect = database.connectDb();
+        ObservableList<PhiQuanLy> listPhiQuanLy = FXCollections.observableArrayList();
+        try {
+            pst = connect.prepareStatement("select * from phiquanly");
+            result = pst.executeQuery(); {
+            while(result.next()) {
+                PhiQuanLy phiquanly = new PhiQuanLy(result.getString("maHoGDPhiQuanLy"), 
+                result.getString("maPhiQuanLy"), 
+                result.getDouble("phiVanHanh"),
+                result.getString("tinhTrangPhiQuanLy"));
+                
+                listPhiQuanLy.add(phiquanly);
+            }
+        }
+            phiQuanLy_table.setItems(listPhiQuanLy);
+            
+            maHoGDPhiQuanLy_col.setCellValueFactory(new PropertyValueFactory<>("maHoGDPhiQuanLy"));
+            maPhiQuanLy_col.setCellValueFactory(new PropertyValueFactory<>("maPhiQuanLy"));
+            phiVanHanh_col.setCellValueFactory(new PropertyValueFactory<>("phiVanHanh"));
+            tinhTrangPhiQuanLy_col.setCellValueFactory(new PropertyValueFactory<>("tinhTrangPhiQuanLy"));  
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(dashboardController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        phiQuanLy_table.setRowFactory( tv -> {
+            TableRow<PhiQuanLy> phiQLrow = new TableRow<>();
+            phiQLrow.setOnMouseClicked (event -> {
+                if (event.getClickCount() == 1 && (!phiQLrow.isEmpty())){
+                    myPhiQLIndex = phiQuanLy_table.getSelectionModel().getSelectedIndex();
+                    
+                    changeMaHoKhauPhiQuanLy_txt.setText(phiQuanLy_table.getItems().get(myPhiQLIndex).getMaHoGDPhiQuanLy());
+                    changeMaPhiQuanLy_txt.setText(phiQuanLy_table.getItems().get(myPhiQLIndex).getMaPhiQuanLy());
+                    changePhiVanHanh_txt.setText(String.valueOf(phiQuanLy_table.getItems().get(myPhiQLIndex).getPhiVanHanh()));
+                    changeTinhTrangPhiQuanLy_txt.setText(phiQuanLy_table.getItems().get(myPhiQLIndex).getTinhTrangPhiQuanLy());
+                    
+                }
+            });
+            return phiQLrow;
+            
+        });
+//        searchPhiQL_txt.textProperty().addListener((observable, oldValue, newValue) -> {
+//        filterPhiMoiList(newValue);
+//    });
+    }
+    
+    //Tìm kiếm Phi Moi
+    private void filterPhiQLList(String phimoisearchword) {
+        connect = database.connectDb();
+        ObservableList<PhiQuanLy> filteredList = FXCollections.observableArrayList();
+
+        try {
+            pst = connect.prepareStatement("select * from phiquanly");
+            result = pst.executeQuery();
+            while (result.next()) {
+                PhiQuanLy phiquanly;
+                phiquanly = new PhiQuanLy(
+                        result.getString("maHoGDPhiQuanLy"),
+                        result.getString("maPhiQuanLy"),
+                        result.getDouble("phiVanHanh"),
+                        result.getString("tinhTrangPhiMoi")
+                );
+
+                // Check if any field contains the keyword
+//                if (phiquanly.getMaHoGDPhiQuanLy().toLowerCase().contains(phimoisearchword.toLowerCase())
+//                        || String.valueOf(phiquanly.getPhiGuiXe()).toLowerCase().contains(phimoisearchword.toLowerCase())
+//                        || String.valueOf(phimoi.getPhiDien()).toLowerCase().contains(phimoisearchword.toLowerCase())
+//                        || String.valueOf(phimoi.getPhiNuoc()).toLowerCase().contains(phimoisearchword.toLowerCase())
+//                        || String.valueOf(phimoi.getPhiInternet()).toLowerCase().contains(phimoisearchword.toLowerCase())
+//                        || phimoi.getTinhTrangPhiMoi().toLowerCase().contains(phimoisearchword.toLowerCase())) {
+//                    filteredList.add(phimoi);
+//                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Handle the SQLException appropriately, e.g., log or show an error message.
+        }
+    }
+    
+    
+    // THÔNG TIN PHÍ CẬP NHẬT MỚI (VERSION 2)
+    
+    // Sửa đổi thông tin phi cap nhat
+    @FXML
+    void changePhiMoi(ActionEvent event) throws SQLException {
+        
+        connect = database.connectDb();
+        String changePhiMoi = "update phimoi set PhiGuiXe = ?, PhiDien = ?, PhiNuoc = ?, PhiInternet = ?, TinhTrangPhiMoi = ?"
+                + " where MaHoGDPhiMoi = '" + changeMaHoPhiMoi_txt.getText() + "'";
+        try {
+            
+            Alert alert;
+            
+            if (changeMaHoPhiMoi_txt.getText().isEmpty() 
+                    || changePhiGuiXe_txt.getText().isEmpty()
+                    || changePhiDien_txt.getText().isEmpty()
+                    || changePhiNuoc_txt.getText().isEmpty()
+                    || changePhiInternet_txt.getText().isEmpty()
+                    || changeTinhTrangPhiMoi_txt.getText().isEmpty()) {
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Báo lỗi");
+            alert.setHeaderText((null));
+            alert.setContentText("Xin hãy điền đầy đủ thông tin!");
+            alert.showAndWait();
+            PhiMoiShowListData();
+            
+            } else {
+                alert = new Alert(AlertType.CONFIRMATION);
+                alert.setTitle("Xác nhận sửa");
+                alert.setHeaderText(null);
+                alert.setContentText("Bạn có chắc muốn SỬA phí cập nhật của hộ # " + changeMaHoPhiMoi_txt.getText() + "?");
+
+                Optional<ButtonType> option = alert.showAndWait();
+
+                if (option.get().equals(ButtonType.OK)){
+                    pst = connect.prepareStatement(changePhiMoi);
+                    pst.setString(1, changePhiGuiXe_txt.getText());
+                    pst.setString(2, changePhiDien_txt.getText());
+                    pst.setString(3, changePhiNuoc_txt.getText());
+                    pst.setString(4, changePhiInternet_txt.getText());
+                    pst.setString(5, changeTinhTrangPhiMoi_txt.getText());
+
+                    pst.executeUpdate();
+                    
+                    alert = new Alert(AlertType.INFORMATION);
+                    alert.setTitle("Thông báo sửa phí");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Sửa phí thành công!");
+                    alert.showAndWait();
+                    
+                    // UPDATE TABLEVIEW
+                    PhiMoiShowListData();
+                    //TO CLEAR THE FIELDS
+                    ChangePhiMoiClear();
+                }
+            }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+    }
+    
+    // Xoa Phi cap nhat moi
+    @FXML
+    void deletePhiMoi(ActionEvent event) {
+        connect = database.connectDb();
+        PhiMoi selectedPhiMoiRow = phiMoi_table.getSelectionModel().getSelectedItem();
+        
+        try {
+        if (selectedPhiMoiRow != null) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Xác nhận xóa");
+            alert.setHeaderText("");
+            alert.setContentText("Bạn có muốn XÓA phí của hộ này?");
+
+            ButtonType rs = alert.showAndWait().orElse(ButtonType.CANCEL);
+
+            if (rs == ButtonType.OK) {
+                pst = connect.prepareStatement("delete from phimoi where MaHoGDPhiMoi = ?");
+                pst.setString(1, selectedPhiMoiRow.getMaHoGDPhiMoi());
+                int rowsAffected = pst.executeUpdate();
+                
+                alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Thông báo");
+                alert.setHeaderText(null);
+                alert.setContentText("Xóa chi phí thành công");
+                
+                if (rowsAffected > 0) {
+                    phiMoi_table.getItems().remove(selectedPhiMoiRow);
+                }
+                
+                ChangePhiMoiClear();
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Báo lỗi");
+            alert.setHeaderText("Không có hộ nào được chọn!");
+            alert.setContentText("Hãy chọn hộ muốn XÓA phí!");
+            alert.showAndWait();
+            PhiMoiShowListData();
+
+        }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    }
+    
+    // Thêm thông tin phi cap nhat
+    public void addPhiMoi(ActionEvent event) {
+    String insertPhiMoi = "insert into phimoi (MaHoGDPhiMoi,PhiGuiXe,PhiDien,PhiNuoc,PhiInternet,TinhTrangPhiMoi) values(?,?,?,?,?,?)";
+
+    connect = database.connectDb();
+
+    try {
+        Alert alert;
+
+        if (addMaHoPhiMoi_txt.getText().isEmpty()
+                || addPhiGuiXe_txt.getText().isEmpty()
+                || addPhiDien_txt.getText().isEmpty()
+                || addPhiNuoc_txt.getText().isEmpty()
+                || addPhiInternet_txt.getText().isEmpty()
+                || addTinhTrangPhiMoi_txt.getText().isEmpty()) {
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Báo lỗi");
+            alert.setHeaderText((null));
+            alert.setContentText("Xin hãy điền đầy đủ thông tin");
+            alert.showAndWait();
+            PhiMoiShowListData();
+
+        } else {
+            // CHECK IF EXIST
+            String checkPhiMoi = "select MaHoGDPhiMoi from phimoi where MaHoGDPhiMoi = '"
+                    + addMaHoPhiMoi_txt.getText() + "'";
+
+            statement = connect.createStatement();
+            result = statement.executeQuery(checkPhiMoi);
+
+            if (result.next()) {
+                alert = new Alert(AlertType.ERROR);
+                alert.setTitle("Báo lỗi");
+                alert.setHeaderText(null);
+                alert.setContentText("Hộ khẩu #" + addMaHoPhiMoi_txt.getText() + "đã tồn tại!");
+                alert.showAndWait();
+                AddPhiMoiClear();
+            } else {
+                pst = connect.prepareStatement(insertPhiMoi);
+                pst.setString(1, addMaHoPhiMoi_txt.getText());
+                pst.setString(2, addPhiGuiXe_txt.getText());
+                pst.setString(3, addPhiDien_txt.getText());
+                pst.setString(4, addPhiNuoc_txt.getText());
+                pst.setString(5, addPhiInternet_txt.getText());
+                pst.setString(6, addTinhTrangPhiMoi_txt.getText());
+
+                pst.executeUpdate();
+
+                alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Thông báo");
+                alert.setHeaderText(null);
+                alert.setContentText("Thêm chi phí thành công");
+                alert.showAndWait();
+
+                // UPDATE  TABLEVIEW
+                PhiMoiShowListData();
+                // TO CLEAR THE FIELDS
+                AddPhiMoiClear();
+            }
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
+    
+    public void AddPhiMoiClear(){
+        addMaHoPhiMoi_txt.setText("");
+        addPhiGuiXe_txt.setText("");
+        addPhiDien_txt.setText("");
+        addPhiNuoc_txt.setText("");
+        addPhiInternet_txt.setText("");
+        addTinhTrangPhiMoi_txt.setText("");
+    }
+    
+    public void ChangePhiMoiClear(){
+        changeMaHoPhiMoi_txt.setText("");
+        changePhiGuiXe_txt.setText("");
+        changePhiDien_txt.setText("");
+        changePhiNuoc_txt.setText("");
+        changePhiInternet_txt.setText("");
+        changeTinhTrangPhiMoi_txt.setText("");
+    }
+
+    public void PhiMoiShowListData(){
+        
+        connect = database.connectDb();
+        ObservableList<PhiMoi> listPhiMoi = FXCollections.observableArrayList();
+        try {
+            pst = connect.prepareStatement("select * from phimoi");
+            result = pst.executeQuery(); {
+            while(result.next()) {
+                PhiMoi phimoi = new PhiMoi(result.getString("maHoGDPhiMoi"), 
+                result.getDouble("phiGuiXe"), 
+                result.getDouble("phiDien"),
+                result.getDouble("phiNuoc"), 
+                result.getDouble("phiInternet"),
+                result.getString("tinhTrangPhiMoi"));
+                
+                listPhiMoi.add(phimoi);
+            }
+        }
+            phiMoi_table.setItems(listPhiMoi);
+            
+            maHoGDPhiMoi_col.setCellValueFactory(new PropertyValueFactory<>("maHoGDPhiMoi"));
+            phiGuiXe_col.setCellValueFactory(new PropertyValueFactory<>("phiGuiXe"));
+            phiDien_col.setCellValueFactory(new PropertyValueFactory<>("phiDien"));
+            phiNuoc_col.setCellValueFactory(new PropertyValueFactory<>("phiNuoc"));
+            phiInternet_col.setCellValueFactory(new PropertyValueFactory<>("phiInternet"));
+            tinhTrangPhiMoi_col.setCellValueFactory(new PropertyValueFactory<>("tinhTrangPhiMoi"));  
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(dashboardController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        phiMoi_table.setRowFactory( tv -> {
+            TableRow<PhiMoi> phiMoirow = new TableRow<>();
+            phiMoirow.setOnMouseClicked (event -> {
+                if (event.getClickCount() == 1 && (!phiMoirow.isEmpty())){
+                    myPhiMoiIndex = phiMoi_table.getSelectionModel().getSelectedIndex();
+                    
+                    changeMaHoPhiMoi_txt.setText(phiMoi_table.getItems().get(myPhiMoiIndex).getMaHoGDPhiMoi());
+                    changePhiGuiXe_txt.setText(String.valueOf(phiMoi_table.getItems().get(myPhiMoiIndex).getPhiGuiXe()));
+                    changePhiDien_txt.setText(String.valueOf(phiMoi_table.getItems().get(myPhiMoiIndex).getPhiDien()));
+                    changePhiNuoc_txt.setText(String.valueOf(phiMoi_table.getItems().get(myPhiMoiIndex).getPhiNuoc()));
+                    changePhiInternet_txt.setText(String.valueOf(phiMoi_table.getItems().get(myPhiMoiIndex).getPhiInternet()));
+                    changeTinhTrangPhiMoi_txt.setText(phiMoi_table.getItems().get(myPhiMoiIndex).getTinhTrangPhiMoi());
+                    
+                }
+            });
+            return phiMoirow;
+            
+        });
+        searchPhiMoi_txt.textProperty().addListener((observable, oldValue, newValue) -> {
+        filterPhiMoiList(newValue);
+    });
+    }
+    
+    //Tìm kiếm Phi Moi
+    private void filterPhiMoiList(String phimoisearchword) {
+        connect = database.connectDb();
+        ObservableList<PhiMoi> filteredList = FXCollections.observableArrayList();
+
+        try {
+            pst = connect.prepareStatement("select * from phimoi");
+            result = pst.executeQuery();
+            while (result.next()) {
+                PhiMoi phimoi;
+                phimoi = new PhiMoi(
+                        result.getString("maHoGDPhiMoi"),
+                        result.getDouble("phiGuiXe"),
+                        result.getDouble("phiDien"),
+                        result.getDouble("phiNuoc"),
+                        result.getDouble("phiInternet"),
+                        result.getString("tinhTrangPhiMoi")
+                );
+
+                // Check if any field contains the keyword
+                if (phimoi.getMaHoGDPhiMoi().toLowerCase().contains(phimoisearchword.toLowerCase())
+                        || String.valueOf(phimoi.getPhiGuiXe()).toLowerCase().contains(phimoisearchword.toLowerCase())
+                        || String.valueOf(phimoi.getPhiDien()).toLowerCase().contains(phimoisearchword.toLowerCase())
+                        || String.valueOf(phimoi.getPhiNuoc()).toLowerCase().contains(phimoisearchword.toLowerCase())
+                        || String.valueOf(phimoi.getPhiInternet()).toLowerCase().contains(phimoisearchword.toLowerCase())
+                        || phimoi.getTinhTrangPhiMoi().toLowerCase().contains(phimoisearchword.toLowerCase())) {
+                    filteredList.add(phimoi);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Handle the SQLException appropriately, e.g., log or show an error message.
+        }
+    }
+
     
     // THÔNG TIN NHÂN KHẨU TỪ ĐÂY
+    //////////////////////////
+    // Tìm kiếm nhân khẩu
+    @FXML
+    void searchNhanKhau(ActionEvent event) {
+
+    }
+
+    // Sửa đổi thông tin nhân khẩu
+    @FXML
+    void changeNhanKhau(ActionEvent event) throws SQLException {
+        
+        connect = database.connectDb();
+        String changeNhanKhau = "update nhankhau set HoTenNhanKhau = ?, SoCCCD = ?, GioiTinhNhanKhau = ?, NgaySinhNhanKhau = ?, QuanHeChuHo = ?"
+                + " where MaNhanKhau = '" + changeMaNhanKhau_txt.getText() + "'";
+        try {
+            suaNhanKhau_form.setVisible(true);
+            
+            Alert alert;
+            
+            if (changeMaNhanKhau_txt.getText().isEmpty() 
+                    || changeTenNhanKhau_txt.getText().isEmpty()
+                    || changeCCCD_txt.getText().isEmpty()
+                    || changeGioiTinhNhanKhau_txt.getText().isEmpty()
+                    || changeNgaySinhNhanKhau_txt.getValue() == null
+                    || changeQuanHeChuHo_txt.getText().isEmpty()) {
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Báo lỗi");
+            alert.setHeaderText((null));
+            alert.setContentText("Xin hãy điền đầy đủ thông tin!");
+            alert.showAndWait();
+            NhanKhauShowListData();
+            
+            } else {
+                alert = new Alert(AlertType.CONFIRMATION);
+                alert.setTitle("Xác nhận sửa");
+                alert.setHeaderText(null);
+                alert.setContentText("Bạn có chắc muốn SỬA nhân khẩu # " + changeMaNhanKhau_txt.getText() + "?");
+
+                Optional<ButtonType> option = alert.showAndWait();
+
+                if (option.get().equals(ButtonType.OK)){
+                    pst = connect.prepareStatement(changeNhanKhau);
+                    pst.setString(1, changeTenNhanKhau_txt.getText());
+                    pst.setString(2, changeCCCD_txt.getText());
+                    pst.setString(3, changeGioiTinhNhanKhau_txt.getText());
+                    pst.setString(4, String.valueOf(changeNgaySinhNhanKhau_txt.getValue()));
+                    pst.setString(5, changeQuanHeChuHo_txt.getText());
+
+                    pst.executeUpdate();
+                    
+                    alert = new Alert(AlertType.INFORMATION);
+                    alert.setTitle("Thông báo sửa nhân khẩu");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Sửa nhân khẩu thành công!");
+                    alert.showAndWait();
+                    
+                    // UPDATE QTV TABLEVIEW
+                    NhanKhauShowListData();
+                    //TO CLEAR THE FIELDS
+                    ChangeNhanKhauClear();
+                }
+            }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+    }
     
+    // Xoa nhan khau
+    @FXML
+    void deleteNhanKhau(ActionEvent event) {
+        connect = database.connectDb();
+        NhanKhau selectedNhanKhauRow = nhanKhau_table.getSelectionModel().getSelectedItem();
+        
+        try {
+        if (selectedNhanKhauRow != null) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Xác nhận xóa");
+            alert.setHeaderText("");
+            alert.setContentText("Bạn có muốn XÓA nhân khẩu này?");
+
+            ButtonType rs = alert.showAndWait().orElse(ButtonType.CANCEL);
+
+            if (rs == ButtonType.OK) {
+                pst = connect.prepareStatement("delete from nhankhau where MaNhanKhau = ?");
+                pst.setString(1, selectedNhanKhauRow.getMaNhanKhau());
+                int rowsAffected = pst.executeUpdate();
+                
+                alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Thông báo");
+                alert.setHeaderText(null);
+                alert.setContentText("Xóa nhân khẩu thành công");
+                
+                if (rowsAffected > 0) {
+                    nhanKhau_table.getItems().remove(selectedNhanKhauRow);
+                }
+                
+                ChangeNhanKhauClear();
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Báo lỗi");
+            alert.setHeaderText("Không có nhân khẩu nào được chọn!");
+            alert.setContentText("Hãy chọn nhân khẩu muốn XÓA!");
+            alert.showAndWait();
+            NhanKhauShowListData();
+
+        }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    }
+    
+    // Thêm thông tin nhân khẩu
+    public void addNhanKhau(MouseEvent event) {
+    String insertNhanKhau = "insert into nhankhau (MaNhanKhau,HoTenNhanKhau,SoCCCD,GioiTinhNhanKhau,NgaySinhNhanKhau,QuanHeChuHo) values(?,?,?,?,?,?)";
+
+    connect = database.connectDb();
+
+    try {
+        themNhanKhau_form.setVisible(true);
+        Alert alert;
+
+        if (addMaNhanKhau_txt.getText().isEmpty()
+                || addTenNhanKhau_txt.getText().isEmpty()
+                || addCCCD_txt.getText().isEmpty()
+                || addGioiTinhNhanKhau_txt.getText().isEmpty()
+                || addNgaySinhNhanKhau_txt.getValue() == null
+                || addQuanHeChuHo_txt.getText().isEmpty()) {
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Báo lỗi");
+            alert.setHeaderText((null));
+            alert.setContentText("Xin hãy điền đầy đủ thông tin");
+            alert.showAndWait();
+            HoKhauShowListData();
+
+        } else {
+            // CHECK IF NhanKhau IS EXIST
+            String checkNhanKhau = "select MaNhanKhau from nhankhau where MaNhanKhau = '"
+                    + addMaNhanKhau_txt.getText() + "'";
+
+            statement = connect.createStatement();
+            result = statement.executeQuery(checkNhanKhau);
+
+            if (result.next()) {
+                alert = new Alert(AlertType.ERROR);
+                alert.setTitle("Báo lỗi");
+                alert.setHeaderText(null);
+                alert.setContentText("Nhân khẩu #" + addMaNhanKhau_txt.getText() + "đã tồn tại!");
+                alert.showAndWait();
+                AddHoKhauClear();
+            } else {
+                pst = connect.prepareStatement(insertNhanKhau);
+                pst.setString(1, addMaNhanKhau_txt.getText());
+                pst.setString(2, addTenNhanKhau_txt.getText());
+                pst.setString(3, addCCCD_txt.getText());
+                pst.setString(4, addGioiTinhNhanKhau_txt.getText());
+                pst.setString(5, String.valueOf(addNgaySinhNhanKhau_txt.getValue()));
+                pst.setString(6, addQuanHeChuHo_txt.getText());
+
+                pst.executeUpdate();
+
+                alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Thông báo");
+                alert.setHeaderText(null);
+                alert.setContentText("Thêm nhân khẩu thành công");
+                alert.showAndWait();
+
+                // UPDATE NhanKhau TABLEVIEW
+                NhanKhauShowListData();
+                // TO CLEAR THE FIELDS
+                AddNhanKhauClear();
+            }
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
+
     
     public void ChangeNhanKhauClear(){
         changeMaNhanKhau_txt.setText("");
@@ -468,6 +1792,49 @@ public class dashboardController implements Initializable{
 
     }
     
+    public void AddNhanKhauClear(){
+        addMaNhanKhau_txt.setText("");
+        addTenNhanKhau_txt.setText("");
+        addCCCD_txt.setText("");
+        addGioiTinhNhanKhau_txt.setText("");
+        addNgaySinhNhanKhau_txt.setValue(null);
+        addQuanHeChuHo_txt.setText("");
+    }
+    
+    //Tim kiem nhan khau
+    private void filterNhanKhauList(String nksearchword) {
+    connect = database.connectDb();
+    ObservableList<NhanKhau> filteredList = FXCollections.observableArrayList();
+
+    try {
+        pst = connect.prepareStatement("select * from nhankhau");
+        result = pst.executeQuery();
+        while (result.next()) {
+            NhanKhau nk = new NhanKhau(result.getString("maNhanKhau"),
+                    result.getString("hoTenNhanKhau"),
+                    result.getString("soCCCD"),
+                    result.getString("gioiTinhNhanKhau"),                    
+                    result.getDate("ngaySinhNhanKhau"),
+                    result.getString("quanHeChuHo"));
+
+
+            // Check if any field contains the keyword
+            if (nk.getMaNhanKhau().toLowerCase().contains(nksearchword.toLowerCase())
+                    || nk.getHoTenNhanKhau().toLowerCase().contains(nksearchword.toLowerCase())
+                    || nk.getSoCCCD().toLowerCase().contains(nksearchword.toLowerCase())
+                    || nk.getGioiTinhNhanKhau().toLowerCase().contains(nksearchword.toLowerCase())
+                    || nk.getQuanHeChuHo().toLowerCase().contains(nksearchword.toLowerCase())) {
+                filteredList.add(nk);
+            }
+        }
+
+        nhanKhau_table.setItems(filteredList);
+    } catch (SQLException ex) {
+        Logger.getLogger(dashboardController.class.getName()).log(Level.SEVERE, null, ex);
+    }
+}
+    
+    // Show NhanKhau
     public void NhanKhauShowListData(){
         
         connect = database.connectDb();
@@ -517,7 +1884,11 @@ public class dashboardController implements Initializable{
             return NhanKhaurow;
             
         });
+        searchNhanKhau_txt.textProperty().addListener((observable, oldValue, newValue) -> {
+        filterNhanKhauList(newValue);
+    });
     }
+         
     
     // THÔNG TIN HỘ KHẨU TỪ ĐÂY
     
@@ -529,6 +1900,8 @@ public class dashboardController implements Initializable{
         String changeHoKhau = "update hokhau set TenChuHo = ?, DiaChiHoKhau = ?, DienTich = ?, ChatLuongChungCu = ?, NgaySua = ?"
                 + " where MaHoKhau = '" + changeMaHoKhau_txt.getText() + "'";
         try {
+            suaHoKhau_form.setVisible(true);
+            
             Alert alert;
             
             if (changeMaHoKhau_txt.getText().isEmpty() 
@@ -599,9 +1972,16 @@ public class dashboardController implements Initializable{
                 pst.setString(1, selectedHoKhauRow.getMaHoKhau());
                 int rowsAffected = pst.executeUpdate();
                 
+                alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Thông báo");
+                alert.setHeaderText(null);
+                alert.setContentText("Xóa hộ khẩu thành công");
+                
                 if (rowsAffected > 0) {
                     hoKhau_table.getItems().remove(selectedHoKhauRow);
                 }
+                
+                ChangeHoKhauClear();
             }
         } else {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -610,6 +1990,7 @@ public class dashboardController implements Initializable{
             alert.setContentText("Hãy chọn hộ khẩu muốn XÓA!");
             alert.showAndWait();
             HoKhauShowListData();
+
         }
         }catch(SQLException e){
             e.printStackTrace();
@@ -623,6 +2004,7 @@ public class dashboardController implements Initializable{
         connect = database.connectDb();
         
         try {
+            themHoKhau_form.setVisible(true);
             Alert alert;
             
             if (addMaHoKhau_txt.getText().isEmpty() 
@@ -754,43 +2136,6 @@ public class dashboardController implements Initializable{
         });
     }
     
-    
-    
-    
-    // TÌM KIẾM QUẢN TRỊ VIÊN
-//    void searchQTV() {
-//        QTVShowListData();
-//        ObservableList<QuanTriVien> ListQTV = FXCollections.observableArrayList();
-//        
-//        QTV_table.setItems(ListQTV);
-//        FilteredList<QuanTriVien> filterData = new FilteredList<>(ListQTV, b -> true);
-//            
-//            searchQTV_txt.textProperty().addListener((observable, oldValue, newValue) -> {
-//                filterData.setPredicate(quantrivien -> {
-//                    if (newValue==null || newValue.isEmpty()) {
-//                        return true;
-//                    }
-//                    String toLowerCaseFilter = newValue.toLowerCase();
-//                    if(quantrivien.getMaQTV().contains(newValue)){
-//                        return true;
-//                    } else if(quantrivien.getHoTen().toLowerCase().contains(toLowerCaseFilter)){
-//                        return true;
-//                    } else if(quantrivien.getGioiTinh().toLowerCase().contains(toLowerCaseFilter)){
-//                        return true;
-//                    } else if(quantrivien.getSdt().toLowerCase().contains(toLowerCaseFilter)){
-//                        return true;
-//                    } else if(quantrivien.getEmail().toLowerCase().contains(toLowerCaseFilter)){
-//                        return true;
-//                    } else if(quantrivien.getDiaChi().toLowerCase().contains(toLowerCaseFilter)){
-//                        return true;
-//                    } else return false;
-//                   
-//                });
-//            });
-//                SortedList<QuanTriVien> sortedQTV = new SortedList<>(filterData);
-//                sortedQTV.comparatorProperty().bind(QTV_table.comparatorProperty());
-//                QTV_table.setItems(sortedQTV);
-//            }
     
     // THAY ĐỔI THÔNG TIN QUẢN TRỊ VIÊN
     @FXML
@@ -1048,6 +2393,108 @@ public class dashboardController implements Initializable{
             return QTVrow;
             
         });
+        searchQTV_txt.textProperty().addListener((observable, oldValue, newValue) -> {
+        filterQTVList(newValue);
+    });
+    }
+    
+    //Tìm kiếm QTV
+    private void filterQTVList(String qtvsearchword) {
+    connect = database.connectDb();
+    ObservableList<QuanTriVien> filteredList = FXCollections.observableArrayList();
+
+    try {
+        pst = connect.prepareStatement("select * from quantrivien");
+        result = pst.executeQuery();
+        while (result.next()) {
+            QuanTriVien quantrivienD = new QuanTriVien(result.getString("maQTV"),
+                    result.getString("hoTen"),
+                    result.getString("gioiTinh"),
+                    result.getDate("ngaySinh"),
+                    result.getString("sdt"),
+                    result.getString("email"),
+                    result.getString("diaChi"));
+
+            // Check if any field contains the keyword
+            if (quantrivienD.getMaQTV().toLowerCase().contains(qtvsearchword.toLowerCase())
+                    || quantrivienD.getHoTen().toLowerCase().contains(qtvsearchword.toLowerCase())
+                    || quantrivienD.getGioiTinh().toLowerCase().contains(qtvsearchword.toLowerCase())
+                    || quantrivienD.getSdt().toLowerCase().contains(qtvsearchword.toLowerCase())
+                    || quantrivienD.getEmail().toLowerCase().contains(qtvsearchword.toLowerCase())
+                    || quantrivienD.getDiaChi().toLowerCase().contains(qtvsearchword.toLowerCase())) {
+                filteredList.add(quantrivienD);
+            }
+        }
+
+        QTV_table.setItems(filteredList);
+    } catch (SQLException ex) {
+        Logger.getLogger(dashboardController.class.getName()).log(Level.SEVERE, null, ex);
+    }
+}
+    
+    //Đổi mật khẩu QTV
+    @FXML
+    private void handleChangePassword(ActionEvent event) {
+        String account = account_txt.getText();
+        String currentPassword = currentPassword_txt.getText();
+        String newPassword = newPassword_txt.getText();
+
+        if (isValidPasswordChange(account, currentPassword)) {
+            changePasswordInDatabase(account, newPassword);
+            showAlert("Thay đổi mật khẩu thành công!");
+        } else {
+            showAlert("Tài khoản hoặc mật khẩu không hợp lệ!");
+        }
+    }
+
+    private boolean isValidPasswordChange(String account, String currentPassword) {
+        connect = database.connectDb();
+        
+            String query = "SELECT * FROM admin WHERE username = ? AND password = ?";
+            try (PreparedStatement preparedStatement = connect.prepareStatement(query)) {
+                preparedStatement.setString(1, account);
+                preparedStatement.setString(2, currentPassword);
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    return resultSet.next(); // If there's a match, return true
+                }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    private void changePasswordInDatabase(String account, String newPassword) {
+        connect = database.connectDb(); {
+            String updateQuery = "UPDATE admin SET password = ? WHERE username = ?";
+            
+            try (PreparedStatement preparedStatement = connect.prepareStatement(updateQuery)) {
+                preparedStatement.setString(1, newPassword);
+                preparedStatement.setString(2, account);
+                
+                int rowsAffected = preparedStatement.executeUpdate();
+                
+                if (rowsAffected > 0) {
+                    System.out.println("Thay đổi mật khẩu thành công");
+                    account_txt.setText("");
+                    newPassword_txt.setText("");
+                    currentPassword_txt.setText("");
+                } else {
+                    System.out.println("Không thể thay đổi mật khẩu do không có tài khoản phù hợp");
+                }
+            }
+         catch (SQLException e) {
+            e.printStackTrace();
+            // Handle the exception appropriately in your application
+        }
+    }
+    }
+
+    private void showAlert(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Password Change");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
     
     
@@ -1317,30 +2764,9 @@ public class dashboardController implements Initializable{
 
     }
 
-    @FXML
-    void addPhiQuanLy(ActionEvent event) {
-
-    }
 
     @FXML
     void closeAddFee(ActionEvent event) {
-
-    }
-
-
-    @FXML
-    void addPhiDichVu(ActionEvent event) {
-
-    }
-
-
-    @FXML
-    void addPhiKhac(ActionEvent event) {
-
-    }
-
-    @FXML
-    void changePhiQuanLy(ActionEvent event) {
 
     }
 
@@ -1350,35 +2776,7 @@ public class dashboardController implements Initializable{
     }
 
     @FXML
-    void changePhiDichVu(ActionEvent event) {
-
-    }
-
-    @FXML
-    void changePhiKhac(ActionEvent event) {
-
-    }
-
-    @FXML
-    void searchNhanKhau(ActionEvent event) {
-
-    }
-
-
-    @FXML
-    void changeNhanKhau(ActionEvent event) {
-
-    }
-
-
-    @FXML
     void closeChangeInForFamily(ActionEvent event) {
-
-    }
-
-
-    @FXML
-    void addNhanKhau(ActionEvent event) {
 
     }
 
@@ -1398,7 +2796,6 @@ public class dashboardController implements Initializable{
     void closeChangePass(ActionEvent event) {
 
     }
-
 
     
     //SHOW_ACCOUNT_NAME
@@ -1426,7 +2823,10 @@ public class dashboardController implements Initializable{
         QTVShowListData();
         HoKhauShowListData();
         NhanKhauShowListData();
-
+        PhiMoiShowListData();
+        PhiQuanLyShowListData();
+        PhiDichVuShowListData();
+        PhiKhacShowListData();
     }
     
 }
